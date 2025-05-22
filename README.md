@@ -31,7 +31,13 @@ docker-compose down
 
 ### Configuration
 
-Configuration should be okay as is, but you can override the default parameters via `.env.local` file.
+For frontend to work, add `.env` file to `frontend/` with the following content:
+
+```env
+VITE_API_URL=/api
+```
+
+Backend configuration should be okay as is, but you can override the default parameters via `.env.local` file.
 
 ### Usage (API)
 
