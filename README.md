@@ -14,7 +14,7 @@ Install dependencies using Composer:
 docker/composer install --no-interaction
 ```
 
-By default, the app will be available at: `http://localhost:20000`
+By default, the app (frontend) will be available at: `http://localhost:20000`
 
 If the image is already built, you can simply start the container:
 
@@ -33,10 +33,10 @@ docker-compose down
 
 Configuration should be okay as is, but you can override the default parameters via `.env.local` file.
 
-### Usage
+### Usage (API)
 
-To retrive GTFS data in json form:
+To retrieve GTFS data in json form from backend API:
 
 ```bash
-curl -X GET http://localhost:20000/get_data
+curl -X GET http://localhost:20000/api/get_data
 ```
