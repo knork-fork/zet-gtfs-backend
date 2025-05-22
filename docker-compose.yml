@@ -23,3 +23,12 @@ services:
             - '.:/application'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/fpm/conf.d/99-overrides.ini'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/cli/conf.d/99-overrides.ini'
+
+    vue-frontend:
+        container_name: zet-gtfs-vue-frontend
+        restart: unless-stopped
+        image: node:20-alpine
+        working_dir: /application
+        volumes:
+            - './frontend:/application'
+        command: sh -c "npm install && npm run dev -- --host"

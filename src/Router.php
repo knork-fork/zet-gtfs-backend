@@ -12,6 +12,8 @@ use KnorkFork\LoadEnvironment\Environment;
 
 final class Router
 {
+    public const API_PREFIX = '/api';
+
     public static function getResponse(string $uri): Response
     {
         $cronPollInterval = Environment::getStringEnv('CRON_POLLING_INTERVAL_IN_SECONDS');
@@ -19,11 +21,11 @@ final class Router
 
         // ultra simple hardcoded routing, for now
 
-        if ($uri === '/status') {
+        if ($uri === self::API_PREFIX . '/status') {
             return new JsonResponse(['status' => 'up']);
         }
 
-        if ($uri === '/info') {
+        if ($uri === self::API_PREFIX . '/info') {
             return new JsonResponse([
                 'description' => 'GTFS-RT to JSON converter',
                 'polling_interval_in_seconds' => $cronPollInterval,
@@ -31,7 +33,7 @@ final class Router
             ]);
         }
 
-        if ($uri === '/get_data') {
+        if ($uri === self::API_PREFIX . '/get_data') {
             // TO-DO: move this to cron, don't interact with third party directly
             $json = shell_exec(
                 '/opt/venv/bin/python /application/scripts/gtfs2json.py '
