@@ -29,13 +29,22 @@ To stop and remove the container:
 docker-compose down
 ```
 
-### Configuration
+### Frontend
 
-For frontend to work, add `.env` file to `frontend/` with the following content:
+After cloning the repo, do:
+
+```bash
+git submodule update --init --recursive
+```
+to clone the frontend repository.
+
+Then, add `.env` file to `frontend/` with the following content:
 
 ```env
 VITE_API_URL=/api
 ```
+
+### Configuration
 
 Backend configuration should be okay as is, but you can override the default parameters via `.env.local` file.
 
