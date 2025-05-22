@@ -1,0 +1,10 @@
+vendor/
+var/
+
+.phpunit.result.cache
+config/routes.cache.php
+
+# IDEs and Editors
+.vscode/
+
+.env.local

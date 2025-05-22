@@ -1,0 +1,7 @@
+parameters:
+    level: 9
+    checkUninitializedProperties: true
+    checkBenevolentUnionTypes: true
+    paths:
+        - public/
+        - src/

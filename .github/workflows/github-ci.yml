@@ -1,0 +1,23 @@
+name: CI
+
+on: push
+
+jobs:
+  commit-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout latest commit
+
+    - name: Set up Docker Compose
+      run: docker compose up -d --build
+
+    - name: Install Composer dependencies
+      run: docker exec zet-gtfs-php-fpm composer install --no-interaction
+    
+    - name: Run PHPStan
+      run: docker exec zet-gtfs-php-fpm vendor/phpstan/phpstan/phpstan
+
+    - name: Run PHP-CS-Fixer
+      run: docker exec -e PHP_CS_FIXER_IGNORE_ENV=1 zet-gtfs-php-fpm vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --dry-run --allow-risky=yes --verbose --show-progress dots
