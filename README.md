@@ -29,6 +29,10 @@ To stop and remove the container:
 docker-compose down
 ```
 
+### Configuration
+
+Configuration should be okay as is, but you can override the default parameters via `.env.local` file.
+
 ### Usage
 
 To retrive GTFS data in json form:
