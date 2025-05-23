@@ -1,4 +1,4 @@
-FROM php:8.4-fpm
+FROM phpdockerio/php:8.4-fpm
 WORKDIR "/application"
 
 # Install Python and venv
