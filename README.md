@@ -4,7 +4,7 @@ Live ZET GTFS data presented on a leaflet map.
 
 Data is polled periodically (default: every 5 minutes) from official ZET API (https://www.zet.hr/odredbe/datoteke-u-gtfs-formatu/669).
 
-As a good will mechanism, ff no activity is detected for certain time (default: 10 minutes) the app will stop polling the API until activity is detected again.
+As a good will mechanism, if no activity is detected for certain time (default: 10 minutes) the app will stop polling the API until activity is detected again.
 
 ### Installation
 
