@@ -21,15 +21,21 @@ if ($cacheDummyData) {
 
 $json = shell_exec(
     '/opt/venv/bin/python /application/scripts/gtfs/gtfs2json.py '
-    . escapeshellarg($zetUrl)
+    . escapeshellarg($zetUrl) . ' 2>&1'
 );
 
 if (!is_string($json)) {
-    Logger::critical('Error while executing gtfs2json script: ' . $json, 'gtfs_cron');
+    Logger::critical('Unknown error while executing gtfs2json script', 'gtfs_cron');
     throw new Exception('Error while executing gtfs2json script');
 }
 if (!json_validate($json)) {
-    Logger::critical('Invalid GTFS JSON: ' . json_last_error_msg(), 'gtfs_cron');
+    $errorMsg = sprintf(
+        'Invalid GTFS JSON: %s, shell output: %s',
+        json_last_error_msg(),
+        // safety limit to not overwhelm the log
+        substr($json, 0, 400)
+    );
+    Logger::critical($errorMsg, 'gtfs_cron');
     throw new Exception('Invalid GTFS JSON');
 }
 
