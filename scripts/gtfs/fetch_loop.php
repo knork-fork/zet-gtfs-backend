@@ -20,10 +20,17 @@ if (!is_numeric($inactivityTime)) {
 }
 $inactivityTime = (int) $inactivityTime;
 
+$shouldLogPollingStatus = true;
 // @phpstan-ignore-next-line While loop condition is always true
 while (true) {
     if (shouldPollData($inactivityTime)) {
+        $shouldLogPollingStatus = true;
         shell_exec('php /application/scripts/gtfs/get_gtfs_data.php');
+    } else {
+        if ($shouldLogPollingStatus) {
+            Logger::info('Inactivity detected, polling stopped', 'gtfs_cron');
+            $shouldLogPollingStatus = false;
+        }
     }
 
     sleep($pollingInterval);
@@ -47,7 +54,6 @@ function shouldPollData(int $inactivityTime): bool
     $timeSinceLastRead = time() - $lastCacheRead;
     if ($timeSinceLastRead > $inactivityTime) {
         // Cache was not read for a while, do not poll
-        // Logger::info('Not polling GTFS due to inactivity', 'gtfs_cron');
         return false;
     }
 
