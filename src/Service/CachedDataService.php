@@ -8,6 +8,14 @@ use App\Exception\BadRequestException;
 final class CachedDataService
 {
     public const GTFS_CACHE_FILENAME = '/application/var/cache/latest_gtfs.json';
+    public const LAST_CACHE_READ_FILENAME = '/application/var/cache/last_cache_read';
+
+    public function __construct()
+    {
+        // Register cache read every time the service is instantiated
+        // This helps us stop polling the GTFS data if the cache is not read for a while
+        touch(self::LAST_CACHE_READ_FILENAME);
+    }
 
     /**
      * @return mixed[]|null

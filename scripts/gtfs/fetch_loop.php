@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+use App\Service\CachedDataService;
 use App\System\Logger;
 use KnorkFork\LoadEnvironment\Environment;
 
@@ -12,9 +13,43 @@ if (!is_numeric($pollingInterval)) {
     throw new Exception('Invalid polling interval');
 }
 $pollingInterval = (int) $pollingInterval;
+$inactivityTime = Environment::getStringEnv('STOP_POLLING_AFTER_INACTIVITY_IN_SECONDS');
+if (!is_numeric($inactivityTime)) {
+    Logger::critical('Invalid inactivity time: ' . $inactivityTime, 'gtfs_cron');
+    throw new Exception('Invalid inactivity time');
+}
+$inactivityTime = (int) $inactivityTime;
 
 // @phpstan-ignore-next-line While loop condition is always true
 while (true) {
-    shell_exec('php /application/scripts/gtfs/get_gtfs_data.php');
+    if (shouldPollData($inactivityTime)) {
+        shell_exec('php /application/scripts/gtfs/get_gtfs_data.php');
+    }
+
     sleep($pollingInterval);
+}
+
+function shouldPollData(int $inactivityTime): bool
+{
+    if (!file_exists(CachedDataService::LAST_CACHE_READ_FILENAME)) {
+        // Cache was never read, do not poll
+        return false;
+    }
+
+    // Clear internal stat cache
+    clearstatcache(true, CachedDataService::LAST_CACHE_READ_FILENAME);
+
+    $lastCacheRead = filemtime(CachedDataService::LAST_CACHE_READ_FILENAME);
+    if ($lastCacheRead === false) {
+        return false;
+    }
+
+    $timeSinceLastRead = time() - $lastCacheRead;
+    if ($timeSinceLastRead > $inactivityTime) {
+        // Cache was not read for a while, do not poll
+        // Logger::info('Not polling GTFS due to inactivity', 'gtfs_cron');
+        return false;
+    }
+
+    return true;
 }

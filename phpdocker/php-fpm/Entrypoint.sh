@@ -9,6 +9,11 @@ touch /var/log/php_errors.log
 chown www-data:www-data /var/log/php_errors.log
 chmod 664 /var/log/php_errors.log
 
+# Ensure cache dir exists with correct permissions
+mkdir -p /application/var/cache
+chown www-data:www-data /application/var/cache
+chmod 775 /application/var/cache
+
 # Ensure correct permissions for config dir (so that caching works)
 chmod -R 777 /application/config
 
