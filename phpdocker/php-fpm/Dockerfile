@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     python3-venv \
     git \
     && apt-get clean
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 # Create virtualenv and install GTFS bindings
 RUN python3 -m venv /opt/venv \
