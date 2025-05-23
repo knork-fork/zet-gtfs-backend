@@ -1,21 +1,15 @@
 <?php
 declare(strict_types=1);
 
+use App\Service\AppVersionService;
 use App\Service\CachedDataService;
 use App\System\Logger;
 use KnorkFork\LoadEnvironment\Environment;
 
 require_once __DIR__ . '/../../src/init.php';
 
-// Cache frontend and backend commit hashes
-$frontendCommit = shell_exec(
-    "git -c safe.directory=/application/frontend -C /application/frontend rev-parse HEAD | tr -d '\n'"
-);
-$backendCommit = shell_exec(
-    "git -c safe.directory=/application -C /application rev-parse HEAD | tr -d '\n'"
-);
-file_put_contents(CachedDataService::FRONTEND_COMMIT_FILENAME, $frontendCommit);
-file_put_contents(CachedDataService::BACKEND_COMMIT_FILENAME, $backendCommit);
+// This is run here as fetch_loop.php is effectively ran on startup only
+AppVersionService::addVersionInfoToCache();
 
 $pollingInterval = Environment::getStringEnv('POLLING_INTERVAL_IN_SECONDS');
 if (!is_numeric($pollingInterval)) {

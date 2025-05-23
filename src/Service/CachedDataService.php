@@ -9,8 +9,6 @@ final class CachedDataService
 {
     public const GTFS_CACHE_FILENAME = '/application/var/cache/latest_gtfs.json';
     public const LAST_CACHE_READ_FILENAME = '/application/var/cache/last_cache_read';
-    public const FRONTEND_COMMIT_FILENAME = '/application/var/cache/frontend_commit.txt';
-    public const BACKEND_COMMIT_FILENAME = '/application/var/cache/backend_commit.txt';
 
     public function __construct()
     {
