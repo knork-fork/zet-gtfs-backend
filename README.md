@@ -8,6 +8,19 @@ As a good will mechanism, if no activity is detected for certain time (default: 
 
 ### Installation
 
+After cloning the repo, do:
+
+```bash
+git submodule update --init --recursive
+```
+to clone the frontend repository.
+
+Then, add `.env` file to `frontend/` with the following content:
+
+```env
+VITE_API_URL=/api
+```
+
 Start the container and build the image:
 
 ```bash
@@ -33,21 +46,6 @@ To stop and remove the container:
 
 ```bash
 docker-compose down
-```
-
-### Frontend
-
-After cloning the repo, do:
-
-```bash
-git submodule update --init --recursive
-```
-to clone the frontend repository.
-
-Then, add `.env` file to `frontend/` with the following content:
-
-```env
-VITE_API_URL=/api
 ```
 
 ### Configuration
