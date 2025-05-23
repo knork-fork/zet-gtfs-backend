@@ -1,0 +1,23 @@
+status:
+    path: /api/status
+    controller: App\Controller\StatusController::status
+    method: GET
+    description: Check if application is online
+    request: null
+    status_code: 200
+
+info:
+    path: /api/info
+    controller: App\Controller\StatusController::info
+    method: GET
+    description: Get application information dump
+    request: null
+    status_code: 200
+
+get_all_data:
+    path: /api/get_data
+    controller: App\Controller\DataController::getAllData
+    method: GET
+    description: Get all data from the GTFS-RT endpoint
+    request: null
+    status_code: 200
