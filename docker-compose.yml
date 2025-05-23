@@ -25,6 +25,18 @@ services:
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/fpm/conf.d/99-overrides.ini'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/cli/conf.d/99-overrides.ini'
             - './var/logs/php-fpm:/var/log'
+    
+    php-fetcher:
+        container_name: zet-gtfs-php-fetcher
+        restart: unless-stopped
+        build: phpdocker/php-fetcher
+        working_dir: /application
+        volumes:
+            - '.:/application'
+            - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/fpm/conf.d/99-overrides.ini'
+            - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/cli/conf.d/99-overrides.ini'
+            - './var/logs/php-fpm:/var/log'
+        command: ["php", "/application/scripts/gtfs/fetch_loop.php"]
 
     vue-frontend:
         container_name: zet-gtfs-vue-frontend

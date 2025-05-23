@@ -3,6 +3,7 @@
 $finder = (new PhpCsFixer\Finder())
     ->in([
         'public/',
+        'scripts/',
         'src/',
     ])
     ->exclude([

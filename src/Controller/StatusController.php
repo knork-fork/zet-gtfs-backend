@@ -17,7 +17,7 @@ final class StatusController
 
     public static function info(): JsonResponse
     {
-        $cronPollInterval = Environment::getStringEnv('CRON_POLLING_INTERVAL_IN_SECONDS');
+        $cronPollInterval = Environment::getStringEnv('POLLING_INTERVAL_IN_SECONDS');
         $zetUrl = Environment::getStringEnv('ZET_URL');
 
         return new JsonResponse([

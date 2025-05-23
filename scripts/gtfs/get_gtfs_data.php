@@ -24,11 +24,11 @@ $json = shell_exec(
     . escapeshellarg($zetUrl)
 );
 
-if (!\is_string($json)) {
+if (!is_string($json)) {
     Logger::critical('Error while executing gtfs2json script: ' . $json, 'gtfs_cron');
     throw new Exception('Error while executing gtfs2json script');
 }
-if (!\json_validate($json)) {
+if (!json_validate($json)) {
     Logger::critical('Invalid GTFS JSON: ' . json_last_error_msg(), 'gtfs_cron');
     throw new Exception('Invalid GTFS JSON');
 }
@@ -37,5 +37,5 @@ if (!\json_validate($json)) {
 file_put_contents(CachedDataService::GTFS_CACHE_FILENAME, $json);
 Logger::info(sprintf(
     'GTFS data cached successfully (size: %d)',
-    \strlen($json)
+    strlen($json)
 ), 'gtfs_cron');

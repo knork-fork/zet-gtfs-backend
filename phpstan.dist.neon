@@ -4,4 +4,5 @@ parameters:
     checkBenevolentUnionTypes: true
     paths:
         - public/
+        - scripts/
         - src/
