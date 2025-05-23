@@ -21,3 +21,11 @@ get_all_data:
     description: Get all data from the GTFS-RT endpoint
     requestDto: null
     status_code: 200
+
+get_vehicles:
+    path : /api/vehicles/{route_id}
+    controller: App\Controller\VehicleController::getVehicles
+    method: GET
+    description: Get all vehicles for a specific route
+    requestDto: null
+    status_code: 200
