@@ -7,6 +7,16 @@ use KnorkFork\LoadEnvironment\Environment;
 
 require_once __DIR__ . '/../../src/init.php';
 
+// Cache frontend and backend commit hashes
+$frontendCommit = shell_exec(
+    'git -c safe.directory=/application/frontend -C /application/frontend rev-parse HEAD 2>&1'
+);
+$backendCommit = shell_exec(
+    'git -c safe.directory=/application -C /application rev-parse HEAD 2>&1'
+);
+file_put_contents(CachedDataService::FRONTEND_COMMIT_FILENAME, $frontendCommit);
+file_put_contents(CachedDataService::BACKEND_COMMIT_FILENAME, $backendCommit);
+
 $pollingInterval = Environment::getStringEnv('POLLING_INTERVAL_IN_SECONDS');
 if (!is_numeric($pollingInterval)) {
     Logger::critical('Invalid polling interval: ' . $pollingInterval, 'gtfs_cron');
