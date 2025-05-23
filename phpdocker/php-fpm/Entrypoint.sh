@@ -20,5 +20,5 @@ chmod -R 777 /application/config
 # Add safe directory to git config to prevent composer dump-autoload warnings
 git config --global --add safe.directory /application
 
-# Run the original entrypoint (if any) or PHP-FPM
-exec "$@"
+# Run the original PHP-FPM entrypoint
+exec php-fpm
