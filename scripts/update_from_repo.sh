@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# NOTE: this script will update frontend to currently referenced commit in the backend repo submodule,
+# but this may or may not match to latest commit in the frontend repo.
+
 # Check if the script is being run from the root of the repository
 if [ ! -d ".git" ]; then
   echo "This script must be run from the root of the repository."
