@@ -1,18 +1,13 @@
 #!/bin/sh
 set -e
 
-# Ensure error log file exists with correct permissions
+# Ensure log dir exists with correct permissions
 mkdir -p /var/log
-chown www-data:www-data /var/log
-chmod 775 /var/log
-touch /var/log/php_errors.log
-chown www-data:www-data /var/log/php_errors.log
-chmod 664 /var/log/php_errors.log
+chown -R www-data:www-data /var/log
 
 # Ensure cache dir exists with correct permissions
 mkdir -p /application/var/cache
-chown www-data:www-data /application/var/cache
-chmod 775 /application/var/cache
+chown -R www-data:www-data /application/var/cache
 
 # Ensure correct permissions for config dir (so that caching works)
 chmod -R 777 /application/config

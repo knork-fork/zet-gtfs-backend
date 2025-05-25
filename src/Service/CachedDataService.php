@@ -7,26 +7,26 @@ use App\Exception\BadRequestException;
 
 final class CachedDataService
 {
-    public const GTFS_CACHE_FILENAME = '/application/var/cache/latest_gtfs.json';
     public const LAST_CACHE_READ_FILENAME = '/application/var/cache/last_cache_read';
+
+    public GtfsDataService $gtfsDataService;
 
     public function __construct()
     {
         // Register cache read every time the service is instantiated
         // This helps us stop polling the GTFS data if the cache is not read for a while
         touch(self::LAST_CACHE_READ_FILENAME);
+
+        $this->gtfsDataService = new GtfsDataService();
     }
 
     /**
-     * @return mixed[]|null
+     * @return mixed[]
      */
-    public function getFullDataFromCache(): ?array
+    public function getFullDataFromCache(): array
     {
-        if (!file_exists(self::GTFS_CACHE_FILENAME)) {
-            return null;
-        }
-
-        $json = file_get_contents(self::GTFS_CACHE_FILENAME);
+        $this->gtfsDataService->fetchDataToCacheIfOutdated();
+        $json = file_get_contents(GtfsDataService::GTFS_CACHE_FILENAME);
 
         if (!\is_string($json)) {
             throw new BadRequestException('Error reading GTFS cache');

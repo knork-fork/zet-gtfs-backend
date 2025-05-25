@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Response\JsonResponse;
 use App\Service\AppVersionService;
 use App\Service\CachedDataService;
+use App\Service\GtfsDataService;
 use KnorkFork\LoadEnvironment\Environment;
 
 final class StatusController
@@ -22,7 +23,7 @@ final class StatusController
         $pollInterval = Environment::getStringEnv('POLLING_INTERVAL_IN_SECONDS');
         $inactivityTime = Environment::getStringEnv('STOP_POLLING_AFTER_INACTIVITY_IN_SECONDS');
         $lastCacheRead = filemtime(CachedDataService::LAST_CACHE_READ_FILENAME);
-        $lastCacheWrite = filemtime(CachedDataService::GTFS_CACHE_FILENAME);
+        $lastCacheWrite = filemtime(GtfsDataService::GTFS_CACHE_FILENAME);
         $zetUrl = Environment::getStringEnv('ZET_URL');
         $appVersionInfo = AppVersionService::getVersionInfoFromCache();
 

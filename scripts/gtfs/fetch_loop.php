@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * This script is ran in a loop in zet-gtfs-php-fetcher container.
+ * It checks if the GTFS data cache was read recently and if so, it fetches new GTFS data.
+ * If the cache was not read for a while, it stops polling.
+ * The polling interval and inactivity time can be configured via environment variables.
+ */
+
 use App\Service\AppVersionService;
 use App\Service\CachedDataService;
 use App\System\Logger;
@@ -8,7 +15,7 @@ use KnorkFork\LoadEnvironment\Environment;
 
 require_once __DIR__ . '/../../src/init.php';
 
-// This is run here as fetch_loop.php is effectively ran on startup only
+// fetch_loop.php is ran on startup so this is a good place to save git info to cache
 AppVersionService::addVersionInfoToCache();
 
 $pollingInterval = Environment::getStringEnv('POLLING_INTERVAL_IN_SECONDS');
