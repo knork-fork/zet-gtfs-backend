@@ -37,3 +37,7 @@ route_geography:
     description: Get route geography for a specific route
     requestDto: null
     status_code: 200
+
+# Handled via nginx directly
+#stop_list:
+#    path: /api/stops
