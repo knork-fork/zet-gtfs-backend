@@ -23,9 +23,17 @@ get_all_data:
     status_code: 200
 
 get_vehicles:
-    path : /api/vehicles/{route_id}
+    path: /api/vehicles/{route_id}
     controller: App\Controller\VehicleController::getVehicles
     method: GET
     description: Get all vehicles for a specific route
+    requestDto: null
+    status_code: 200
+
+route_geography:
+    path: /api/route/{routeId}/geography
+    controller: App\Controller\RouteGeographyController::getRouteGeography
+    method: GET
+    description: Get route geography for a specific route
     requestDto: null
     status_code: 200

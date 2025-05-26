@@ -17,10 +17,10 @@ abstract class Response
     public const HTTP_INTERNAL_SERVER_ERROR = 500;
 
     /**
-     * @param mixed[] $data
+     * @param mixed[]|string $data
      */
     public function __construct(
-        private array $data,
+        private array|string $data,
         private int $statusCode
     ) {
     }
@@ -29,6 +29,10 @@ abstract class Response
     {
         header('Content-Type: application/json');
         http_response_code($statusCode ?? $this->statusCode);
-        echo json_encode($this->data);
+        if (\is_array($this->data)) {
+            echo json_encode($this->data);
+        } else {
+            echo $this->data;
+        }
     }
 }
