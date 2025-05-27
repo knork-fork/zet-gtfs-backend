@@ -1,0 +1,45 @@
+server {
+    listen 80 default;
+
+    client_max_body_size 108M;
+
+    access_log /var/log/nginx/application.access.log;
+
+    root /application/public;
+    index index.php;
+
+    add_header 'Access-Control-Allow-Origin' '*';
+    add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+    add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+
+    # Forward frontend requests to static Vite-built frontend
+    location / {
+        root /application/frontend/dist;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Handle stops endpoint in an optimized way
+    location /api/stops {
+        alias /application/scripts/gtfs/generated_stops/stops.json;
+        add_header Content-Type application/json;
+
+        gzip_static on;
+    }
+
+    # Forward /api requests to php-fpm
+    location ^~ /api/ {
+        rewrite ^/api/(.*)$ /index.php?/$1 last;
+    }
+
+    # PHP handling
+    location ~ \.php$ {
+        try_files $uri =404; # Ensure the file actually exists before passing it to PHP-FPM
+        fastcgi_pass php-fpm:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_buffers 16 16k;
+        fastcgi_buffer_size 32k;
+        include fastcgi_params;
+    }
+}

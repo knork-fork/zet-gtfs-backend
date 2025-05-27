@@ -57,7 +57,8 @@ echo "Updates available. Proceeding with update..."
 if ! ( docker-compose down \
     && git pull \
     && git submodule update \
-    && docker-compose up -d --build ); then
+    && scripts/deployment/build_frontend.sh \
+    && scripts/deployment/start_server_prod.sh ); then
     echo "Failed applying updates."
     exit 1
 fi

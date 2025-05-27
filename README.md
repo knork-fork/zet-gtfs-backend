@@ -60,10 +60,19 @@ To retrieve GTFS data in json form from backend API:
 curl -X GET http://localhost:20000/api/get_data
 ```
 
-### Updates
+### Deploy
+
+Build the frontend:
+```bash
+scripts/deployment/build_frontend.sh
+```
+
+And then start the server:
+```bash
+scripts/deployment/start_server_prod.sh
+```
 
 Run the following command to update deployed version to latest repo state:
-
 ```bash
 scripts/update_from_repo.sh
 ```
