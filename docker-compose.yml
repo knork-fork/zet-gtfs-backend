@@ -18,8 +18,12 @@ services:
     php-fpm:
         container_name: zet-gtfs-php-fpm
         restart: unless-stopped
-        build: phpdocker/php-fpm
+        build:
+            context: phpdocker/php-fpm
+            dockerfile: Dockerfile
         working_dir: /application
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
         volumes:
             - '.:/application'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/fpm/conf.d/99-overrides.ini'
