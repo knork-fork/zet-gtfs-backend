@@ -4,7 +4,7 @@ WORKDIR "/application"
 # Install Python and venv
 RUN sed -i 's|http://archive.ubuntu.com/ubuntu/|http://mirror.eu.oneandone.net/ubuntu/|g' /etc/apt/sources.list \
     && apt-get update \
-    && apt-get install -y python3 python3-pip python3-venv git php8.4-xdebug \
+    && apt-get install -y python3 python3-pip python3-venv git php8.4-xdebug php8.4-pgsql \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 

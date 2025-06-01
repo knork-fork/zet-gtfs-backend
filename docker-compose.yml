@@ -3,6 +3,42 @@
 ###############################################################################
 #version: '3.1'
 services:
+    postgres:
+        container_name: zet-gtfs-postgres
+        restart: unless-stopped
+        image: 'postgres:15-alpine'
+        working_dir: /application
+        volumes:
+            - '.:/application'
+            - zet-gtfs-pgdata:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_USER=zetgtfs_user
+            - POSTGRES_PASSWORD=zetgtfs_pass
+            - POSTGRES_DB=zetgtfs_db
+
+    pgbouncer:
+        container_name: zet-gtfs-db
+        depends_on: 
+            - postgres
+        restart: unless-stopped
+        image: edoburu/pgbouncer:latest
+        extra_hosts:
+            - 'giscloud.local:172.30.0.1'
+        ports:
+            - 20001:5435
+        environment:
+            DB_USER: zetgtfs_user
+            DB_PASSWORD: zetgtfs_pass
+            DB_HOST: zet-gtfs-postgres
+            DATABASES: |
+                zetgtfs_db = host=zet-gtfs-postgres dbname=zetgtfs_db
+            POOL_MODE: transaction
+            MAX_CLIENT_CONN: 100
+            DEFAULT_POOL_SIZE: 20
+            LISTEN_PORT: 5435
+        volumes:
+            - ./pgbouncer_userlist.txt:/etc/pgbouncer/userlist.txt:ro
+
     webserver:
         container_name: zet-gtfs-webserver
         restart: unless-stopped
@@ -51,3 +87,6 @@ services:
         volumes:
             - './frontend:/application'
         command: sh -c "npm install && npm run dev -- --host"
+
+volumes:
+    zet-gtfs-pgdata:
