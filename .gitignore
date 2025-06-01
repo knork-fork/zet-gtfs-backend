@@ -8,3 +8,7 @@ config/routes.cache.php
 .vscode/
 
 .env.local
+
+# Db init files
+scripts/database/db_initialized
+scripts/gtfs/static_gtfs_files/stop_times_clean.csv

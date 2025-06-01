@@ -59,7 +59,8 @@ if ! ( docker-compose down \
     && git submodule update \
     && scripts/deployment/build_frontend.sh \
     && scripts/deployment/start_server_prod.sh \
-    && docker/composer install --no-dev ); then
+    && docker/composer install --no-dev \
+    && scripts/database/init-db.sh ); then
     echo "Failed applying updates."
     exit 1
 fi
