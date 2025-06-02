@@ -6,7 +6,7 @@ from collections import defaultdict
 # INSTRUCTIONS:
 # Call from project root
 # for id in $(seq 1 313); do
-#   python3 scripts/gtfs/generate_geojson_for_route.py "$id"
+#   python3 scripts/gtfs/generate_geojson_route.py "$id"
 # done
 # Cleanup empty files: find scripts/gtfs/generated_geojson_routes -type f -size 51c -delete
 # This is needed only once per static file update

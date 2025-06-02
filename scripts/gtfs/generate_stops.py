@@ -4,7 +4,7 @@ from typing import List, Dict
 
 # INSTRUCTIONS:
 # Call from project root only if stops.txt has been updated
-# python3 scripts/gtfs/get_station_list.py
+# python3 scripts/gtfs/generate_stops.py
 # after that gzip the output file:
 # gzip -k9 scripts/gtfs/generated_stops/stops.json
 
