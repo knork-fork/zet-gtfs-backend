@@ -41,3 +41,11 @@ route_geography:
 # Handled via nginx directly
 #stop_list:
 #    path: /api/stops
+
+stop_arrivals:
+    path: /api/arrivals/{stopId}
+    controller: App\Controller\StopController::getArrivals
+    method: GET
+    description: Get incoming vehicles for a specific stop
+    requestDto: null
+    status_code: 200

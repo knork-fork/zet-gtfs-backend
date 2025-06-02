@@ -38,4 +38,68 @@ final class CachedDataService
 
         return $jsonObject;
     }
+
+    /**
+     * @return array<int, array{
+     *     type: 'vehicle'|'tripUpdate',
+     *     timestamp: string|int,
+     *     route_id: string,
+     *     trip_id: string,
+     *     stopTimeUpdates?: array<int, array{
+     *         stopId: string,
+     *         stopSequence: int,
+     *         arrivalDelay: int
+     *     }>,
+     *     position?: array{
+     *         latitude: float,
+     *         longitude: float
+     *     }
+     * }>
+     *
+     * @throws BadRequestException if no GTFS data is available
+     */
+    public function getMinimizedEntityDataFromCache(): array
+    {
+        // TO-DO: implement caching of this data to prevent reformatting same data every time
+
+        $cacheData = $this->getFullDataFromCache();
+        $entities = $cacheData['entity'] ?? [];
+        if (!\is_array($entities) || empty($entities)) {
+            throw new BadRequestException('No GTFS data available');
+        }
+
+        $formattedData = [];
+        foreach ($entities as $entity) {
+            if (!\is_array($entity) || !\array_key_exists('vehicle', $entity) && !\array_key_exists('tripUpdate', $entity)) {
+                continue; // Skip invalid entities
+            }
+            $type = \array_key_exists('vehicle', $entity) ? 'vehicle' : 'tripUpdate';
+            $data = [
+                'type' => $type,
+                'timestamp' => $entity[$type]['timestamp'] ?? '',
+                'route_id' => $entity[$type]['trip']['routeId'] ?? '',
+                'trip_id' => $entity[$type]['trip']['tripId'] ?? '',
+            ];
+
+            if ($type === 'tripUpdate') {
+                $data['stopTimeUpdates'] = [];
+                foreach ($entity['tripUpdate']['stopTimeUpdate'] as $stopTimeUpdate) {
+                    $data['stopTimeUpdates'][] = [
+                        'stopId' => $stopTimeUpdate['stopId'] ?? '',
+                        'stopSequence' => $stopTimeUpdate['stopSequence'] ?? 0,
+                        'arrivalDelay' => $stopTimeUpdate['arrival']['delay'] ?? 0,
+                    ];
+                }
+            } else {
+                $data['position'] = [
+                    'latitude' => $entity['vehicle']['position']['latitude'] ?? 0.0,
+                    'longitude' => $entity['vehicle']['position']['longitude'] ?? 0.0,
+                ];
+            }
+
+            $formattedData[] = $data;
+        }
+
+        return $formattedData;
+    }
 }

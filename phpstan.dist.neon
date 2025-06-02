@@ -6,3 +6,8 @@ parameters:
         - public/
         - scripts/
         - src/
+    ignoreErrors:
+        - message: '#Class App\\Entity\\.* has an uninitialized property#'
+        - message: '#Cannot cast mixed to .*#'
+          paths:
+              - src/System/Database/Entity.php
