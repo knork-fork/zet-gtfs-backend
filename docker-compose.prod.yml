@@ -29,8 +29,9 @@ services:
         environment:
             DB_USER: zetgtfs_user
             DB_PASSWORD: zetgtfs_pass
-            DB_NAME: zetgtfs_db
             DB_HOST: zet-gtfs-postgres
+            DATABASES: |
+                zetgtfs_db = host=zet-gtfs-postgres dbname=zetgtfs_db
             POOL_MODE: transaction
             MAX_CLIENT_CONN: 100
             DEFAULT_POOL_SIZE: 20
