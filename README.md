@@ -78,3 +78,8 @@ Run the following command to update deployed version to latest repo state:
 ```bash
 scripts/deployment/update_from_repo.sh
 ```
+
+### Updating static gtfs files
+
+For now, `scripts/gtfs/update_schedule.sh` needs to be ran manually at least once a month.
+

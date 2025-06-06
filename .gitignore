@@ -12,3 +12,6 @@ config/routes.cache.php
 # Db init files
 scripts/database/db_initialized
 scripts/gtfs/static_gtfs_files/stop_times_clean.csv
+
+# Too large for git, gzipped variant is pushed instead
+scripts/gtfs/static_gtfs_files/stop_times.txt
