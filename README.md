@@ -1,10 +1,12 @@
-# Live ZET GTFS
+# Live ZET GTFS API
 
-Live ZET GTFS data presented on a leaflet map.
+Live ZET GTFS data API provider.
 
-Data is polled periodically (default: every 5 minutes) from official ZET API (https://www.zet.hr/odredbe/datoteke-u-gtfs-formatu/669).
+**Frontend**: [zet-web](https://github.com/MatijaNovosel/zet-web) (presented on a leaflet map)
 
-As a good will mechanism, if no activity is detected for certain time (default: 10 minutes) the app will stop polling the API until activity is detected again.
+Data is polled periodically (live version: every 5 seconds) from official ZET API (https://www.zet.hr/odredbe/datoteke-u-gtfs-formatu/669).
+
+As a good will mechanism, if no activity is detected for certain time (live version: 20 seconds) the app will stop polling the API until activity is detected again.
 
 ### Installation
 
@@ -74,5 +76,5 @@ scripts/deployment/start_server_prod.sh
 
 Run the following command to update deployed version to latest repo state:
 ```bash
-scripts/update_from_repo.sh
+scripts/deployment/update_from_repo.sh
 ```
