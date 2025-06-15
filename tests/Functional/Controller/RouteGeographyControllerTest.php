@@ -5,7 +5,6 @@ namespace App\Tests\Functional\Controller;
 
 use App\Tests\Common\FunctionalTestCase;
 use App\Tests\Common\Request;
-use App\Tests\Common\Response;
 
 /**
  * @internal
@@ -23,7 +22,7 @@ final class RouteGeographyControllerTest extends FunctionalTestCase
         self::assertArrayHasKey('type', $json);
         self::assertSame('FeatureCollection', $json['type']);
         self::assertArrayHasKey('features', $json);
-        
+
         $features = $json['features'];
         self::assertIsArray($features);
 
@@ -39,7 +38,7 @@ final class RouteGeographyControllerTest extends FunctionalTestCase
         self::assertArrayHasKey('type', $geometry);
         self::assertSame('LineString', $geometry['type']);
         self::assertArrayHasKey('coordinates', $geometry);
-        
+
         $coordinates = $geometry['coordinates'];
         self::assertIsArray($coordinates);
 
