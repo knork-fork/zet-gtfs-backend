@@ -9,7 +9,7 @@
             "id": "XCEA5XS0D5_302",
             "vehicle": {
                 "trip": {
-                    "tripId": "0_33_12102_121_30083",
+                    "tripId": "0_5_12102_121_30083",
                     "startDate": "20250601",
                     "scheduleRelationship": "SCHEDULED",
                     "routeId": "121"
@@ -28,7 +28,7 @@
             "id": "XCEA5XS0D5",
             "tripUpdate": {
                 "trip": {
-                    "tripId": "0_33_12102_121_30083",
+                    "tripId": "0_5_12102_121_30083",
                     "startDate": "20250601",
                     "scheduleRelationship": "SCHEDULED",
                     "routeId": "121"

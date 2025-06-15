@@ -22,7 +22,7 @@ final class ArrivalsService
         // dummy data works for stopId 1619_21
         // calendar_dates.txt needs to be updated with cron
         // get stop times from stop_times.txt that begin with the tripId prefix
-        $calendarPrefix = '0_33_'; // Example prefix, replace with actual logic to fetch from calendar_dates.txt
+        $calendarPrefix = '0_5_'; // Example prefix, replace with actual logic to fetch from calendar_dates.txt
 
         // TO-DO: save stop locations to db and query it by $stopId
         $latitude = 45.817608;
