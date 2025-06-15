@@ -26,4 +26,4 @@ jobs:
       run: scripts/database/init-db.sh --reinit
 
     - name: Run PHPUnit
-      run: docker exec zet-gtfs-php-fpm bin/phpunit
+      run: docker exec zet-gtfs-php-fpm php bin/phpunit
