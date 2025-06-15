@@ -19,7 +19,7 @@ final class TimeFormatHelper
             $seconds = 24 * 3600 + $seconds;
         }
         if ($seconds >= 24 * 3600) {
-            $seconds = $seconds % (24 * 3600);
+            $seconds %= (24 * 3600);
         }
 
         $h = (int) ($seconds / 3600);
