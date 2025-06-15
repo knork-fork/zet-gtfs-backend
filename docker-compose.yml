@@ -65,6 +65,8 @@ services:
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/fpm/conf.d/99-overrides.ini'
             - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.4/cli/conf.d/99-overrides.ini'
             - './var/logs/php-fpm:/var/log'
+        environment:
+            - ALLOW_ENV_OVERRIDE=true
     
     php-fetcher:
         container_name: zet-gtfs-php-fetcher

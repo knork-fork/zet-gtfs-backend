@@ -37,6 +37,16 @@ final class AppVersionService
 
         $frontendRepo = Environment::getStringEnv('FRONTEND_REPO');
         $backendRepo = Environment::getStringEnv('BACKEND_REPO');
+
+        if ($frontendRepo === 'dummy') {
+            // Skip pinging github.com if environment variable is set to 'dummy'
+            return [
+                'checkedOutFrontendRef' => $frontendCommit,
+                'checkedOutBackendRef' => $backendCommit,
+                'should_update' => false,
+            ];
+        }
+
         $commitFromRepoCommand = "git ls-remote %s HEAD | awk '{ print $1 }' | tr -d '\n'";
         $frontendCommitFromRepo = shell_exec(\sprintf($commitFromRepoCommand, $frontendRepo));
         $backendCommitFromRepo = shell_exec(\sprintf($commitFromRepoCommand, $backendRepo));
