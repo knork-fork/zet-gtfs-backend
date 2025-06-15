@@ -4,8 +4,10 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Entity\StopTime;
+use App\Exception\InternalServerErrorException;
 use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
+use App\System\Logger;
 use DateTime;
 use DateTimeZone;
 
@@ -33,20 +35,20 @@ final class ArrivalsService
         // Filter stop times by calendar prefix (e.g. schedule is more limited during weekends)
         $relevantStopTimes = array_filter(
             $relevantStopTimes,
-            static fn (array $stopTime): bool => str_starts_with($stopTime['trip_id'], $calendarPrefix)
+            static fn (StopTime $stopTime): bool => str_starts_with($stopTime->trip_id, $calendarPrefix)
         );
 
         // Prepare arrivals by defaulting isRealtimeConfirmed to false
         $arrivals = [];
         foreach ($relevantStopTimes as $stopTime) {
-            $tripId = $stopTime['trip_id'];
+            $tripId = $stopTime->trip_id;
             $arrivals[$tripId] = [
-                'routeId' => self::getRouteFromTripId($stopTime['trip_id']),
-                'tripId' => $stopTime['trip_id'],
+                'routeId' => self::getRouteFromTripId($stopTime->trip_id),
+                'tripId' => $stopTime->trip_id,
                 'airDistanceInMeters' => null,
-                'scheduledArrivalTime' => $stopTime['arrival_time'],
+                'scheduledArrivalTime' => $stopTime->arrival_time,
                 'delayInSeconds' => null,
-                'calculatedArrivalTime' => $stopTime['arrival_time'],
+                'calculatedArrivalTime' => $stopTime->arrival_time,
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
             ];
@@ -56,7 +58,7 @@ final class ArrivalsService
         $entityData = (new CachedDataService())->getMinimizedEntityDataFromCache();
         // Filter GTFS data by trip IDs shown in the stop times (ignore unscheduled trips/vehicles)
         $stopTripIds = array_unique(array_map(
-            static fn (array $stopTime): string => $stopTime['trip_id'],
+            static fn (StopTime $stopTime): string => $stopTime->trip_id,
             $relevantStopTimes
         ));
         $filteredGtfsData = array_filter($entityData, static fn (array $data): bool => \in_array($data['trip_id'], $stopTripIds, true));
@@ -69,6 +71,14 @@ final class ArrivalsService
             $arrivals[$tripId]['realtimeDataTimestamp'] = $data['timestamp'];
 
             if ($data['type'] === 'vehicle') {
+                if (!\array_key_exists('position', $data)) {
+                    Logger::critical(
+                        'Vehicle data does not contain position information for trip ID ' . $tripId . ', entity data dump: ' . var_export($entityData, true),
+                        'arrivals_service'
+                    );
+                    throw new InternalServerErrorException('Vehicle data does not contain position information for trip ID: ' . $tripId);
+                }
+
                 $arrivals[$tripId]['airDistanceInMeters'] = GeoDistanceHelper::getDistanceBetweenPoints(
                     $latitude,
                     $longitude,
@@ -78,6 +88,14 @@ final class ArrivalsService
             }
 
             if ($data['type'] === 'tripUpdate') {
+                if (!\array_key_exists('stopTimeUpdates', $data)) {
+                    Logger::critical(
+                        'Trip update data does not contain stop time updates for trip ID ' . $tripId . ', entity data dump: ' . var_export($entityData, true),
+                        'arrivals_service'
+                    );
+                    throw new InternalServerErrorException('Trip update data does not contain stop time updates for trip ID: ' . $tripId);
+                }
+
                 foreach ($data['stopTimeUpdates'] as $stopTimeUpdate) {
                     if ($stopTimeUpdate['stopId'] !== $stopId) {
                         continue;
@@ -102,7 +120,7 @@ final class ArrivalsService
     /**
      * Fetch stop times scheduled within a ±1 hour window from current time
      *
-     * @return array<int, array<string, mixed>>
+     * @return StopTime[]
      */
     private static function getStopTimesForStation(string $stopId): array
     {
@@ -118,7 +136,9 @@ final class ArrivalsService
         $relevantStopTimes = [];
         foreach ($stopTimes as $stopTime) {
             if (self::isArrivalTimeWithinOneHour((string) $stopTime['arrival_time'], $currentTimeInSeconds)) {
-                $relevantStopTimes[] = $stopTime;
+                $stopTimeObject = new StopTime();
+                $stopTimeObject->hydrate($stopTime);
+                $relevantStopTimes[] = $stopTimeObject;
             }
         }
 
