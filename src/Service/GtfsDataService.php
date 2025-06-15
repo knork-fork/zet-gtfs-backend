@@ -40,7 +40,7 @@ final class GtfsDataService
         if ($cacheDummyData) {
             // Cache dummy data instead of pinging third-party
             Logger::info('Caching dummy GTFS data', 'gtfs_cron');
-            $json = file_get_contents('/application/test/TestData/gtfs_dummy.json');
+            $json = file_get_contents('/application/tests/TestData/gtfs_dummy.json');
             file_put_contents(self::GTFS_CACHE_FILENAME, $json);
 
             return;

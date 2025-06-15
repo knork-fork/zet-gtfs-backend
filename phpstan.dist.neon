@@ -6,6 +6,7 @@ parameters:
         - public/
         - scripts/
         - src/
+        - tests/
     ignoreErrors:
         - message: '#Class App\\Entity\\.* has an uninitialized property#'
         - message: '#Cannot cast mixed to .*#'

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker exec -it -e XDEBUG_SESSION_START=PHPSTORM zet-gtfs-php-fpm bin/phpunit $@
