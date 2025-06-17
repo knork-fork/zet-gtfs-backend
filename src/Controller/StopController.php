@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Repository\StopTimeRepository;
 use App\Response\JsonResponse;
 use App\Service\ArrivalsService;
+use App\Service\CachedDataService;
 
 final class StopController
 {
@@ -13,7 +14,11 @@ final class StopController
     {
         // to-do: dependency injection
         $stopTimeRepository = new StopTimeRepository();
-        $arrivalsService = new ArrivalsService($stopTimeRepository);
+        $cachedDataService = new CachedDataService();
+        $arrivalsService = new ArrivalsService(
+            $stopTimeRepository,
+            $cachedDataService
+        );
 
         return new JsonResponse(
             $arrivalsService->getArrivalsForStation($stopId),

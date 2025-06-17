@@ -4,8 +4,9 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Exception\BadRequestException;
+use App\Service\Interfaces\CachedDataServiceInterface;
 
-final class CachedDataService
+final class CachedDataService implements CachedDataServiceInterface
 {
     public const LAST_CACHE_READ_FILENAME = '/application/var/cache/last_cache_read';
 
@@ -20,9 +21,6 @@ final class CachedDataService
         $this->gtfsDataService = new GtfsDataService();
     }
 
-    /**
-     * @return mixed[]
-     */
     public function getFullDataFromCache(): array
     {
         $this->gtfsDataService->fetchDataToCacheIfOutdated();
@@ -39,25 +37,6 @@ final class CachedDataService
         return $jsonObject;
     }
 
-    /**
-     * @return array<int, array{
-     *     type: 'vehicle'|'tripUpdate',
-     *     timestamp: string|int,
-     *     route_id: string,
-     *     trip_id: string,
-     *     stopTimeUpdates?: array<int, array{
-     *         stopId: string,
-     *         stopSequence: int,
-     *         arrivalDelay: int
-     *     }>,
-     *     position?: array{
-     *         latitude: float,
-     *         longitude: float
-     *     }
-     * }>
-     *
-     * @throws BadRequestException if no GTFS data is available
-     */
     public function getMinimizedEntityDataFromCache(): array
     {
         // TO-DO: implement caching of this data to prevent reformatting same data every time

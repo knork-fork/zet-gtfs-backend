@@ -7,7 +7,8 @@ use App\Entity\StopTime;
 use App\Exception\InternalServerErrorException;
 use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
-use App\Repository\StopTimeRepository;
+use App\Repository\Interfaces\StopTimeRepositoryInterface;
+use App\Service\Interfaces\CachedDataServiceInterface;
 use App\System\Logger;
 use DateTime;
 use DateTimeZone;
@@ -16,8 +17,10 @@ final class ArrivalsService
 {
     private const TIMEZONE = 'Europe/Zagreb';
 
-    public function __construct(private StopTimeRepository $stopTimeRepository)
-    {
+    public function __construct(
+        private StopTimeRepositoryInterface $stopTimeRepository,
+        private CachedDataServiceInterface $cachedDataService,
+    ) {
     }
 
     /**
@@ -60,7 +63,7 @@ final class ArrivalsService
         }
 
         // Get latest GTFS data from cache
-        $entityData = (new CachedDataService())->getMinimizedEntityDataFromCache();
+        $entityData = $this->cachedDataService->getMinimizedEntityDataFromCache();
         // Filter GTFS data by trip IDs shown in the stop times (ignore unscheduled trips/vehicles)
         $stopTripIds = array_unique(array_map(
             static fn (StopTime $stopTime): string => $stopTime->trip_id,

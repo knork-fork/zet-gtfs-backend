@@ -5,13 +5,12 @@ namespace App\Repository;
 
 use App\Entity\StopTime;
 use App\Helper\TimeFormatHelper;
-use PDOException;
-use RuntimeException;
+use App\Repository\Interfaces\StopTimeRepositoryInterface;
 
 /**
  * @extends AbstractRepository<StopTime>
  */
-final class StopTimeRepository extends AbstractRepository
+final class StopTimeRepository extends AbstractRepository implements StopTimeRepositoryInterface
 {
     protected function getEntityClass(): string
     {
@@ -23,12 +22,6 @@ final class StopTimeRepository extends AbstractRepository
         return 'stop_times';
     }
 
-    /**
-     * @return StopTime[]
-     *
-     * @throws PDOException
-     * @throws RuntimeException
-     */
     public function getStopTimesWithArrivalWithinOneHourForStopId(string $stopId, int $timeInSeconds): array
     {
         $stopTimes = $this->getArrayBy('stop_id', $stopId);
