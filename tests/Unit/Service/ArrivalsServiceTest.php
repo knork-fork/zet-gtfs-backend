@@ -54,6 +54,13 @@ final class ArrivalsServiceTest extends UnitTestCase
     {
         $data = [
             [
+                'id' => 6506006,
+                'stop_id' => '1619_21',
+                'trip_id' => '0_4_12103_121_20383', // this will get filtered out by calendar prefix
+                'arrival_time' => '15:22:00',
+                'stop_sequence' => 12,
+            ],
+            [
                 'id' => 6632600,
                 'stop_id' => '1619_21',
                 'trip_id' => '0_5_12102_121_30217',
