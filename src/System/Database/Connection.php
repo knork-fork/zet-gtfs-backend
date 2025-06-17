@@ -37,7 +37,7 @@ final class Connection
     /**
      * @param mixed[] $params
      *
-     * @return mixed[]
+     * @return array<int, array<string, scalar>>
      *
      * @throws PDOException
      */

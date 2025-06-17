@@ -7,6 +7,7 @@ use App\Entity\StopTime;
 use App\Exception\InternalServerErrorException;
 use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
+use App\Repository\StopTimeRepository;
 use App\System\Logger;
 use DateTime;
 use DateTimeZone;
@@ -15,10 +16,14 @@ final class ArrivalsService
 {
     private const TIMEZONE = 'Europe/Zagreb';
 
+    public function __construct(private StopTimeRepository $stopTimeRepository)
+    {
+    }
+
     /**
      * @return array<int, array<string, mixed>>
      */
-    public static function getArrivalsForStation(string $stopId): array
+    public function getArrivalsForStation(string $stopId): array
     {
         // TO-DO: get tripId prefix (e.g. '0_33_') from calendar_dates.txt
         // dummy data works for stopId 1619_21
@@ -122,43 +127,21 @@ final class ArrivalsService
      *
      * @return StopTime[]
      */
-    private static function getStopTimesForStation(string $stopId): array
+    private function getStopTimesForStation(string $stopId): array
     {
-        /** @var array<int, array<string, scalar>> $stopTimes */
-        $stopTimes = (new StopTime())->getArrayBy('stop_id', $stopId);
-
         $now = new DateTime('now', new DateTimeZone(self::TIMEZONE));
         $currentTimeInSeconds = ($now->format('H') * 3600) + ($now->format('i') * 60) + $now->format('s');
 
         // tmp
         $currentTimeInSeconds = (14 * 3600) + (33 * 60) + 0; // 14:33:00
 
-        $relevantStopTimes = [];
-        foreach ($stopTimes as $stopTime) {
-            if (self::isArrivalTimeWithinOneHour((string) $stopTime['arrival_time'], $currentTimeInSeconds)) {
-                $stopTimeObject = new StopTime();
-                $stopTimeObject->hydrate($stopTime);
-                $relevantStopTimes[] = $stopTimeObject;
-            }
-        }
-
-        return $relevantStopTimes;
+        return $this->stopTimeRepository->getStopTimesWithArrivalWithinOneHourForStopId(
+            $stopId,
+            $currentTimeInSeconds
+        );
     }
 
-    private static function isArrivalTimeWithinOneHour(string $arrivalTime, int $currentTimeInSeconds): bool
-    {
-        $arrivalSeconds = TimeFormatHelper::getSecondsFromTimeString($arrivalTime);
-        $diff = abs($currentTimeInSeconds - $arrivalSeconds);
-
-        // Handle wrap-around at midnight (e.g., 23:30 vs. 00:10)
-        if ($diff > 43200) { // 12 hours in seconds
-            $diff = 86400 - $diff; // 86400 = seconds in a day
-        }
-
-        return $diff <= 3600; // 3600 seconds = 1 hour
-    }
-
-    private static function getRouteFromTripId(string $tripId): ?string
+    private function getRouteFromTripId(string $tripId): ?string
     {
         // Extract route ID from trip ID, assuming the format is consistent
         // Example trip ID: '0_33_12102_121_30083'
