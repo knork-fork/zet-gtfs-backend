@@ -7,6 +7,7 @@ use App\Entity\StopTime;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
 use App\Service\ArrivalsService;
 use App\Service\Interfaces\CachedDataServiceInterface;
+use App\Service\Interfaces\CalendarPrefixServiceInterface;
 use App\Tests\Common\UnitTestCase;
 
 /**
@@ -29,9 +30,17 @@ final class ArrivalsServiceTest extends UnitTestCase
             ->willReturn($this->getMinimizedCacheData())
         ;
 
+        $calendarPrefixServiceMock = $this->createMock(CalendarPrefixServiceInterface::class);
+        $calendarPrefixServiceMock->expects(self::once())
+            ->method('getCalendarPrefixForDate')
+            ->with(self::anything())
+            ->willReturn('0_5_')
+        ;
+
         $arrivalsService = new ArrivalsService(
             $stopTimeRepositoryMock,
-            $cachedDataServiceMock
+            $cachedDataServiceMock,
+            $calendarPrefixServiceMock,
         );
 
         $arrivals = $arrivalsService->getArrivalsForStation('1619_21');

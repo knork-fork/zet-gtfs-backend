@@ -9,6 +9,7 @@ use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
 use App\Service\Interfaces\CachedDataServiceInterface;
+use App\Service\Interfaces\CalendarPrefixServiceInterface;
 use App\System\Logger;
 use DateTime;
 use DateTimeZone;
@@ -20,6 +21,7 @@ final class ArrivalsService
     public function __construct(
         private StopTimeRepositoryInterface $stopTimeRepository,
         private CachedDataServiceInterface $cachedDataService,
+        private CalendarPrefixServiceInterface $calendarPrefixService,
     ) {
     }
 
@@ -32,7 +34,10 @@ final class ArrivalsService
         // dummy data works for stopId 1619_21
         // calendar_dates.txt needs to be updated with cron
         // get stop times from stop_times.txt that begin with the tripId prefix
-        $calendarPrefix = '0_5_'; // Example prefix, replace with actual logic to fetch from calendar_dates.txt
+
+        $calendarPrefix = $this->calendarPrefixService->getCalendarPrefixForDate(
+            new DateTime('now', new DateTimeZone(self::TIMEZONE))
+        );
 
         // TO-DO: save stop locations to db and query it by $stopId
         $latitude = 45.817608;

@@ -7,6 +7,7 @@ use App\Repository\StopTimeRepository;
 use App\Response\JsonResponse;
 use App\Service\ArrivalsService;
 use App\Service\CachedDataService;
+use App\Service\CalendarPrefixService;
 
 final class StopController
 {
@@ -15,9 +16,11 @@ final class StopController
         // to-do: dependency injection
         $stopTimeRepository = new StopTimeRepository();
         $cachedDataService = new CachedDataService();
+        $calendarPrefixService = new CalendarPrefixService();
         $arrivalsService = new ArrivalsService(
             $stopTimeRepository,
-            $cachedDataService
+            $cachedDataService,
+            $calendarPrefixService,
         );
 
         return new JsonResponse(
