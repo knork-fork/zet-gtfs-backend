@@ -21,7 +21,7 @@ final class ArrivalsService
     }
 
     /**
-     * @return array<int, array<string, mixed>>
+     * @return array<int, array<string, scalar|null>>
      */
     public function getArrivalsForStation(string $stopId): array
     {
