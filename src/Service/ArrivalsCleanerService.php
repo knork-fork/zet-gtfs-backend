@@ -13,6 +13,7 @@ final class ArrivalsCleanerService implements ArrivalsCleanerServiceInterface
     // we have to manually infer it based on diff between current time and scheduled arrival time and the distance from the stop.
     private const PAST_SCHEDULE_TIME_LIMIT_IN_MINUTES = 5;
     private const PAST_SCHEDULE_DISTANCE_IN_METERS = 500;
+    private const PAST_SCHEDULE_TOO_FAR_DISTANCE_IN_METERS = 900; // will ignore arrival even if within time limit
 
     public function cleanArrivalsForDateTime(array $arrivals, DateTime $dateTime): array
     {
@@ -76,6 +77,11 @@ final class ArrivalsCleanerService implements ArrivalsCleanerServiceInterface
             if ($arrival['airDistanceInMeters'] > self::PAST_SCHEDULE_DISTANCE_IN_METERS) {
                 return true;
             }
+        }
+
+        if ($arrival['airDistanceInMeters'] !== null && $arrival['airDistanceInMeters'] > self::PAST_SCHEDULE_TOO_FAR_DISTANCE_IN_METERS) {
+            // Arrival is in the past within the limit, but distance is too far (vehicle probably departed very quickly)
+            return true;
         }
 
         return false;

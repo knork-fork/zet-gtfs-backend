@@ -52,6 +52,17 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => true,
             ],
+            // Past schedule within limit, but very far away, do not show up
+            [
+                'routeId' => '8',
+                'tripId' => '0_7_801_8_10032',
+                'airDistanceInMeters' => 1000,
+                'scheduledArrivalTime' => '03:59:00',
+                'delayInSeconds' => null,
+                'calculatedArrivalTime' => '03:59:00',
+                'realtimeDataTimestamp' => null,
+                'isRealtimeConfirmed' => true,
+            ],
             // Past schedule more than 5 min, delay present
             [
                 'routeId' => '8',
