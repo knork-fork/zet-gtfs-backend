@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker exec -it zet-gtfs-php-fpm bin/phpunit \
+  --display-deprecations \
+  --display-phpunit-deprecations \
+  $@
