@@ -16,12 +16,11 @@ final class ArrivalsCleanerService implements ArrivalsCleanerServiceInterface
 
     public function cleanArrivalsForDateTime(array $arrivals, DateTime $dateTime): array
     {
-        $test = new DateTime('04:00:00');
-        if ($test === $dateTime) {
-            $test = 123;
-        }
-
-        $currentTimeString = TimeFormatHelper::getTimeStringFromSeconds($dateTime->getTimestamp());
+        $accountForTimezone = $dateTime->getTimezone()->getName() !== 'UTC';
+        $currentTimeString = TimeFormatHelper::getTimeStringFromSeconds(
+            $dateTime->getTimestamp(),
+            $accountForTimezone
+        );
 
         foreach ($arrivals as $key => &$arrival) {
             $timeDiff = $this->getTimeDiffInMinutes((string) $arrival['calculatedArrivalTime'], $currentTimeString);

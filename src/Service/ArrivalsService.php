@@ -148,8 +148,6 @@ final class ArrivalsService
         $now = new DateTime('now', new DateTimeZone(self::TIMEZONE));
         $currentTimeInSeconds = ($now->format('H') * 3600) + ($now->format('i') * 60) + $now->format('s');
 
-        $currentTimeInSeconds = (4 * 3600) + (0 * 60) + 0;
-
         return $this->stopTimeRepository->getStopTimesWithArrivalWithinOneHourForStopId(
             $stopId,
             (int) $currentTimeInSeconds
