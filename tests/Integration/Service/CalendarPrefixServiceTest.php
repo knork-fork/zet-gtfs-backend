@@ -34,13 +34,13 @@ final class CalendarPrefixServiceTest extends IntegrationTestCase
     {
         // These values depend on calendar_dates.txt and need to be updated if scripts/gtfs/update_schedule.sh is run
         return [
-            'Monday' => ['input' => '2025-06-09', 'expected' => '0_3_'],
-            'Tuesday' => ['input' => '2025-06-10', 'expected' => '0_3_'],
-            'Wednesday' => ['input' => '2025-06-11', 'expected' => '0_3_'],
-            'Thursday' => ['input' => '2025-06-12', 'expected' => '0_3_'],
-            'Friday' => ['input' => '2025-06-13', 'expected' => '0_3_'],
-            'Saturday' => ['input' => '2025-06-14', 'expected' => '0_4_'],
-            'Sunday' => ['input' => '2025-06-15', 'expected' => '0_5_'],
+            'Monday' => ['input' => '2025-06-23', 'expected' => '0_20_'],
+            'Tuesday' => ['input' => '2025-06-24', 'expected' => '0_20_'],
+            'Wednesday' => ['input' => '2025-06-25', 'expected' => '0_20_'],
+            'Thursday' => ['input' => '2025-06-26', 'expected' => '0_20_'],
+            'Friday' => ['input' => '2025-06-27', 'expected' => '0_20_'],
+            'Saturday' => ['input' => '2025-06-28', 'expected' => '0_23_'],
+            'Sunday' => ['input' => '2025-06-29', 'expected' => '0_24_'],
         ];
     }
 }
