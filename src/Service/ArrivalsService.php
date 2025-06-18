@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Entity\StopTime;
+use App\Exception\BadRequestException;
 use App\Exception\InternalServerErrorException;
 use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
@@ -14,6 +15,7 @@ use App\Service\Interfaces\CalendarPrefixServiceInterface;
 use App\System\Logger;
 use DateTime;
 use DateTimeZone;
+use RuntimeException;
 
 final class ArrivalsService
 {
@@ -36,7 +38,11 @@ final class ArrivalsService
             new DateTime('now', new DateTimeZone(self::TIMEZONE))
         );
 
-        [$latitude, $longitude] = $this->stopRepository->getCoordinatesForStopId($stopId);
+        try {
+            [$latitude, $longitude] = $this->stopRepository->getCoordinatesForStopId($stopId);
+        } catch (RuntimeException) {
+            throw new BadRequestException('Stop with ID ' . $stopId . ' does not exist .');
+        }
 
         // Stop times scheduled within a ±1 hour window from current time
         $relevantStopTimes = self::getStopTimesForStation($stopId);
@@ -135,12 +141,9 @@ final class ArrivalsService
         $now = new DateTime('now', new DateTimeZone(self::TIMEZONE));
         $currentTimeInSeconds = ($now->format('H') * 3600) + ($now->format('i') * 60) + $now->format('s');
 
-        // tmp
-        $currentTimeInSeconds = (14 * 3600) + (33 * 60) + 0; // 14:33:00
-
         return $this->stopTimeRepository->getStopTimesWithArrivalWithinOneHourForStopId(
             $stopId,
-            $currentTimeInSeconds
+            (int) $currentTimeInSeconds
         );
     }
 
