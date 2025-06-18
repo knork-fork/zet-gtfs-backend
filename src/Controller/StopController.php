@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Repository\StopRepository;
 use App\Repository\StopTimeRepository;
 use App\Response\JsonResponse;
+use App\Service\ArrivalsCleanerService;
 use App\Service\ArrivalsService;
 use App\Service\CachedDataService;
 use App\Service\CalendarPrefixService;
@@ -19,11 +20,13 @@ final class StopController
         $cachedDataService = new CachedDataService();
         $calendarPrefixService = new CalendarPrefixService();
         $stopRepository = new StopRepository();
+        $arrivalsCleanerService = new ArrivalsCleanerService();
         $arrivalsService = new ArrivalsService(
             $stopTimeRepository,
             $cachedDataService,
             $calendarPrefixService,
             $stopRepository,
+            $arrivalsCleanerService,
         );
 
         return new JsonResponse(

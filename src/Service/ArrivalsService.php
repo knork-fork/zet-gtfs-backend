@@ -10,6 +10,7 @@ use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
 use App\Repository\Interfaces\StopRepositoryInterface;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
+use App\Service\Interfaces\ArrivalsCleanerServiceInterface;
 use App\Service\Interfaces\CachedDataServiceInterface;
 use App\Service\Interfaces\CalendarPrefixServiceInterface;
 use App\System\Logger;
@@ -26,6 +27,7 @@ final class ArrivalsService
         private CachedDataServiceInterface $cachedDataService,
         private CalendarPrefixServiceInterface $calendarPrefixService,
         private StopRepositoryInterface $stopRepository,
+        private ArrivalsCleanerServiceInterface $arrivalsCleanerService,
     ) {
     }
 
@@ -34,8 +36,10 @@ final class ArrivalsService
      */
     public function getArrivalsForStation(string $stopId): array
     {
+        $currentDateTime = new DateTime('now', new DateTimeZone(self::TIMEZONE));
+
         $calendarPrefix = $this->calendarPrefixService->getCalendarPrefixForDate(
-            new DateTime('now', new DateTimeZone(self::TIMEZONE))
+            $currentDateTime
         );
 
         try {
@@ -128,7 +132,10 @@ final class ArrivalsService
             }
         }
 
-        return array_values($arrivals);
+        return $this->arrivalsCleanerService->cleanArrivalsForDateTime(
+            array_values($arrivals),
+            $currentDateTime
+        );
     }
 
     /**
@@ -140,6 +147,8 @@ final class ArrivalsService
     {
         $now = new DateTime('now', new DateTimeZone(self::TIMEZONE));
         $currentTimeInSeconds = ($now->format('H') * 3600) + ($now->format('i') * 60) + $now->format('s');
+
+        $currentTimeInSeconds = (4 * 3600) + (0 * 60) + 0;
 
         return $this->stopTimeRepository->getStopTimesWithArrivalWithinOneHourForStopId(
             $stopId,

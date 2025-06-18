@@ -7,9 +7,11 @@ use App\Entity\StopTime;
 use App\Repository\Interfaces\StopRepositoryInterface;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
 use App\Service\ArrivalsService;
+use App\Service\Interfaces\ArrivalsCleanerServiceInterface;
 use App\Service\Interfaces\CachedDataServiceInterface;
 use App\Service\Interfaces\CalendarPrefixServiceInterface;
 use App\Tests\Common\UnitTestCase;
+use DateTime;
 
 /**
  * @internal
@@ -45,11 +47,24 @@ final class ArrivalsServiceTest extends UnitTestCase
             ->willReturn([45.817608, 15.875368])
         ;
 
+        $arrivalsCleanerServiceMock = $this->createMock(ArrivalsCleanerServiceInterface::class);
+        $arrivalsCleanerServiceMock->expects(self::once())
+            ->method('cleanArrivalsForDateTime')
+            ->willReturnCallback(static function (array $arrivals, DateTime $ignoredDateTime): array {
+                return array_map(static function (array $arrival): array {
+                    $arrival['arrivalTimeInMinutes'] = 0;
+
+                    return $arrival;
+                }, $arrivals);
+            })
+        ;
+
         $arrivalsService = new ArrivalsService(
             $stopTimeRepositoryMock,
             $cachedDataServiceMock,
             $calendarPrefixServiceMock,
             $stopRepositoryMock,
+            $arrivalsCleanerServiceMock,
         );
 
         $arrivals = $arrivalsService->getArrivalsForStation('1619_21');
@@ -163,6 +178,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '13:42:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'arrivalTimeInMinutes' => 0,
             ],
             [
                 'routeId' => '121',
@@ -173,6 +189,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:07:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'arrivalTimeInMinutes' => 0,
             ],
             [
                 'routeId' => '121',
@@ -183,6 +200,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:32:01',
                 'realtimeDataTimestamp' => '1748781180',
                 'isRealtimeConfirmed' => true,
+                'arrivalTimeInMinutes' => 0,
             ],
             [
                 'routeId' => '121',
@@ -193,6 +211,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:52:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'arrivalTimeInMinutes' => 0,
             ],
             [
                 'routeId' => '121',
@@ -203,6 +222,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '15:17:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'arrivalTimeInMinutes' => 0,
             ],
         ];
     }
