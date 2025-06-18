@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Repository\StopRepository;
 use App\Repository\StopTimeRepository;
 use App\Response\JsonResponse;
 use App\Service\ArrivalsService;
@@ -17,10 +18,12 @@ final class StopController
         $stopTimeRepository = new StopTimeRepository();
         $cachedDataService = new CachedDataService();
         $calendarPrefixService = new CalendarPrefixService();
+        $stopRepository = new StopRepository();
         $arrivalsService = new ArrivalsService(
             $stopTimeRepository,
             $cachedDataService,
             $calendarPrefixService,
+            $stopRepository,
         );
 
         return new JsonResponse(

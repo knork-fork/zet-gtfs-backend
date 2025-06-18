@@ -7,6 +7,7 @@ use App\Entity\StopTime;
 use App\Exception\InternalServerErrorException;
 use App\Helper\GeoDistanceHelper;
 use App\Helper\TimeFormatHelper;
+use App\Repository\Interfaces\StopRepositoryInterface;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
 use App\Service\Interfaces\CachedDataServiceInterface;
 use App\Service\Interfaces\CalendarPrefixServiceInterface;
@@ -22,6 +23,7 @@ final class ArrivalsService
         private StopTimeRepositoryInterface $stopTimeRepository,
         private CachedDataServiceInterface $cachedDataService,
         private CalendarPrefixServiceInterface $calendarPrefixService,
+        private StopRepositoryInterface $stopRepository,
     ) {
     }
 
@@ -30,18 +32,11 @@ final class ArrivalsService
      */
     public function getArrivalsForStation(string $stopId): array
     {
-        // TO-DO: get tripId prefix (e.g. '0_33_') from calendar_dates.txt
-        // dummy data works for stopId 1619_21
-        // calendar_dates.txt needs to be updated with cron
-        // get stop times from stop_times.txt that begin with the tripId prefix
-
         $calendarPrefix = $this->calendarPrefixService->getCalendarPrefixForDate(
             new DateTime('now', new DateTimeZone(self::TIMEZONE))
         );
 
-        // TO-DO: save stop locations to db and query it by $stopId
-        $latitude = 45.817608;
-        $longitude = 15.875368;
+        [$latitude, $longitude] = $this->stopRepository->getCoordinatesForStopId($stopId);
 
         // Stop times scheduled within a ±1 hour window from current time
         $relevantStopTimes = self::getStopTimesForStation($stopId);

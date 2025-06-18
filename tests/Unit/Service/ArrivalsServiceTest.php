@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Tests\Unit\Service;
 
 use App\Entity\StopTime;
+use App\Repository\Interfaces\StopRepositoryInterface;
 use App\Repository\Interfaces\StopTimeRepositoryInterface;
 use App\Service\ArrivalsService;
 use App\Service\Interfaces\CachedDataServiceInterface;
@@ -37,10 +38,18 @@ final class ArrivalsServiceTest extends UnitTestCase
             ->willReturn('0_5_')
         ;
 
+        $stopRepositoryMock = $this->createMock(StopRepositoryInterface::class);
+        $stopRepositoryMock->expects(self::once())
+            ->method('getCoordinatesForStopId')
+            ->with('1619_21')
+            ->willReturn([45.817608, 15.875368])
+        ;
+
         $arrivalsService = new ArrivalsService(
             $stopTimeRepositoryMock,
             $cachedDataServiceMock,
             $calendarPrefixServiceMock,
+            $stopRepositoryMock,
         );
 
         $arrivals = $arrivalsService->getArrivalsForStation('1619_21');

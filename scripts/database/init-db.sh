@@ -57,6 +57,14 @@ then
     exit 2
 fi
 
+# Import stops
+${current_path}/import_stops.sh
+if [[ $? -ne 0 ]]
+then
+    echo "Failed importing stops."
+    exit 2
+fi
+
 echo "Database initialized."
 touch ${current_path}/db_initialized
 exit 0
