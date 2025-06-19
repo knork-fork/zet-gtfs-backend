@@ -74,6 +74,9 @@ final class CachedDataService implements CachedDataServiceInterface
                     'latitude' => $entity['vehicle']['position']['latitude'] ?? 0.0,
                     'longitude' => $entity['vehicle']['position']['longitude'] ?? 0.0,
                 ];
+                $data['vehicle'] = [
+                    'id' => $entity['vehicle']['vehicle']['id'] ?? '',
+                ];
             }
 
             $formattedData[] = $data;

@@ -146,6 +146,9 @@ final class ArrivalsServiceTest extends UnitTestCase
                     'latitude' => 45.817467,
                     'longitude' => 15.87521,
                 ],
+                'vehicle' => [
+                    'id' => '302',
+                ],
             ],
             [
                 'type' => 'tripUpdate',
@@ -178,6 +181,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '13:42:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             [
@@ -189,6 +193,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:07:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             [
@@ -200,6 +205,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:32:01',
                 'realtimeDataTimestamp' => '1748781180',
                 'isRealtimeConfirmed' => true,
+                'vehicleId' => '302',
                 'arrivalTimeInMinutes' => 0,
             ],
             [
@@ -211,6 +217,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '14:52:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             [
@@ -222,6 +229,7 @@ final class ArrivalsServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '15:17:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
         ];

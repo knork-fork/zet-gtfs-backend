@@ -40,6 +40,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '03:49:36',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Past schedule more than 5 min, close proximity
             [
@@ -50,7 +51,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => null,
                 'calculatedArrivalTime' => '03:49:36',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Past schedule within limit, but very far away, do not show up
             [
@@ -61,7 +63,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => null,
                 'calculatedArrivalTime' => '03:59:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Past schedule more than 5 min, delay present
             [
@@ -72,7 +75,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 660,
                 'calculatedArrivalTime' => '04:01:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Past schedule, no realtime data
             [
@@ -84,6 +88,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '03:58:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Past schedule, realtime data (delay)
             [
@@ -94,7 +99,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 60,
                 'calculatedArrivalTime' => '03:59:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Ahead of schedule, no realtime data
             [
@@ -106,6 +112,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '04:06:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Ahead of schedule, no realtime data, rounding up required
             [
@@ -117,6 +124,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '04:06:35',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Ahead of schedule, delay present
             [
@@ -127,7 +135,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 120,
                 'calculatedArrivalTime' => '04:08:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Wrap around past schedule, do not show up
             [
@@ -139,6 +148,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '27:10:36',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Wrap around ahead of schedule, no realtime data
             [
@@ -150,6 +160,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '28:03:54',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
             // Wrap around ahead of schedule, delay present
             [
@@ -160,7 +171,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 58,
                 'calculatedArrivalTime' => '28:04:52',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ],
         ];
     }
@@ -180,7 +192,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => null,
                 'calculatedArrivalTime' => '03:49:36',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             // Past schedule more than 5 min, delay present
@@ -192,7 +205,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 660,
                 'calculatedArrivalTime' => '04:01:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 1,
             ],
             // Past schedule, no realtime data
@@ -205,6 +219,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '03:58:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             // Past schedule, realtime data (delay)
@@ -216,7 +231,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 60,
                 'calculatedArrivalTime' => '03:59:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 0,
             ],
             // Ahead of schedule, no realtime data
@@ -229,6 +245,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '04:06:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 6,
             ],
             // Ahead of schedule, no realtime data, rounding up required
@@ -241,6 +258,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '04:06:35',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 7,
             ],
             // Ahead of schedule, delay present
@@ -252,7 +270,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 120,
                 'calculatedArrivalTime' => '04:08:00',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 8,
             ],
             // Wrap around ahead of schedule, no realtime data
@@ -265,6 +284,7 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '28:03:54',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 4,
             ],
             // Wrap around ahead of schedule, delay present
@@ -276,7 +296,8 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'delayInSeconds' => 58,
                 'calculatedArrivalTime' => '28:04:52',
                 'realtimeDataTimestamp' => null,
-                'isRealtimeConfirmed' => true,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
                 'arrivalTimeInMinutes' => 5,
             ],
         ];

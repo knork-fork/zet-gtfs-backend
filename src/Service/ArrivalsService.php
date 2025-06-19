@@ -69,6 +69,7 @@ final class ArrivalsService
                 'calculatedArrivalTime' => $stopTime->arrival_time,
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
             ];
         }
 
@@ -89,13 +90,15 @@ final class ArrivalsService
             $arrivals[$tripId]['realtimeDataTimestamp'] = $data['timestamp'];
 
             if ($data['type'] === 'vehicle') {
-                if (!\array_key_exists('position', $data)) {
+                if (!\array_key_exists('position', $data) || !\array_key_exists('vehicle', $data)) {
                     Logger::critical(
-                        'Vehicle data does not contain position information for trip ID ' . $tripId . ', entity data dump: ' . var_export($entityData, true),
+                        'Vehicle data does not contain full information for trip ID ' . $tripId . ', entity data dump: ' . var_export($entityData, true),
                         'arrivals_service'
                     );
-                    throw new InternalServerErrorException('Vehicle data does not contain position information for trip ID: ' . $tripId);
+                    throw new InternalServerErrorException('Vehicle data does not contain full information for trip ID: ' . $tripId);
                 }
+
+                $arrivals[$tripId]['vehicleId'] = $data['vehicle']['id'];
 
                 $arrivals[$tripId]['airDistanceInMeters'] = GeoDistanceHelper::getDistanceBetweenPoints(
                     $latitude,

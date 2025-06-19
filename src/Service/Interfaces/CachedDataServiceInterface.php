@@ -26,6 +26,9 @@ interface CachedDataServiceInterface
      *     position?: array{
      *         latitude: float,
      *         longitude: float
+     *     },
+     *     vehicle?: array{
+     *         id: string
      *     }
      * }>
      *
