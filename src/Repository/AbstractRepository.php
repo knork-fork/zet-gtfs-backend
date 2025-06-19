@@ -22,7 +22,7 @@ abstract class AbstractRepository
 
     abstract protected function getTableName(): string;
 
-    private Connection $connection;
+    protected Connection $connection;
 
     public function __construct()
     {

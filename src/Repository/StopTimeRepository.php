@@ -50,4 +50,30 @@ final class StopTimeRepository extends AbstractRepository implements StopTimeRep
 
         return $diff <= 3600; // 3600 seconds = 1 hour
     }
+
+    public function getPreviousTripIdsForTrips(array $tripIds): array
+    {
+        $query = \sprintf(
+            'SELECT trip_id FROM %s WHERE trip_id < :value order by trip_id desc limit 1',
+            $this->getTableName()
+        );
+
+        $previousTripIds = [];
+        foreach ($tripIds as $tripId) {
+            $result = $this->connection->query($query, ['value' => $tripId]);
+
+            if (\count($result) !== 1) {
+                continue;
+            }
+
+            $previousTripId = $result[0]['trip_id'] ?? null;
+            if ($previousTripId === null) {
+                continue;
+            }
+
+            $previousTripIds[(string) $previousTripId] = $tripId;
+        }
+
+        return $previousTripIds;
+    }
 }

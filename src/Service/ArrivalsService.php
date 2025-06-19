@@ -75,15 +75,37 @@ final class ArrivalsService
 
         // Get latest GTFS data from cache
         $entityData = $this->cachedDataService->getMinimizedEntityDataFromCache();
+
         // Filter GTFS data by trip IDs shown in the stop times (ignore unscheduled trips/vehicles)
+        /** @var array<int, string> */
         $stopTripIds = array_unique(array_map(
             static fn (StopTime $stopTime): string => $stopTime->trip_id,
             $relevantStopTimes
         ));
         $filteredGtfsData = array_filter($entityData, static fn (array $data): bool => \in_array($data['trip_id'], $stopTripIds, true));
 
+        // There is an issue with GTFS feed where vehicles finish a trip and start a trip in opposite direction,
+        // but vehicle entity data is still shown with old trip ID.
+        $stopTripIdsMappedToPreviousTrips = $this->stopTimeRepository->getPreviousTripIdsForTrips($stopTripIds);
+        $previousTripIds = array_keys($stopTripIdsMappedToPreviousTrips);
+        $filteredGtfsDataWithPreviousTrips = array_filter($entityData, static fn (array $data): bool => \in_array($data['trip_id'], $previousTripIds, true));
+        // Fix trip ids in entity data
+        foreach ($filteredGtfsDataWithPreviousTrips as &$data) {
+            $tripId = $data['trip_id'];
+            $tripId = $stopTripIdsMappedToPreviousTrips[$tripId] ?? null;
+            if ($tripId === null) {
+                continue;
+            }
+
+            // If trip ID is mapped to a previous trip, update the data to current trip ID
+            $data['trip_id'] = $tripId;
+        }
+        unset($data); // Unset reference to avoid issues in the loop
+
+        $finalGtfsData = array_merge($filteredGtfsData, $filteredGtfsDataWithPreviousTrips);
+
         // Update prepared arrivals with realtime data
-        foreach ($filteredGtfsData as $data) {
+        foreach ($finalGtfsData as $data) {
             $tripId = $data['trip_id'];
             // Schedule confirmed by realtime data
             $arrivals[$tripId]['isRealtimeConfirmed'] = true;

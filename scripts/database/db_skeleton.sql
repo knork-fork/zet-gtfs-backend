@@ -13,6 +13,7 @@ CREATE TABLE stop_times (
 );
 
 CREATE INDEX idx_stop_times_stop_id ON stop_times (stop_id);
+CREATE INDEX idx_stop_times_trip_id ON stop_times (trip_id);
 
 CREATE TABLE stops (
     id SERIAL PRIMARY KEY,

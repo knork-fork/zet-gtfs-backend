@@ -16,4 +16,11 @@ interface StopTimeRepositoryInterface
      * @throws RuntimeException
      */
     public function getStopTimesWithArrivalWithinOneHourForStopId(string $stopId, int $timeInSeconds): array;
+
+    /**
+     * @param string[] $tripIds
+     *
+     * @return array<string, string>
+     */
+    public function getPreviousTripIdsForTrips(array $tripIds): array;
 }

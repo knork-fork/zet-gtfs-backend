@@ -26,6 +26,11 @@ final class ArrivalsServiceTest extends UnitTestCase
             ->with('1619_21', self::anything())
             ->willReturn($this->getStopTimes())
         ;
+        $stopTimeRepositoryMock->expects(self::once())
+            ->method('getPreviousTripIdsForTrips')
+            ->with(self::anything())
+            ->willReturn([])
+        ;
 
         $cachedDataServiceMock = $this->createMock(CachedDataServiceInterface::class);
         $cachedDataServiceMock->expects(self::once())
