@@ -1788,12 +1788,6 @@
     "stop_lon": "15.937654"
   },
   {
-    "stop_id": "245_13",
-    "stop_name": "Ljubljanica",
-    "stop_lat": "45.797236",
-    "stop_lon": "15.937948"
-  },
-  {
     "stop_id": "246_1",
     "stop_name": "Marijane Radev",
     "stop_lat": "45.793013",
@@ -2512,6 +2506,18 @@
     "stop_name": "Zapadni kolodvor",
     "stop_lat": "45.809494",
     "stop_lon": "15.953928"
+  },
+  {
+    "stop_id": "317_1",
+    "stop_name": "Zapadni kolodvor",
+    "stop_lat": "45.809613",
+    "stop_lon": "15.955034"
+  },
+  {
+    "stop_id": "317_2",
+    "stop_name": "Zapadni kolodvor",
+    "stop_lat": "45.809613",
+    "stop_lon": "15.955034"
   },
   {
     "stop_id": "319_23",
@@ -3710,8 +3716,8 @@
   {
     "stop_id": "418_24",
     "stop_name": "Jandrićeva",
-    "stop_lat": "45.837129",
-    "stop_lon": "15.977208"
+    "stop_lat": "45.837074",
+    "stop_lon": "15.977202"
   },
   {
     "stop_id": "419_23",
@@ -3872,8 +3878,8 @@
   {
     "stop_id": "430_22",
     "stop_name": "Medveščak",
-    "stop_lat": "45.819556",
-    "stop_lon": "15.979902"
+    "stop_lat": "45.819340",
+    "stop_lon": "15.979236"
   },
   {
     "stop_id": "431_23",
@@ -6754,6 +6760,18 @@
     "stop_name": "Šolići",
     "stop_lat": "45.697356",
     "stop_lon": "15.891185"
+  },
+  {
+    "stop_id": "702_23",
+    "stop_name": "Hladnjača",
+    "stop_lat": "45.691469",
+    "stop_lon": "15.885234"
+  },
+  {
+    "stop_id": "702_24",
+    "stop_name": "Hladnjača",
+    "stop_lat": "45.690952",
+    "stop_lon": "15.884753"
   },
   {
     "stop_id": "703_23",
@@ -11340,36 +11358,6 @@
     "stop_lon": "16.229483"
   },
   {
-    "stop_id": "1224_22",
-    "stop_name": "Ante Starčevića 45 A",
-    "stop_lat": "45.824543",
-    "stop_lon": "16.096974"
-  },
-  {
-    "stop_id": "1225_23",
-    "stop_name": "Sopnička - škola",
-    "stop_lat": "45.821846",
-    "stop_lon": "16.092985"
-  },
-  {
-    "stop_id": "1225_24",
-    "stop_name": "Sopnička - škola",
-    "stop_lat": "45.821846",
-    "stop_lon": "16.092985"
-  },
-  {
-    "stop_id": "1226_24",
-    "stop_name": "Sopnička 37",
-    "stop_lat": "45.819283",
-    "stop_lon": "16.095715"
-  },
-  {
-    "stop_id": "1227_23",
-    "stop_name": "Sopnička-kod 10D",
-    "stop_lat": "45.817058",
-    "stop_lon": "16.099184"
-  },
-  {
     "stop_id": "1228_21",
     "stop_name": "Ranci",
     "stop_lat": "45.793099",
@@ -13172,14 +13160,14 @@
   {
     "stop_id": "1664_21",
     "stop_name": "Gračansko dolje",
-    "stop_lat": "45.861027",
-    "stop_lon": "15.983181"
+    "stop_lat": "45.861121",
+    "stop_lon": "15.983182"
   },
   {
     "stop_id": "1664_22",
     "stop_name": "Gračansko dolje",
-    "stop_lat": "45.861200",
-    "stop_lon": "15.982796"
+    "stop_lat": "45.861172",
+    "stop_lon": "15.982757"
   },
   {
     "stop_id": "1664_26",
@@ -15196,18 +15184,6 @@
     "stop_name": "Radićevo šetalište",
     "stop_lat": "45.832299",
     "stop_lon": "15.977820"
-  },
-  {
-    "stop_id": "2098_23",
-    "stop_name": "Starjak",
-    "stop_lat": "45.673722",
-    "stop_lon": "15.886166"
-  },
-  {
-    "stop_id": "2098_24",
-    "stop_name": "Starjak",
-    "stop_lat": "45.673838",
-    "stop_lon": "15.886410"
   },
   {
     "stop_id": "2099_21",
