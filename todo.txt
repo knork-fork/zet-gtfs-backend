@@ -1,0 +1,11 @@
+dva issuea:
+
+umjesto da se gleda limit distance, nađi prethodnu stanicu i iz toga skuži smjer, odnosno jel tramvaj dolazi iz smjera prethodne ili ako je već departao
+ - izmjeri udaljenost između dvije stanice
+ - izmjeri udaljenost između tramvaja do obje stanice
+ - ako je udaljenost do stanice manja nego udaljenost do prethodne, a udaljenost je veća od razmaka između dvije stanice, departao je već
+ - ako je udaljenost do trenutne manja a udaljenost nije veća od razmaka ili je udaljenost do prethodne manja onda ga prikaži
+ 
+ 
+ dohvatit dva calendar prefixa ako je vrijeme između ponoći i 8 ujutro
+ - današnji i jučerašnji

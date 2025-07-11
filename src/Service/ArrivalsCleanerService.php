@@ -79,6 +79,7 @@ final class ArrivalsCleanerService implements ArrivalsCleanerServiceInterface
             }
         }
 
+        // ovo ne radi ak je tramvaj jako udaljen, a još nije odradio departure...
         if ($arrival['airDistanceInMeters'] !== null && $arrival['airDistanceInMeters'] > self::PAST_SCHEDULE_TOO_FAR_DISTANCE_IN_METERS) {
             // Arrival is in the past within the limit, but distance is too far (vehicle probably departed very quickly)
             return true;

@@ -23,10 +23,26 @@ get_all_data:
     status_code: 200
 
 get_vehicles:
-    path: /api/vehicles/{route_id}
-    controller: App\Controller\VehicleController::getVehicles
+    path: /api/vehicles
+    controller: App\Controller\DataController::getAllVehicles
     method: GET
-    description: Get all vehicles for a specific route
+    description: Get all vehicle entities
+    requestDto: null
+    status_code: 200
+
+get_trip_updates:
+    path: /api/trip_updates
+    controller: App\Controller\DataController::getAllTripUpdates
+    method: GET
+    description: Get all trip updates
+    requestDto: null
+    status_code: 200
+
+get_alerts:
+    path: /api/alerts
+    controller: App\Controller\DataController::getAllAlerts
+    method: GET
+    description: Get all alerts
     requestDto: null
     status_code: 200
 

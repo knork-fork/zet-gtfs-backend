@@ -36,6 +36,9 @@ final class GtfsDataService
      */
     public function fetchDataToCache(): void
     {
+        // to-do: json streaming?
+        // razdvojit get_data response na vehicles, trip-updates i alerts
+
         $cacheDummyData = Environment::getStringEnv('LOAD_DUMMY_DATA') === 'true';
         if ($cacheDummyData) {
             // Cache dummy data instead of pinging third-party

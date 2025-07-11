@@ -24,6 +24,34 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
         self::assertSame($this->getExpected(), $cleanedArrivals);
     }
 
+    public function testCleanArrivalsAroundMidnightReturnsExpectedArrivals(): void
+    {
+        $uncleanArrivals = [
+            [
+                'routeId' => '8',
+                'tripId' => '0_7_801_8_10032',
+                'airDistanceInMeters' => null,
+                'scheduledArrivalTime' => '23:56:07',
+                'delayInSeconds' => null,
+                'calculatedArrivalTime' => '23:56:07',
+                'realtimeDataTimestamp' => null,
+                'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
+            ],
+        ];
+
+        $expectedArrivals = [];
+
+        // Call cleanArrivalsForDateTime for 1 am
+        $arrivalsCleanerService = new ArrivalsCleanerService();
+        $cleanedArrivals = $arrivalsCleanerService->cleanArrivalsForDateTime(
+            $uncleanArrivals,
+            new DateTime('00:38:00'),
+        );
+
+        self::assertSame($expectedArrivals, $cleanedArrivals);
+    }
+
     /**
      * @return array<int, array<string, scalar|null>>
      */
@@ -136,6 +164,18 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'calculatedArrivalTime' => '04:08:00',
                 'realtimeDataTimestamp' => null,
                 'isRealtimeConfirmed' => false,
+                'vehicleId' => null,
+            ],
+            // Ahead of schedule, no delay, large distance
+            [
+                'routeId' => '6',
+                'tripId' => '0_22_606_6_21019',
+                'airDistanceInMeters' => 2443.5682234746564,
+                'scheduledArrivalTime' => '04:14:00',
+                'delayInSeconds' => null,
+                'calculatedArrivalTime' => '04:14:00',
+                'realtimeDataTimestamp' => null,
+                'isRealtimeConfirmed' => true,
                 'vehicleId' => null,
             ],
             // Wrap around past schedule, do not show up
@@ -273,6 +313,19 @@ final class ArrivalsCleanerServiceTest extends UnitTestCase
                 'isRealtimeConfirmed' => false,
                 'vehicleId' => null,
                 'arrivalTimeInMinutes' => 8,
+            ],
+            // Ahead of schedule, no delay, large distance
+            [
+                'routeId' => '6',
+                'tripId' => '0_22_606_6_21019',
+                'airDistanceInMeters' => 2443.5682234746564,
+                'scheduledArrivalTime' => '04:14:00',
+                'delayInSeconds' => null,
+                'calculatedArrivalTime' => '04:14:00',
+                'realtimeDataTimestamp' => null,
+                'isRealtimeConfirmed' => true,
+                'vehicleId' => null,
+                'arrivalTimeInMinutes' => 14,
             ],
             // Wrap around ahead of schedule, no realtime data
             [

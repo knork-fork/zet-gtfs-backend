@@ -15,4 +15,16 @@ final class DataController
 
         return new JsonResponse($cachedData);
     }
+
+    public static function getAllVehicles(): JsonResponse
+    {
+    }
+
+    public static function getAllTripUpdates(): JsonResponse
+    {
+    }
+
+    public static function getAllAlerts(): JsonResponse
+    {
+    }
 }
