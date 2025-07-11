@@ -28,6 +28,7 @@ final class CalendarPrefixService implements CalendarPrefixServiceInterface
             [$serviceId, $csvDate] = $row;
 
             if ($csvDate === $targetDate) {
+                fclose($handle);
                 return trim((string) $serviceId, '"') . '_'; // append additional underscore to match the format of trip_id
             }
         }
