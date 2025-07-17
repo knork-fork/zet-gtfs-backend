@@ -27,7 +27,7 @@ final class GtfsDataService
         try {
             $this->fetchDataToCache();
         } catch (Exception $e) {
-            throw new BadRequestException($e->getMessage());
+            Logger::error('Keeping outdated json, error while fetching GTFS data: ' . $e->getMessage(), 'gtfs_cron');
         }
     }
 
