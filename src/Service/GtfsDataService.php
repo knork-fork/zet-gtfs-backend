@@ -57,7 +57,7 @@ final class GtfsDataService
             throw new Exception('Error while executing gtfs2json script');
         }
 
-        if (!json_validate($json)) {
+        if (!json_validate($json) || !str_contains($json, 'gtfsRealtimeVersion')) {
             $errorMsg = \sprintf(
                 'Invalid GTFS JSON: %s, shell output: %s',
                 json_last_error_msg(),
