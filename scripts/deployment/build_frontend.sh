@@ -7,12 +7,11 @@ if [ ! -d ".git" ]; then
 fi
 
 if ! ( \
-    # Note: using `npx vite build` instead of npm run build to skip vue-tsc, for now
     docker run --rm \
         -v "$(pwd)/frontend":/app \
         -w /app \
         node:20-alpine \
-        sh -c "npm install && npx vite build" ); then
+        sh -c "npm ci && npm run build" ); then
     echo "Build failed."
     exit 1
 fi
