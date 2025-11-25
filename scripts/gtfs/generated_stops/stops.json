@@ -307,13 +307,13 @@
   },
   {
     "stop_id": "111_1",
-    "stop_name": "Branimir Centar",
+    "stop_name": "Branimir centar",
     "stop_lat": "45.805442",
     "stop_lon": "15.983765"
   },
   {
     "stop_id": "111_2",
-    "stop_name": "Branimir Centar",
+    "stop_name": "Branimir centar",
     "stop_lat": "45.805568",
     "stop_lon": "15.984450"
   },
@@ -482,38 +482,38 @@
   {
     "stop_id": "131_1",
     "stop_name": "Gračanske stube",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.849380",
+    "stop_lon": "15.975135"
   },
   {
     "stop_id": "131_2",
     "stop_name": "Gračanske stube",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.849088",
+    "stop_lon": "15.975274"
   },
   {
     "stop_id": "132_1",
     "stop_name": "Grač. Mihaljevac",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.854340",
+    "stop_lon": "15.973266"
   },
   {
     "stop_id": "132_2",
     "stop_name": "Grač. Mihaljevac",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.853578",
+    "stop_lon": "15.973232"
   },
   {
     "stop_id": "133_1",
     "stop_name": "Gračani",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.858365",
+    "stop_lon": "15.974179"
   },
   {
     "stop_id": "133_2",
     "stop_name": "Gračani",
-    "stop_lat": "0.000000",
-    "stop_lon": "0.000000"
+    "stop_lat": "45.858211",
+    "stop_lon": "15.973936"
   },
   {
     "stop_id": "134_1",
@@ -524,8 +524,8 @@
   {
     "stop_id": "134_2",
     "stop_name": "Gračansko dolje",
-    "stop_lat": "45.860664",
-    "stop_lon": "15.981601"
+    "stop_lat": "45.860247",
+    "stop_lon": "15.980952"
   },
   {
     "stop_id": "135_21",
@@ -900,12 +900,6 @@
     "stop_lon": "15.977365"
   },
   {
-    "stop_id": "176_21",
-    "stop_name": "Mihaljevac",
-    "stop_lat": "45.841583",
-    "stop_lon": "15.975500"
-  },
-  {
     "stop_id": "176_24",
     "stop_name": "Mihaljevac",
     "stop_lat": "45.841963",
@@ -936,22 +930,16 @@
     "stop_lon": "15.974822"
   },
   {
-    "stop_id": "176_44",
-    "stop_name": "Mihaljevac",
-    "stop_lat": "45.840514",
-    "stop_lon": "15.975449"
-  },
-  {
     "stop_id": "177_1",
     "stop_name": "Mihaljevac",
-    "stop_lat": "45.841655",
-    "stop_lon": "15.974709"
+    "stop_lat": "45.842561",
+    "stop_lon": "15.975220"
   },
   {
     "stop_id": "177_2",
     "stop_name": "Mihaljevac",
-    "stop_lat": "45.841655",
-    "stop_lon": "15.974709"
+    "stop_lat": "45.842686",
+    "stop_lon": "15.975202"
   },
   {
     "stop_id": "177_3",
@@ -968,8 +956,8 @@
   {
     "stop_id": "177_5",
     "stop_name": "Mihaljevac",
-    "stop_lat": "45.841655",
-    "stop_lon": "15.974709"
+    "stop_lat": "45.841683",
+    "stop_lon": "15.974721"
   },
   {
     "stop_id": "178_21",
@@ -1135,13 +1123,13 @@
   },
   {
     "stop_id": "188_1",
-    "stop_name": "Adžijina",
+    "stop_name": "HNK 2",
     "stop_lat": "45.807816",
     "stop_lon": "15.961581"
   },
   {
     "stop_id": "188_2",
-    "stop_name": "Adžijina",
+    "stop_name": "HNK 2",
     "stop_lat": "45.807564",
     "stop_lon": "15.962047"
   },
@@ -2416,12 +2404,6 @@
     "stop_name": "Trg žrt. fašizma",
     "stop_lat": "45.810016",
     "stop_lon": "15.988373"
-  },
-  {
-    "stop_id": "299_17",
-    "stop_name": "Trg žrt. fašizma",
-    "stop_lat": "45.809730",
-    "stop_lon": "15.988003"
   },
   {
     "stop_id": "301_21",
@@ -3703,9 +3685,15 @@
   },
   {
     "stop_id": "410_23",
-    "stop_name": "Grabenščica",
+    "stop_name": "Grebenščica",
     "stop_lat": "45.851501",
     "stop_lon": "15.959115"
+  },
+  {
+    "stop_id": "410_24",
+    "stop_name": "Grebenščica",
+    "stop_lat": "45.852585",
+    "stop_lon": "15.958394"
   },
   {
     "stop_id": "411_24",
@@ -3832,18 +3820,6 @@
     "stop_name": "Kaptol",
     "stop_lat": "45.815765",
     "stop_lon": "15.978570"
-  },
-  {
-    "stop_id": "420_28",
-    "stop_name": "Kaptol",
-    "stop_lat": "45.815066",
-    "stop_lon": "15.978462"
-  },
-  {
-    "stop_id": "420_29",
-    "stop_name": "Kaptol",
-    "stop_lat": "45.815298",
-    "stop_lon": "15.978477"
   },
   {
     "stop_id": "421_23",
@@ -5683,7 +5659,7 @@
   },
   {
     "stop_id": "578_21",
-    "stop_name": "Adžijina",
+    "stop_name": "HNK2",
     "stop_lat": "45.807740",
     "stop_lon": "15.960870"
   },
@@ -5761,7 +5737,7 @@
   },
   {
     "stop_id": "589_21",
-    "stop_name": "Adžijina",
+    "stop_name": "HNK2",
     "stop_lat": "45.807501",
     "stop_lon": "15.960206"
   },
@@ -13716,12 +13692,6 @@
     "stop_lon": "16.004211"
   },
   {
-    "stop_id": "1732_24",
-    "stop_name": "Mlinovi 148 a",
-    "stop_lat": "45.852585",
-    "stop_lon": "15.958394"
-  },
-  {
     "stop_id": "1733_22",
     "stop_name": "Gospodska 92",
     "stop_lat": "45.820109",
@@ -13834,12 +13804,6 @@
     "stop_name": "Granešina-groblje",
     "stop_lat": "45.849619",
     "stop_lon": "16.049250"
-  },
-  {
-    "stop_id": "1766_24",
-    "stop_name": "INA",
-    "stop_lat": "45.730626",
-    "stop_lon": "16.024891"
   },
   {
     "stop_id": "1771_22",
@@ -15286,42 +15250,6 @@
     "stop_name": "Jelenovac 38D",
     "stop_lat": "45.826887",
     "stop_lon": "15.952691"
-  },
-  {
-    "stop_id": "2085_23",
-    "stop_name": "Belostenčeva",
-    "stop_lat": "45.822257",
-    "stop_lon": "15.979944"
-  },
-  {
-    "stop_id": "2085_24",
-    "stop_name": "Belostenčeva",
-    "stop_lat": "45.822165",
-    "stop_lon": "15.979619"
-  },
-  {
-    "stop_id": "2086_23",
-    "stop_name": "Gupčeva zvijezda",
-    "stop_lat": "45.829000",
-    "stop_lon": "15.979116"
-  },
-  {
-    "stop_id": "2086_24",
-    "stop_name": "Gupčeva zvijezda",
-    "stop_lat": "45.828582",
-    "stop_lon": "15.978999"
-  },
-  {
-    "stop_id": "2087_23",
-    "stop_name": "Radićevo šetalište",
-    "stop_lat": "45.831646",
-    "stop_lon": "15.978182"
-  },
-  {
-    "stop_id": "2087_24",
-    "stop_name": "Radićevo šetalište",
-    "stop_lat": "45.832299",
-    "stop_lon": "15.977820"
   },
   {
     "stop_id": "2099_21",

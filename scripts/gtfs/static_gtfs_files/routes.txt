@@ -156,4 +156,3 @@ route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_
 313,0,"313","Zg.(Gl.k.)-Vukomerić",,3,,"ffffff","000000"
 315,0,"315","Zg.(S.m.)-Lukavec",,3,,"ffffff","000000"
 330,0,"330","Zg.(Gl.k.)-V.G. brza",,3,,"ffffff","000000"
-613,0,"613","Kaptol-Gračansko d.",,3,,"FFFFFF","000000"
