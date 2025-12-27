@@ -187,13 +187,13 @@
   },
   {
     "stop_id": "106_1",
-    "stop_name": "Trg J. Jelačića",
+    "stop_name": "Trg bana J. Jelačića",
     "stop_lat": "45.812858",
     "stop_lon": "15.977265"
   },
   {
     "stop_id": "106_2",
-    "stop_name": "Trg J. Jelačića",
+    "stop_name": "Trg bana J. Jelačića",
     "stop_lat": "45.813069",
     "stop_lon": "15.976531"
   },
@@ -586,12 +586,6 @@
     "stop_name": "Vrapčanska aleja",
     "stop_lat": "45.812821",
     "stop_lon": "15.896984"
-  },
-  {
-    "stop_id": "136_29",
-    "stop_name": "Vrapčanska aleja",
-    "stop_lat": "45.812661",
-    "stop_lon": "15.896693"
   },
   {
     "stop_id": "136_30",
@@ -1123,13 +1117,13 @@
   },
   {
     "stop_id": "188_1",
-    "stop_name": "HNK 2",
+    "stop_name": "HNK2",
     "stop_lat": "45.807816",
     "stop_lon": "15.961581"
   },
   {
     "stop_id": "188_2",
-    "stop_name": "HNK 2",
+    "stop_name": "HNK2",
     "stop_lat": "45.807564",
     "stop_lon": "15.962047"
   },
@@ -11172,6 +11166,12 @@
     "stop_lon": "16.077368"
   },
   {
+    "stop_id": "1200_45",
+    "stop_name": "Velika Gorica",
+    "stop_lat": "45.711509",
+    "stop_lon": "16.077380"
+  },
+  {
     "stop_id": "1200_54",
     "stop_name": "Velika Gorica",
     "stop_lat": "45.711472",
@@ -13806,6 +13806,12 @@
     "stop_lon": "16.049250"
   },
   {
+    "stop_id": "1766_24",
+    "stop_name": "INA",
+    "stop_lat": "45.730626",
+    "stop_lon": "16.024891"
+  },
+  {
     "stop_id": "1771_22",
     "stop_name": "Mrkšina-raskrižje",
     "stop_lat": "45.755106",
@@ -14410,18 +14416,6 @@
     "stop_name": "Naletilićeva 122",
     "stop_lat": "45.732254",
     "stop_lon": "15.929020"
-  },
-  {
-    "stop_id": "1901_24",
-    "stop_name": "Medarska",
-    "stop_lat": "45.808378",
-    "stop_lon": "15.907840"
-  },
-  {
-    "stop_id": "1902_22",
-    "stop_name": "Lepavinski put",
-    "stop_lat": "45.806686",
-    "stop_lon": "15.912094"
   },
   {
     "stop_id": "1903_21",
@@ -15192,12 +15186,6 @@
     "stop_lon": "15.932469"
   },
   {
-    "stop_id": "2077_24",
-    "stop_name": "Rob. Frangeša Mih.9",
-    "stop_lat": "45.796791",
-    "stop_lon": "15.911992"
-  },
-  {
     "stop_id": "2078_23",
     "stop_name": "Lipovac I.",
     "stop_lat": "45.828956",
@@ -15222,34 +15210,22 @@
     "stop_lon": "15.994056"
   },
   {
-    "stop_id": "2081_22",
-    "stop_name": "Dolec",
-    "stop_lat": "45.817310",
-    "stop_lon": "15.864119"
-  },
-  {
-    "stop_id": "2081_24",
-    "stop_name": "Dolec",
-    "stop_lat": "45.817310",
-    "stop_lon": "15.864119"
-  },
-  {
-    "stop_id": "2082_21",
-    "stop_name": "Sigetje",
-    "stop_lat": "45.814422",
-    "stop_lon": "15.869966"
-  },
-  {
-    "stop_id": "2083_23",
-    "stop_name": "Grintavečka",
-    "stop_lat": "45.816640",
-    "stop_lon": "15.872594"
-  },
-  {
     "stop_id": "2084_23",
     "stop_name": "Jelenovac 38D",
     "stop_lat": "45.826887",
     "stop_lon": "15.952691"
+  },
+  {
+    "stop_id": "2098_23",
+    "stop_name": "Starjak",
+    "stop_lat": "45.660197",
+    "stop_lon": "15.871398"
+  },
+  {
+    "stop_id": "2098_24",
+    "stop_name": "Starjak",
+    "stop_lat": "45.660107",
+    "stop_lon": "15.871352"
   },
   {
     "stop_id": "2099_21",
