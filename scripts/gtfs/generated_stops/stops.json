@@ -11166,12 +11166,6 @@
     "stop_lon": "16.077368"
   },
   {
-    "stop_id": "1200_45",
-    "stop_name": "Velika Gorica",
-    "stop_lat": "45.711509",
-    "stop_lon": "16.077380"
-  },
-  {
     "stop_id": "1200_54",
     "stop_name": "Velika Gorica",
     "stop_lat": "45.711472",
@@ -13806,12 +13800,6 @@
     "stop_lon": "16.049250"
   },
   {
-    "stop_id": "1766_24",
-    "stop_name": "INA",
-    "stop_lat": "45.730626",
-    "stop_lon": "16.024891"
-  },
-  {
     "stop_id": "1771_22",
     "stop_name": "Mrkšina-raskrižje",
     "stop_lat": "45.755106",
@@ -15214,18 +15202,6 @@
     "stop_name": "Jelenovac 38D",
     "stop_lat": "45.826887",
     "stop_lon": "15.952691"
-  },
-  {
-    "stop_id": "2098_23",
-    "stop_name": "Starjak",
-    "stop_lat": "45.660197",
-    "stop_lon": "15.871398"
-  },
-  {
-    "stop_id": "2098_24",
-    "stop_name": "Starjak",
-    "stop_lat": "45.660107",
-    "stop_lon": "15.871352"
   },
   {
     "stop_id": "2099_21",
