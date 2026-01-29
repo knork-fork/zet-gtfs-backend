@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
+use App\Repository\Interfaces\AbstractRepositoryInterface;
 use App\System\Database\Connection;
 use App\System\Database\Entity;
 use PDOException;
@@ -12,8 +13,10 @@ use RuntimeException;
 
 /**
  * @template T of Entity
+ *
+ * @implements AbstractRepositoryInterface<T>
  */
-abstract class AbstractRepository
+abstract class AbstractRepository implements AbstractRepositoryInterface
 {
     /**
      * @return class-string<T>
@@ -139,5 +142,21 @@ abstract class AbstractRepository
         );
 
         return $this->connection->query($query, ['value' => $value]);
+    }
+
+    /**
+     * @return array<int, array<string, scalar>>
+     *
+     * @throws PDOException
+     * @throws RuntimeException
+     */
+    public function getAll(): array
+    {
+        $query = \sprintf(
+            'SELECT * FROM %s',
+            $this->getTableName(),
+        );
+
+        return $this->connection->query($query);
     }
 }

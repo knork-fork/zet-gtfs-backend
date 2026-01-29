@@ -7,7 +7,10 @@ use App\Entity\StopTime;
 use PDOException;
 use RuntimeException;
 
-interface StopTimeRepositoryInterface
+/**
+ * @extends AbstractRepositoryInterface<StopTime>
+ */
+interface StopTimeRepositoryInterface extends AbstractRepositoryInterface
 {
     /**
      * @return StopTime[]
