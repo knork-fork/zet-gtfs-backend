@@ -38,7 +38,6 @@ final class GtfsDataService
     public function fetchDataToCache(): void
     {
         $timeNow = microtime(true);
-
         $cacheDummyData = Environment::getStringEnv('LOAD_DUMMY_DATA') === 'true';
         if ($cacheDummyData) {
             // Cache dummy data instead of pinging third-party
@@ -48,7 +47,9 @@ final class GtfsDataService
             // Fetch and cache real-time data from ZET GTFS source
             $this->fetchRealtimeData();
         }
+        $fetchingTime = microtime(true) - $timeNow;
 
+        $timeNow = microtime(true);
         $vehicleRepository = new VehicleRepository();
         $cachedDataService = new CachedDataService();
         $vehicleDataService = new VehicleDataService(
@@ -56,12 +57,14 @@ final class GtfsDataService
             $cachedDataService,
         );
         $vehicleDataService->saveVehicleDataToDb();
+        $processingTime = microtime(true) - $timeNow;
 
-        $timeAfterFetch = microtime(true);
-        $fetchDuration = $timeAfterFetch - $timeNow;
+        $fetchDuration = $fetchingTime + $processingTime;
         Logger::info(\sprintf(
-            'GTFS data fetch and cache completed in %.2f seconds',
-            $fetchDuration
+            'GTFS data fetch and cache completed in %.2f seconds (%.2f fetching, %.2f processing)',
+            $fetchDuration,
+            $fetchingTime,
+            $processingTime,
         ), 'gtfs_cron');
     }
 
