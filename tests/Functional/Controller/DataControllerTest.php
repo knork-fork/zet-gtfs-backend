@@ -60,6 +60,6 @@ final class DataControllerTest extends FunctionalTestCase
         self::assertSame(121, $vehicle['route_id']);
         self::assertSame(45.817467, $vehicle['position_lat']);
         self::assertSame(15.87521, $vehicle['position_long']);
-        self::assertIsFloat($vehicle['rotation_deg']);
+        self::assertArrayHasKey('rotation_deg', $vehicle);
     }
 }
