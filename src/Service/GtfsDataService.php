@@ -36,16 +36,34 @@ final class GtfsDataService
      */
     public function fetchDataToCache(): void
     {
+        $timeNow = microtime(true);
+
         $cacheDummyData = Environment::getStringEnv('LOAD_DUMMY_DATA') === 'true';
         if ($cacheDummyData) {
             // Cache dummy data instead of pinging third-party
             Logger::info('Caching dummy GTFS data', 'gtfs_cron');
-            $json = file_get_contents('/application/tests/TestData/gtfs_dummy.json');
-            file_put_contents(self::GTFS_CACHE_FILENAME, $json);
-
-            return;
+            $this->fetchDummyData();
+        } else {
+            // Fetch and cache real-time data from ZET GTFS source
+            $this->fetchRealtimeData();
         }
 
+        $timeAfterFetch = microtime(true);
+        $fetchDuration = $timeAfterFetch - $timeNow;
+        Logger::info(\sprintf(
+            'GTFS data fetch and cache completed in %.2f seconds',
+            $fetchDuration
+        ), 'gtfs_cron');
+    }
+
+    private function fetchDummyData(): void
+    {
+        $json = file_get_contents('/application/tests/TestData/gtfs_dummy.json');
+        file_put_contents(self::GTFS_CACHE_FILENAME, $json);
+    }
+
+    private function fetchRealtimeData(): void
+    {
         $zetUrl = Environment::getStringEnv('ZET_URL');
         $json = shell_exec(
             '/opt/venv/bin/python /application/scripts/gtfs/gtfs2json.py '
