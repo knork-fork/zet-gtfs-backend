@@ -10,7 +10,7 @@ interface CachedDataServiceInterface
     /**
      * @return mixed[]
      */
-    public function getFullDataFromCache(): array;
+    public function getFullDataFromCache(bool $ignoreReadActivity = false): array;
 
     /**
      * @return array<int, array{
@@ -34,5 +34,5 @@ interface CachedDataServiceInterface
      *
      * @throws BadRequestException if no GTFS data is available
      */
-    public function getMinimizedEntityDataFromCache(): array;
+    public function getMinimizedEntityDataFromCache(bool $ignoreReadActivity = false): array;
 }

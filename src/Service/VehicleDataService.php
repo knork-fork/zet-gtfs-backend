@@ -31,7 +31,7 @@ final class VehicleDataService implements VehicleDataServiceInterface
         }
 
         // Get vehicles from current cache fetch
-        $vehicleDataCache = $this->cachedDataService->getMinimizedEntityDataFromCache();
+        $vehicleDataCache = $this->cachedDataService->getMinimizedEntityDataFromCache(ignoreReadActivity: true);
         $cacheById = [];
         foreach ($vehicleDataCache as $data) {
             if ($data['type'] !== 'vehicle') {

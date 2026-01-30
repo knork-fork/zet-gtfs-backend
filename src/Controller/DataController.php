@@ -20,6 +20,9 @@ final class DataController
 
     public static function getVehicleData(): JsonResponse
     {
+        $cachedDataService = new CachedDataService();
+        $cachedDataService->registerCacheRead();
+
         $vehicleRepository = new VehicleRepository();
         $cachedDataService = new CachedDataService();
         $vehicleDataService = new VehicleDataService(

@@ -14,15 +14,23 @@ final class CachedDataService implements CachedDataServiceInterface
 
     public function __construct()
     {
-        // Register cache read every time the service is instantiated
-        // This helps us stop polling the GTFS data if the cache is not read for a while
-        touch(self::LAST_CACHE_READ_FILENAME);
-
         $this->gtfsDataService = new GtfsDataService();
     }
 
-    public function getFullDataFromCache(): array
+    public function registerCacheRead(): void
     {
+        // Register cache read
+        // This helps us stop polling the GTFS data if the cache is not read for a while
+        touch(self::LAST_CACHE_READ_FILENAME);
+    }
+
+    public function getFullDataFromCache(bool $ignoreReadActivity = false): array
+    {
+        // Don't register if ignoring read activity to prevent infinite loop of activity
+        if (!$ignoreReadActivity) {
+            $this->registerCacheRead();
+        }
+
         $this->gtfsDataService->fetchDataToCacheIfOutdated();
         $json = file_get_contents(GtfsDataService::GTFS_CACHE_FILENAME);
 
@@ -37,11 +45,11 @@ final class CachedDataService implements CachedDataServiceInterface
         return $jsonObject;
     }
 
-    public function getMinimizedEntityDataFromCache(): array
+    public function getMinimizedEntityDataFromCache(bool $ignoreReadActivity = false): array
     {
         // TO-DO: implement caching of this data to prevent reformatting same data every time
 
-        $cacheData = $this->getFullDataFromCache();
+        $cacheData = $this->getFullDataFromCache($ignoreReadActivity);
         $entities = $cacheData['entity'] ?? [];
         if (!\is_array($entities) || empty($entities)) {
             throw new BadRequestException('No GTFS data available');
