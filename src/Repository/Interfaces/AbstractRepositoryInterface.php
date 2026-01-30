@@ -31,6 +31,14 @@ interface AbstractRepositoryInterface
     public function delete(object $object): void;
 
     /**
+     * @param int[]|string[] $ids
+     *
+     * @throws PDOException
+     * @throws RuntimeException
+     */
+    public function deleteByIds(array $ids): void;
+
+    /**
      * @return T
      *
      * @throws PDOException

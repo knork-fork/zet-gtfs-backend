@@ -58,6 +58,12 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
             $values[$property] = $object->{$property};
         }
 
+        // Force insert id value
+        if ($forceInsert || $object->id === null) {
+            $properties[] = 'id';
+            $values['id'] = $object->id;
+        }
+
         if ($object->id === null || $forceInsert) {
             $query = \sprintf(
                 'INSERT INTO %s (%s) VALUES (%s) RETURNING id',
@@ -104,6 +110,23 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
 
         $this->connection->query($query, ['id' => $object->id]);
         $object->id = null;
+    }
+
+    /**
+     * @param int[]|string[] $ids
+     *
+     * @throws PDOException
+     * @throws RuntimeException
+     */
+    public function deleteByIds(array $ids): void
+    {
+        $query = \sprintf(
+            'DELETE FROM %s WHERE id IN (%s)',
+            $this->getTableName(),
+            implode(',', $ids)
+        );
+
+        $this->connection->query($query);
     }
 
     /**

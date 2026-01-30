@@ -25,3 +25,11 @@ CREATE TABLE stops (
 );
 
 CREATE INDEX idx_stops_stop_id ON stops (stop_id);
+
+CREATE TABLE vehicles (
+    id INT PRIMARY KEY,
+    route_id INT NOT NULL,
+    position_lat DOUBLE PRECISION NOT NULL,
+    position_long DOUBLE PRECISION NOT NULL,
+    rotation_deg DOUBLE PRECISION NOT NULL
+);

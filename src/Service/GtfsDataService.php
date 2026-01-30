@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Exception\BadRequestException;
+use App\Repository\VehicleRepository;
 use App\System\Logger;
 use Exception;
 use KnorkFork\LoadEnvironment\Environment;
@@ -47,6 +48,14 @@ final class GtfsDataService
             // Fetch and cache real-time data from ZET GTFS source
             $this->fetchRealtimeData();
         }
+
+        $vehicleRepository = new VehicleRepository();
+        $cachedDataService = new CachedDataService();
+        $vehicleDataService = new VehicleDataService(
+            $vehicleRepository,
+            $cachedDataService,
+        );
+        $vehicleDataService->saveVehicleDataToDb();
 
         $timeAfterFetch = microtime(true);
         $fetchDuration = $timeAfterFetch - $timeNow;

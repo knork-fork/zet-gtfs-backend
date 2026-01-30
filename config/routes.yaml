@@ -22,6 +22,14 @@ get_all_data:
     requestDto: null
     status_code: 200
 
+get_vehicle_data:
+    path: /api/get_vehicle_data
+    controller: App\Controller\DataController::getVehicleData
+    method: GET
+    description: Get vehicle id, routeId, position and rotation for all vehicles
+    requestDto: null
+    status_code: 200
+
 get_vehicles:
     path: /api/vehicles/{route_id}
     controller: App\Controller\VehicleController::getVehicles
