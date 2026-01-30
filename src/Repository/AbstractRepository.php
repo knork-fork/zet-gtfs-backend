@@ -35,12 +35,12 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
     /**
      * @param T $object
      *
-     * return T
+     * @return T
      *
      * @throws PDOException
      * @throws RuntimeException
      */
-    public function save(object $object): object
+    public function save(object $object, bool $forceInsert = false): object
     {
         $reflection = new ReflectionObject($object);
         $publicProperties = $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
@@ -55,10 +55,10 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
 
         $values = [];
         foreach ($properties as $property) {
-            $values[$property] = $this->{$property};
+            $values[$property] = $object->{$property};
         }
 
-        if ($object->id === null) {
+        if ($object->id === null || $forceInsert) {
             $query = \sprintf(
                 'INSERT INTO %s (%s) VALUES (%s) RETURNING id',
                 $this->getTableName(),
@@ -66,8 +66,12 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
                 implode(', ', array_map(static fn ($property) => ':' . $property, $properties))
             );
         } else {
-            // todo: finish update query
-            $query = 'UPDATE';
+            $query = \sprintf(
+                'UPDATE %s SET %s WHERE id = :id RETURNING id',
+                $this->getTableName(),
+                implode(', ', array_map(static fn ($property) => $property . ' = :' . $property, $properties))
+            );
+            $values['id'] = $object->id;
         }
 
         $ret = $this->connection->query($query, $values);

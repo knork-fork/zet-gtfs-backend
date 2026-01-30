@@ -15,12 +15,12 @@ interface AbstractRepositoryInterface
     /**
      * @param T $object
      *
-     * return T
+     * @return T
      *
      * @throws PDOException
      * @throws RuntimeException
      */
-    public function save(object $object): object;
+    public function save(object $object, bool $forceInsert): object;
 
     /**
      * @param T $object
