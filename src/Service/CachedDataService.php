@@ -62,7 +62,9 @@ final class CachedDataService implements CachedDataServiceInterface
 
             if ($type === 'tripUpdate') {
                 $data['stopTimeUpdates'] = [];
-                foreach ($entity['tripUpdate']['stopTimeUpdate'] as $stopTimeUpdate) {
+
+                $stopTimeUpdates = $entity['tripUpdate']['stopTimeUpdate'] ?? [];
+                foreach ($stopTimeUpdates as $stopTimeUpdate) {
                     $data['stopTimeUpdates'][] = [
                         'stopId' => $stopTimeUpdate['stopId'] ?? '',
                         'stopSequence' => $stopTimeUpdate['stopSequence'] ?? 0,
