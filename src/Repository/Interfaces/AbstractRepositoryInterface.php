@@ -20,7 +20,7 @@ interface AbstractRepositoryInterface
      * @throws PDOException
      * @throws RuntimeException
      */
-    public function save(object $object, bool $forceInsert): object;
+    public function save(object $object, bool $forceInsert = false): object;
 
     /**
      * @param T $object
