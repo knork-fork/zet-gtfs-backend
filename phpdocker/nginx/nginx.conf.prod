@@ -1,3 +1,16 @@
+map $http_user_agent $is_embed_crawler {
+    default 0;
+    ~*googlebot 0;
+    ~*bingbot 0;
+    ~*duckduckbot 0;
+    ~*discordbot 1;
+    ~*twitterbot 1;
+    ~*facebookexternalhit 1;
+    ~*slackbot 1;
+    ~*linkedinbot 1;
+    ~*telegrambot 1;
+}
+
 server {
     listen 80 default;
 
@@ -13,19 +26,14 @@ server {
     add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
 
     #### Static files (SEO friendly)
-    # /sitemap.xml -> /application/public/static/sitemap.xml
     location = /sitemap.xml { try_files /static/sitemap.xml =404; }
-
-    # /robots.txt -> /application/public/static/robots.txt
     location = /robots.txt { try_files /static/robots.txt =404; }
 
-    # /about (no trailing slash) -> serve the landing page
     location = /about {
         alias /application/public/static/about/index.html;
         default_type text/html;
     }
 
-    # /about/* -> serve files from public/static/about/*
     location ^~ /about/ {
         alias /application/public/static/about/;
         try_files $uri =404;
@@ -41,6 +49,19 @@ server {
         try_files $uri =404;
     }
     #### Static files (SEO friendly)
+
+    # Embed handling:
+    # - crawlers => serve static embed (/application/public/static/about/embed-root.1.html)
+    # - humans   => proxy to Vite SPA
+    location = / {
+        if ($is_embed_crawler) {
+            rewrite ^ /about/embed-root.1.html last;
+        }
+        
+        root /application/frontend/dist;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
 
     # Forward frontend requests to static Vite-built frontend
     location / {
