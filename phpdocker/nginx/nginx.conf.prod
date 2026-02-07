@@ -30,6 +30,10 @@ server {
     location = /robots.txt { try_files /static/robots.txt =404; }
 
     location = /about {
+        if ($is_embed_crawler) {
+            rewrite ^ /about/embed-root.1.html last;
+        }
+
         alias /application/public/static/about/index.html;
         default_type text/html;
     }
@@ -40,6 +44,10 @@ server {
     }
 
     location = /about.en {
+        if ($is_embed_crawler) {
+            rewrite ^ /about/embed-root.1.html last;
+        }
+
         alias /application/public/static/about.en/index.html;
         default_type text/html;
     }
