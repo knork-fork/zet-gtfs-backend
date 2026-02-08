@@ -34,6 +34,11 @@ if ! grep -qi '<meta[^>]*name=["'\'']description["'\'']' "$FILE"; then
     <meta name=\"description\" content=\"${DESCRIPTION}\">" "$FILE"
 fi
 
+# <meta name="google-site-verification" content="mi7cJVnuoE7_yc8nlz_MZU8ZSPR6_OzdWUgxXrqJF1A" />
+# Insert Google Search Console verification
+sed -i "/<meta name=\"description\"/a\\
+    <meta name=\"google-site-verification\" content=\"mi7cJVnuoE7_yc8nlz_MZU8ZSPR6_OzdWUgxXrqJF1A\">" "$FILE"
+
 # Switch title
 sed -i "s|<title>.*</title>|<title>${TITLE}</title>|i" "$FILE"
 
