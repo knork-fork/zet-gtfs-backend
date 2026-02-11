@@ -36,9 +36,13 @@ for id in $(seq 1 313); do
 done
 find scripts/gtfs/generated_geojson_routes -type f -size 51c -delete
 
-# Update filtered stops file
+# Update filtered stops file (for serving cached static response to frontend)
 python3 scripts/gtfs/generate_stops.py
 gzip -kf9 scripts/gtfs/generated_stops/stops.json
+
+# Update stops file for database import
+echo "Creating stops_clean.csv from original stops.txt..."
+mlr --icsv --ocsv cut -f stop_id,stop_name,stop_lat,stop_lon,parent_station "scripts/gtfs/static_gtfs_files/stops.txt" > "scripts/gtfs/static_gtfs_files/stops_clean.csv"
 
 # Cleanup
 rm scripts/gtfs/static_gtfs_files/gtfs_static.zip
