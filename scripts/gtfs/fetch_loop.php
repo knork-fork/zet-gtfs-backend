@@ -9,6 +9,7 @@ declare(strict_types=1);
  */
 
 use App\Service\AppVersionService;
+use App\Service\BajsDataService;
 use App\Service\CachedDataService;
 use App\System\Logger;
 use KnorkFork\LoadEnvironment\Environment;
@@ -24,6 +25,14 @@ if (!is_numeric($pollingInterval)) {
     throw new Exception('Invalid polling interval');
 }
 $pollingInterval = (int) $pollingInterval;
+
+$bajsPollingMultiplier = Environment::getStringEnv('BAJS_POLLING_MULTIPLIER');
+if (!is_numeric($bajsPollingMultiplier)) {
+    Logger::critical('Invalid BAJS polling multiplier: ' . $bajsPollingMultiplier, 'gtfs_cron');
+    throw new Exception('Invalid BAJS polling multiplier');
+}
+$bajsPollingMultiplier = (int) $bajsPollingMultiplier;
+
 $inactivityTime = Environment::getStringEnv('STOP_POLLING_AFTER_INACTIVITY_IN_SECONDS');
 if (!is_numeric($inactivityTime)) {
     Logger::critical('Invalid inactivity time: ' . $inactivityTime, 'gtfs_cron');
@@ -31,16 +40,32 @@ if (!is_numeric($inactivityTime)) {
 }
 $inactivityTime = (int) $inactivityTime;
 
+$bajsLoopCounter = 0;
+
 $shouldLogPollingStatus = true;
 // @phpstan-ignore-next-line While loop condition is always true
 while (true) {
     if (shouldPollData($inactivityTime)) {
         $shouldLogPollingStatus = true;
         shell_exec('php /application/scripts/gtfs/get_gtfs_data.php');
+
+        // Because we don't have separate cron for bajs data, we can poll it every Nth loop of fetching GTFS data.
+        // This way we can reduce the load on bajs API and still have relatively fresh data.
+        if ($bajsPollingMultiplier > 0) {
+            ++$bajsLoopCounter;
+            if ($bajsLoopCounter === $bajsPollingMultiplier) {
+                (new BajsDataService())->fetchDataToCache();
+
+                $bajsLoopCounter = 0;
+            }
+        }
     } else {
         if ($shouldLogPollingStatus) {
             Logger::info('Inactivity detected, polling stopped', 'gtfs_cron');
             $shouldLogPollingStatus = false;
+
+            // Ensure bajs data is fetched on the first loop when polling resumes
+            $bajsLoopCounter = $bajsPollingMultiplier - 1;
         }
     }
 
