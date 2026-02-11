@@ -6,6 +6,8 @@ Live ZET GTFS data API provider.
 
 Data is polled periodically (live version: every 5 seconds) from official ZET API (https://www.zet.hr/odredbe/datoteke-u-gtfs-formatu/669).
 
+Bajs (bike rental) station data is polled periodically from nextbike (https://maps.nextbike.net).
+
 As a good will mechanism, if no activity is detected for certain time (live version: 20 seconds) the app will stop polling the API until activity is detected again.
 
 ### Installation

@@ -57,3 +57,11 @@ stop_arrivals:
     description: Get incoming vehicles for a specific stop
     requestDto: null
     status_code: 200
+
+get_bike_stations:
+    path: /api/bajs
+    controller: App\Controller\BajsController::getBikeStations
+    method: GET
+    description: Get all bike rental stations
+    requestDto: null
+    status_code: 200
