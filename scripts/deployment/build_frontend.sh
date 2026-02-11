@@ -24,8 +24,8 @@ sudo chown -R "$UID_GID" frontend/dist frontend/node_modules
 ### Post-build SEO cleanup ###
 
 FILE="frontend/dist/index.html"
-TITLE='ZET tramvaji uživo u Zagrebu – karta i praćenje u stvarnom vremenu'
-DESCRIPTION='Pratite ZET tramvaje i autobuse uživo na karti Zagreba u stvarnom vremenu. Dijeljenje linka na vozilo, stanice i linije.'
+TITLE='ZET tramvaji i autobusi uživo – karta Zagreba u stvarnom vremenu'
+DESCRIPTION='Pratite ZET tramvaje i autobuse uživo na interaktivnoj karti Zagreba te jednostavno podijelite link na vozilo koje vas zanima.'
 
 # Insert meta description tag
 META_TAG='<meta name="description" content="Pratite ZET tramvaje i autobuse uživo na karti Zagreba. Stanice, vozni red i dijeljenje linka na vozilo.">'
@@ -71,5 +71,33 @@ sed -i "/<meta property=\"og:image\"/a\\
     <meta name=\"twitter:description\" content=\"${DESCRIPTION}\">\\
     <meta name=\"twitter:image\" content=\"https://zet.knork-studio.com/about/embed.jpg\">" "$FILE"
 
+# Insert JSON-LD structured data
+sed -i '/<meta name="twitter:image"/a\
+    <script type="application/ld+json">{\
+      "@context": "https://schema.org",\
+      "@graph": [\
+        {\
+          "@type": "WebSite",\
+          "@id": "https://zet.knork-studio.com/#website",\
+          "url": "https://zet.knork-studio.com/",\
+          "name": "ZET Web",\
+          "alternateName": "ZET uživo",\
+          "inLanguage": "hr",\
+          "publisher": { "@id": "https://zet.knork-studio.com/#org" }\
+        },\
+        {\
+          "@type": "Organization",\
+          "@id": "https://zet.knork-studio.com/#org",\
+          "name": "ZET Web",\
+          "url": "https://zet.knork-studio.com/",\
+          "logo": {\
+            "@type": "ImageObject",\
+            "url": "https://zet.knork-studio.com/favicon-128x128.png",\
+            "width": 128,\
+            "height": 128\
+          }\
+        }\
+      ]\
+    }</script>' "$FILE"
 
 exit 0
