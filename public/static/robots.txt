@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api/
 Allow: /
-Sitemap: https://zet.knork-studio.com/sitemap.xml
+Sitemap: https://zet-uzivo.com/sitemap.xml

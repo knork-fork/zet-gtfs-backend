@@ -51,8 +51,8 @@ sed -i "/<meta name=\"description\"/a\\
 
 # Insert canonical + hreflang (HR only)
 sed -i "/<meta name=\"robots\"/a\\
-    <link rel=\"canonical\" href=\"https://zet.knork-studio.com/\">\\
-    <link rel=\"alternate\" hreflang=\"hr\" href=\"https://zet.knork-studio.com/\">" "$FILE"
+    <link rel=\"canonical\" href=\"https://zet-uzivo.com/\">\\
+    <link rel=\"alternate\" hreflang=\"hr\" href=\"https://zet-uzivo.com/\">" "$FILE"
 
 # Insert Open Graph
 sed -i "/<title>/a\\
@@ -61,15 +61,15 @@ sed -i "/<title>/a\\
     <meta property=\"og:site_name\" content=\"ZET Web\">\\
     <meta property=\"og:title\" content=\"${TITLE}\">\\
     <meta property=\"og:description\" content=\"${DESCRIPTION}\">\\
-    <meta property=\"og:url\" content=\"https://zet.knork-studio.com/\">\\
-    <meta property=\"og:image\" content=\"https://zet.knork-studio.com/about/embed.jpg\">" "$FILE"
+    <meta property=\"og:url\" content=\"https://zet-uzivo.com/\">\\
+    <meta property=\"og:image\" content=\"https://zet-uzivo.com/about/embed.jpg\">" "$FILE"
 
 # Insert Twitter
 sed -i "/<meta property=\"og:image\"/a\\
     <meta name=\"twitter:card\" content=\"summary_large_image\">\\
     <meta name=\"twitter:title\" content=\"${TITLE}\">\\
     <meta name=\"twitter:description\" content=\"${DESCRIPTION}\">\\
-    <meta name=\"twitter:image\" content=\"https://zet.knork-studio.com/about/embed.jpg\">" "$FILE"
+    <meta name=\"twitter:image\" content=\"https://zet-uzivo.com/about/embed.jpg\">" "$FILE"
 
 # Insert JSON-LD structured data
 sed -i '/<meta name="twitter:image"/a\
@@ -78,21 +78,21 @@ sed -i '/<meta name="twitter:image"/a\
       "@graph": [\
         {\
           "@type": "WebSite",\
-          "@id": "https://zet.knork-studio.com/#website",\
-          "url": "https://zet.knork-studio.com/",\
+          "@id": "https://zet-uzivo.com/#website",\
+          "url": "https://zet-uzivo.com/",\
           "name": "ZET Web",\
           "alternateName": "ZET uživo",\
           "inLanguage": "hr",\
-          "publisher": { "@id": "https://zet.knork-studio.com/#org" }\
+          "publisher": { "@id": "https://zet-uzivo.com/#org" }\
         },\
         {\
           "@type": "Organization",\
-          "@id": "https://zet.knork-studio.com/#org",\
+          "@id": "https://zet-uzivo.com/#org",\
           "name": "ZET Web",\
-          "url": "https://zet.knork-studio.com/",\
+          "url": "https://zet-uzivo.com/",\
           "logo": {\
             "@type": "ImageObject",\
-            "url": "https://zet.knork-studio.com/favicon-128x128.png",\
+            "url": "https://zet-uzivo.com/favicon-128x128.png",\
             "width": 128,\
             "height": 128\
           }\
