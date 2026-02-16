@@ -1,3 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/MatijaNovosel/zet-web.git
+[submodule "zet-gtfs-blog"]
+	path = zet-gtfs-blog
+	url = https://github.com/knork-fork/zet-gtfs-blog.git
