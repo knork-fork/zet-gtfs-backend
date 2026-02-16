@@ -16,6 +16,7 @@
     <link rel="canonical" href="https://zet-uzivo.com/about">
     <link rel="alternate" hreflang="hr" href="https://zet-uzivo.com/about">
     <link rel="alternate" hreflang="en" href="https://zet-uzivo.com/about.en">
+    <link rel="alternate" hreflang="x-default" href="https://zet-uzivo.com/about">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -109,10 +110,16 @@
 <body>
     <div class="hero">
         <div class="hero-overlay"></div>
-        <div class="lang-flags">
-            <a href="/about" title="Hrvatski" rel="alternate" hreflang="hr" class="lang-flag active">🇭🇷</a>
-            <a href="/about.en" title="English" rel="alternate" hreflang="en" class="lang-flag">🇬🇧</a>
-        </div>
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="/about" class="nav-link active" aria-current="page">O aplikaciji</a>
+                <a href="/blog" class="nav-link">Blog</a>
+            </div>
+            <div class="lang-flags">
+                <a href="/about" title="Hrvatski" rel="alternate" hreflang="hr" class="lang-flag active" aria-current="page">🇭🇷</a>
+                <a href="/about.en" title="English" rel="alternate" hreflang="en" class="lang-flag">🇬🇧</a>
+            </div>
+        </nav>
         <div class="hero-content">
             <h1>ZET tramvaji i autobusi uživo u Zagrebu</h1>
             <p class="subtitle">Karta javnog prijevoza s lokacijama vozila, stanicama i voznim redom. Podijelite tramvaj ili autobus u kojem ste jednim linkom.</p>

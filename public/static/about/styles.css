@@ -30,11 +30,45 @@ body {
     z-index: 1;
 }
 
-.lang-flags {
+.top-nav {
     position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 0.75rem 0.75rem 1.5rem 1.5rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.15), rgba(0,0,0,0));
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.15rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link.active {
+    color: #fff;
+    border-bottom-color: #2563eb;
+}
+
+.lang-flags {
     display: flex;
     gap: 0.5rem;
 }
@@ -214,5 +248,19 @@ footer {
 
     h2 {
         font-size: 1.35rem;
+    }
+
+    .top-nav {
+        padding: 1rem 1.25rem 1.75rem 2rem;
+        gap: 1.25rem;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .lang-flag {
+        font-size: 2rem;
     }
 }
