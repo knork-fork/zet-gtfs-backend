@@ -60,7 +60,7 @@ sed -i "/<meta name=\"robots\"/a\\
 sed -i "/<title>/a\\
     <meta property=\"og:type\" content=\"website\">\\
     <meta property=\"og:locale\" content=\"hr_HR\">\\
-    <meta property=\"og:site_name\" content=\"ZET Web\">\\
+    <meta property=\"og:site_name\" content=\"ZET Uživo\">\\
     <meta property=\"og:title\" content=\"${TITLE}\">\\
     <meta property=\"og:description\" content=\"${DESCRIPTION}\">\\
     <meta property=\"og:url\" content=\"https://zet-uzivo.com/\">\\
@@ -82,15 +82,14 @@ sed -i '/<meta name="twitter:image"/a\
           "@type": "WebSite",\
           "@id": "https://zet-uzivo.com/#website",\
           "url": "https://zet-uzivo.com/",\
-          "name": "ZET Web",\
-          "alternateName": "ZET uživo",\
+          "name": "ZET Uživo",\
           "inLanguage": "hr",\
           "publisher": { "@id": "https://zet-uzivo.com/#org" }\
         },\
         {\
           "@type": "Organization",\
           "@id": "https://zet-uzivo.com/#org",\
-          "name": "ZET Web",\
+          "name": "ZET Uživo",\
           "url": "https://zet-uzivo.com/",\
           "logo": {\
             "@type": "ImageObject",\

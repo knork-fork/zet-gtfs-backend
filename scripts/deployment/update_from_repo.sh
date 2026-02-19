@@ -76,7 +76,7 @@ fi
 
 frontendCommitShortFormat=$(echo "$remoteFrontendCommit" | cut -c1-7)
 backendCommitShortFormat=$(echo "$remoteBackendCommit" | cut -c1-7)
-message="Zet Web has been updated to the latest version.\n\n"
+message="Zet Uzivo has been updated to the latest version.\n\n"
 message+="Current version:\n"
 message+="Frontend: [$frontendCommitShortFormat](<$frontendRepoUrl/commit/$remoteFrontendCommit>)\n"
 message+="Backend: [$backendCommitShortFormat](<$backendRepoUrl/commit/$remoteBackendCommit>)\n\n"
