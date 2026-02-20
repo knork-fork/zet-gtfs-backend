@@ -1,17 +1,14 @@
 <?php
 
 $finder = (new PhpCsFixer\Finder())
-    ->in([
-        'bin/',
-        'config/',
-        'public/',
-        'src/',
-        'tests/',
-    ])
-    ->exclude([
-        'var',
-        'vendor'
-    ])
+    ->in(__DIR__)
+    ->path('bin')
+    ->path('config')
+    ->path('public')
+    ->path('src')
+    ->path('tests')
+    ->exclude(['var', 'vendor'])
+    ->notPath('config/reference.php')
 ;
 
 return (new PhpCsFixer\Config())
