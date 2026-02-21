@@ -47,7 +47,7 @@ $shouldLogPollingStatus = true;
 while (true) {
     if (shouldPollData($inactivityTime)) {
         $shouldLogPollingStatus = true;
-        shell_exec('php /application/scripts/gtfs/get_gtfs_data.php');
+        shell_exec('timeout 120s php /application/scripts/gtfs/get_gtfs_data.php');
 
         // Because we don't have separate cron for bajs data, we can poll it every Nth loop of fetching GTFS data.
         // This way we can reduce the load on bajs API and still have relatively fresh data.
