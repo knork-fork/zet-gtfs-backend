@@ -1,0 +1,1434 @@
+[
+  {
+    "uid": 556632908,
+    "lat": 45.825299,
+    "lng": 16.109747,
+    "name": "AUTOBUSNI TERMINAL SESVETE",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 8
+  },
+  {
+    "uid": 556633495,
+    "lat": 45.842797,
+    "lng": 15.975421,
+    "name": "MIHALJEVAC OKRETIŠTE",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 12
+  },
+  {
+    "uid": 556634009,
+    "lat": 45.776795,
+    "lng": 15.953339,
+    "name": "ROTOR REMETINEC",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556637365,
+    "lat": 45.795083,
+    "lng": 15.919185,
+    "name": "ADMIRAL HOTEL",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556689563,
+    "lat": 45.77756,
+    "lng": 15.969703,
+    "name": "ZAGREBAČKI VELESAJAM",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556690758,
+    "lat": 45.777658,
+    "lng": 15.999865,
+    "name": "HAK",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 30
+  },
+  {
+    "uid": 556693399,
+    "lat": 45.804187,
+    "lng": 15.99398,
+    "name": "AUTOBUSNI KOLODVOR",
+    "bikes_available_to_rent": 22,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556693838,
+    "lat": 45.777031,
+    "lng": 15.979605,
+    "name": "AVENUE MALL",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 16
+  },
+  {
+    "uid": 556694282,
+    "lat": 45.754458,
+    "lng": 15.989034,
+    "name": "BUZIN SUPERNOVA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 6
+  },
+  {
+    "uid": 556694696,
+    "lat": 45.827999,
+    "lng": 16.077424,
+    "name": "DUBEC OKRETIŠTE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 8
+  },
+  {
+    "uid": 556695034,
+    "lat": 45.810058,
+    "lng": 15.940475,
+    "name": "SVEUČILIŠTE ALGEBRA ",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556695714,
+    "lat": 45.814976,
+    "lng": 15.934753,
+    "name": "ČRNOMEREC OKRETIŠTE ",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556696500,
+    "lat": 45.784832,
+    "lng": 15.949303,
+    "name": "S.D. STJEPAN RADIĆ",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556696890,
+    "lat": 45.824229,
+    "lng": 16.036367,
+    "name": "DUBRAVA OKRETIŠTE",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 16
+  },
+  {
+    "uid": 556697280,
+    "lat": 45.785172,
+    "lng": 15.952194,
+    "name": "SAVSKI MOST OKRETIŠTE",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 14
+  },
+  {
+    "uid": 556698504,
+    "lat": 45.79735,
+    "lng": 15.93816,
+    "name": "REMIZA LJUBLJANICA",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556699778,
+    "lat": 45.795582,
+    "lng": 15.899978,
+    "name": "SHOPPING CENTAR PREČKO",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556701511,
+    "lat": 45.813885,
+    "lng": 15.978947,
+    "name": "VLAŠKA UL.",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 12
+  },
+  {
+    "uid": 556702069,
+    "lat": 45.790564,
+    "lng": 15.961748,
+    "name": "S.D. CVJETNO NASELJE",
+    "bikes_available_to_rent": 24,
+    "bike_racks": 30
+  },
+  {
+    "uid": 556702659,
+    "lat": 45.802755,
+    "lng": 16.002169,
+    "name": "GREEN GOLD",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 40
+  },
+  {
+    "uid": 556706644,
+    "lat": 45.818654,
+    "lng": 16.013297,
+    "name": "MAKSIMIR",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 14
+  },
+  {
+    "uid": 556715445,
+    "lat": 45.812468,
+    "lng": 16.04185,
+    "name": "KAMPUS BORONGAJ",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 8
+  },
+  {
+    "uid": 556716032,
+    "lat": 45.794481,
+    "lng": 15.956616,
+    "name": "S.D. ANTE STARČEVIĆ",
+    "bikes_available_to_rent": 20,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556719773,
+    "lat": 45.803598,
+    "lng": 15.964857,
+    "name": "TRATINSKA UL. - SAVSKA UL.",
+    "bikes_available_to_rent": 19,
+    "bike_racks": 30
+  },
+  {
+    "uid": 556720238,
+    "lat": 45.800065,
+    "lng": 15.954106,
+    "name": "TREŠNJEVAČKI TRG",
+    "bikes_available_to_rent": 18,
+    "bike_racks": 20
+  },
+  {
+    "uid": 556721603,
+    "lat": 45.81441,
+    "lng": 15.998095,
+    "name": "TRG EUGENA KVATERNIKA",
+    "bikes_available_to_rent": 19,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556722804,
+    "lat": 45.814851,
+    "lng": 15.973941,
+    "name": "TRG KATARINE ZRINSKE",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 8
+  },
+  {
+    "uid": 556723550,
+    "lat": 45.805057,
+    "lng": 15.9783,
+    "name": "TRG KRALJA TOMISLAVA",
+    "bikes_available_to_rent": 42,
+    "bike_racks": 57
+  },
+  {
+    "uid": 556724066,
+    "lat": 45.806045,
+    "lng": 15.952347,
+    "name": "HOTEL ZONAR",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 12
+  },
+  {
+    "uid": 556724922,
+    "lat": 45.800787,
+    "lng": 15.977415,
+    "name": "TRG STJEPANA RADIĆA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 12
+  },
+  {
+    "uid": 556725447,
+    "lat": 45.80966,
+    "lng": 15.988144,
+    "name": "TRG ŽRTAVA FAŠIZMA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 16
+  },
+  {
+    "uid": 556910416,
+    "lat": 45.814599,
+    "lng": 16.017345,
+    "name": "BORONGAJ OKRETIŠTE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 15
+  },
+  {
+    "uid": 556910751,
+    "lat": 45.783451,
+    "lng": 15.982254,
+    "name": "CENTAR BUNDEK",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 15
+  },
+  {
+    "uid": 556911042,
+    "lat": 45.797292,
+    "lng": 15.97845,
+    "name": "NACIONALNA I SVEUČILIŠNA KNJIŽNICA",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556911390,
+    "lat": 45.785581,
+    "lng": 15.917542,
+    "name": "UL. HRVATSKOG SOKOLA  - JARUN",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 14
+  },
+  {
+    "uid": 556911540,
+    "lat": 45.771729,
+    "lng": 15.944687,
+    "name": "ARENA ZAGREB",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 12
+  },
+  {
+    "uid": 556911680,
+    "lat": 45.774168,
+    "lng": 15.992521,
+    "name": "BAZEN UTRINA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 556911827,
+    "lat": 45.812742,
+    "lng": 15.897383,
+    "name": "VRAPČE OKRETIŠTE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 8
+  },
+  {
+    "uid": 563563763,
+    "lat": 45.813973,
+    "lng": 15.872728,
+    "name": "ŽELJEZNIČKO STAJALIŠTE GAJNICE",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 8
+  },
+  {
+    "uid": 573741838,
+    "lat": 45.811679,
+    "lng": 15.979413,
+    "name": "PETRINJSKA",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 12
+  },
+  {
+    "uid": 573742537,
+    "lat": 45.791364,
+    "lng": 15.96937,
+    "name": "PRISAVLJE 14 - KOCKICA",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 20
+  },
+  {
+    "uid": 573742948,
+    "lat": 45.797868,
+    "lng": 16.015794,
+    "name": "MUP HEINZELOVA",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 12
+  },
+  {
+    "uid": 573743895,
+    "lat": 45.81108,
+    "lng": 15.974207,
+    "name": "PRERADOVIĆEVA UL.",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 573744151,
+    "lat": 45.808798,
+    "lng": 15.970725,
+    "name": "TRG REPUBLIKE HRVATSKE",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579347859,
+    "lat": 45.800462,
+    "lng": 15.930428,
+    "name": "BAŠTIJANOVA UL. - GOLIKOVA UL.",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579348973,
+    "lat": 45.832845,
+    "lng": 16.107065,
+    "name": "GIMNAZIJA SESVETE",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579358694,
+    "lat": 45.817549,
+    "lng": 15.889028,
+    "name": "PERJAVICA",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 20
+  },
+  {
+    "uid": 579358891,
+    "lat": 45.772677,
+    "lng": 15.979986,
+    "name": "DOM ZDRAVLJA SIGET",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579359574,
+    "lat": 45.829502,
+    "lng": 16.054064,
+    "name": "KULTURNI CENTAR DUBRAVA",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579359701,
+    "lat": 45.779728,
+    "lng": 15.908431,
+    "name": "BASEBALL CLUB ZAGREB",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579359857,
+    "lat": 45.769506,
+    "lng": 15.999967,
+    "name": "UL. BOŽIDARA MAGOVCA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579361783,
+    "lat": 45.815251,
+    "lng": 15.848368,
+    "name": "AUTOBUSNO STAJALIŠTE PRIGORNICA",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579361901,
+    "lat": 45.772212,
+    "lng": 15.96837,
+    "name": "SUPER ANDRIJA SIGET",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 20
+  },
+  {
+    "uid": 579362036,
+    "lat": 45.811709,
+    "lng": 16.106626,
+    "name": "SREDNJA ŠKOLA JELKOVEC",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579362147,
+    "lat": 45.827932,
+    "lng": 16.10585,
+    "name": "AUTOBUSNO STAJALIŠTE DUBEC",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579362410,
+    "lat": 45.800705,
+    "lng": 15.914986,
+    "name": "ZAGREBAČKA CESTA 199",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579363717,
+    "lat": 45.818098,
+    "lng": 16.043003,
+    "name": "EUROSPIN DUBRAVA",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579363811,
+    "lat": 45.834492,
+    "lng": 16.03346,
+    "name": "KB DUBRAVA",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579363933,
+    "lat": 45.814627,
+    "lng": 15.944547,
+    "name": "HRVATSKO KATOLIČKO SVEUČILIŠTE",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579364165,
+    "lat": 45.796235,
+    "lng": 15.970371,
+    "name": "FILOZOFSKI FAKULTET",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 20
+  },
+  {
+    "uid": 579364282,
+    "lat": 45.789237,
+    "lng": 15.929773,
+    "name": "TRŽNICA JARUN",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 15
+  },
+  {
+    "uid": 579364438,
+    "lat": 45.788409,
+    "lng": 15.937127,
+    "name": "BRAĆE DOMANY",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579364575,
+    "lat": 45.82312,
+    "lng": 16.008103,
+    "name": "KBC REBRO",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 16
+  },
+  {
+    "uid": 579364727,
+    "lat": 45.819349,
+    "lng": 16.006375,
+    "name": "UL. JORDANOVAC",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 8
+  },
+  {
+    "uid": 579364856,
+    "lat": 45.803989,
+    "lng": 15.946687,
+    "name": "RTL",
+    "bikes_available_to_rent": 20,
+    "bike_racks": 20
+  },
+  {
+    "uid": 579364974,
+    "lat": 45.798357,
+    "lng": 15.987921,
+    "name": "KRUGE",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365108,
+    "lat": 45.798395,
+    "lng": 15.992793,
+    "name": "SC TRNJE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365228,
+    "lat": 45.79379,
+    "lng": 15.997102,
+    "name": "TC SAVICA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365394,
+    "lat": 45.80895,
+    "lng": 15.997424,
+    "name": "UL. LJUDEVITA POSAVSKOG – UL. BALTAZARA BOGIŠIĆA",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365500,
+    "lat": 45.765985,
+    "lng": 15.99255,
+    "name": "OKTOGON DUGAVE",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365629,
+    "lat": 45.797766,
+    "lng": 15.9489,
+    "name": "PARK STARA TREŠNJEVKA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579365759,
+    "lat": 45.800666,
+    "lng": 15.994975,
+    "name": "VUKOVARSKA UL. - DRŽIĆEVA UL.",
+    "bikes_available_to_rent": 2,
+    "bike_racks": 12
+  },
+  {
+    "uid": 579365873,
+    "lat": 45.815295,
+    "lng": 15.835378,
+    "name": "PODSUSED OKRETIŠTE",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 5
+  },
+  {
+    "uid": 579365996,
+    "lat": 45.818567,
+    "lng": 16.026859,
+    "name": "ŠETNICA DRAGUTINA ALBRECHTA",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579366996,
+    "lat": 45.80008,
+    "lng": 16.049935,
+    "name": "ZELENA TRŽNICA",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367160,
+    "lat": 45.81864,
+    "lng": 15.976417,
+    "name": "TKALČIĆEVA UL.",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367290,
+    "lat": 45.812908,
+    "lng": 15.957241,
+    "name": "TRG DR. FRANJE TUĐMANA",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367424,
+    "lat": 45.811658,
+    "lng": 15.983659,
+    "name": "TRG HRVATSKIH VELIKANA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367560,
+    "lat": 45.808108,
+    "lng": 15.901237,
+    "name": "OSNOVNA ŠKOLA MALEŠNICA",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367685,
+    "lat": 45.801835,
+    "lng": 15.897965,
+    "name": "TRŽNICA ŠPANSKO",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367813,
+    "lat": 45.786318,
+    "lng": 16.005994,
+    "name": "UL. GRADA CHICAGA",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579367925,
+    "lat": 45.804787,
+    "lng": 16.025527,
+    "name": "SPORTSKA DVORANA PEŠČENICA",
+    "bikes_available_to_rent": 20,
+    "bike_racks": 16
+  },
+  {
+    "uid": 579368063,
+    "lat": 45.79922,
+    "lng": 15.963448,
+    "name": "UL. GRADA VUKOVARA 52",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579368179,
+    "lat": 45.809934,
+    "lng": 15.956933,
+    "name": "UL. REPUBLIKE AUSTRIJE",
+    "bikes_available_to_rent": 20,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579368363,
+    "lat": 45.835725,
+    "lng": 16.044465,
+    "name": "DUBRAVA SUPERNOVA",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579368509,
+    "lat": 45.780452,
+    "lng": 15.961373,
+    "name": "OSNOVNA ŠKOLA KAJZERICA",
+    "bikes_available_to_rent": 20,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579368650,
+    "lat": 45.783103,
+    "lng": 15.970881,
+    "name": "KLIZALIŠTE VELESAJAM",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 8
+  },
+  {
+    "uid": 579368763,
+    "lat": 45.81343,
+    "lng": 15.905837,
+    "name": "TRŽNICA VRAPČE",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 579368895,
+    "lat": 45.803227,
+    "lng": 15.942999,
+    "name": "PARK KATE ŠOLJIĆ",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 7
+  },
+  {
+    "uid": 583375760,
+    "lat": 45.772901,
+    "lng": 16.001764,
+    "name": "UL. BOŽIDARA MAGOVCA - UKRAJINSKA UL.",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583375893,
+    "lat": 45.813771,
+    "lng": 15.98353,
+    "name": "DRAŠKOVIĆEVA UL.",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376002,
+    "lat": 45.835766,
+    "lng": 15.983766,
+    "name": "MIROGOJ",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376151,
+    "lat": 45.77348,
+    "lng": 15.985638,
+    "name": "OŠ IVE ANDRIĆA - SOPOT",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376330,
+    "lat": 45.767224,
+    "lng": 15.972077,
+    "name": "PODBREŽJE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376435,
+    "lat": 45.814396,
+    "lng": 15.963909,
+    "name": "RADNIČKI DOL",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376556,
+    "lat": 45.801021,
+    "lng": 16.009041,
+    "name": "RADNIČKA UL. - UL. FRANA FOLNEGOVIĆA",
+    "bikes_available_to_rent": 0,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376736,
+    "lat": 45.776817,
+    "lng": 15.964201,
+    "name": "UL. TRNSKO - UL. AVENIJA DUBROVNIK",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376832,
+    "lat": 45.79867,
+    "lng": 15.905173,
+    "name": "TRG 101. BRIGADE",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583376969,
+    "lat": 45.809486,
+    "lng": 15.978992,
+    "name": "TRG NIKOLE ZRINSKOG",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583377742,
+    "lat": 45.773068,
+    "lng": 15.965179,
+    "name": "TRNSKO 34B",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378026,
+    "lat": 45.778182,
+    "lng": 15.99575,
+    "name": "TRŽNI CENTAR ZAPRUĐE",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378327,
+    "lat": 45.825087,
+    "lng": 16.010814,
+    "name": "BARUTANSKI BREG - BUKOVAČKA CESTA",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378392,
+    "lat": 45.78743,
+    "lng": 15.929076,
+    "name": "CRKVA SV. MATI SLOBODE",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378649,
+    "lat": 45.808058,
+    "lng": 15.984253,
+    "name": "DRAŠKOVIĆEVA UL. - UL. KNEZA MISLAVA",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378740,
+    "lat": 45.811813,
+    "lng": 15.969473,
+    "name": "FRANKOPANSKA UL.",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583378813,
+    "lat": 45.811185,
+    "lng": 15.976367,
+    "name": "GAJEVA UL. -  UL. NIKOLE TESLE",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583380439,
+    "lat": 45.789022,
+    "lng": 15.920389,
+    "name": "HORVAĆANSKA CESTA - ULICA HRVATSKOG SOKOLA",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583380529,
+    "lat": 45.809459,
+    "lng": 16.016669,
+    "name": "IVANIĆGRADSKA UL.",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583380671,
+    "lat": 45.783286,
+    "lng": 15.925978,
+    "name": "JARUNSKA UL. - HRGOVIĆI",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583380751,
+    "lat": 45.798187,
+    "lng": 15.857248,
+    "name": "KING CROSS JANKOMIR",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583381247,
+    "lat": 45.812264,
+    "lng": 15.991094,
+    "name": "UL. KOSTE VOJNOVIĆA",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583381321,
+    "lat": 45.791319,
+    "lng": 15.999438,
+    "name": "LASTOVSKA UL.",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583381582,
+    "lat": 45.816643,
+    "lng": 16.003081,
+    "name": "MAKSIMIRSKA CESTA 51",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583381651,
+    "lat": 45.812496,
+    "lng": 15.988785,
+    "name": "MARTIĆEVA UL. - UL. FRANE BULIĆA",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583381755,
+    "lat": 45.793229,
+    "lng": 16.005071,
+    "name": "UL. MILKE TRNINE",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583384947,
+    "lat": 45.806525,
+    "lng": 15.908054,
+    "name": "ORANICE - UL. I.BRLIĆ-MAŽURANIĆ",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385025,
+    "lat": 45.783597,
+    "lng": 15.933309,
+    "name": "RŠC JARUN - PETRINE",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385377,
+    "lat": 45.806885,
+    "lng": 15.964362,
+    "name": "PIEROTTIJEVA UL.",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385565,
+    "lat": 45.817745,
+    "lng": 15.832586,
+    "name": "SD SUTINSKA VRELA",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 8
+  },
+  {
+    "uid": 583385638,
+    "lat": 45.761115,
+    "lng": 16.007434,
+    "name": "GOMBOŠEVA UL. - HRELIĆKA UL.",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385717,
+    "lat": 45.79109,
+    "lng": 15.944574,
+    "name": "SELSKA CESTA - UL. BLAŽA TROGIRANINA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385846,
+    "lat": 45.801719,
+    "lng": 15.903222,
+    "name": "UL. A. ŠOLJANA - UL. GUSTAVA KRKLECA",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583385935,
+    "lat": 45.81478,
+    "lng": 16.008533,
+    "name": "UL. A. HARAMBAŠIĆA - TRG J.F. KENNEDEY",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583386026,
+    "lat": 45.811284,
+    "lng": 15.948703,
+    "name": "UL. GRADA MAINZA - VODOVODNA UL.",
+    "bikes_available_to_rent": 18,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583386112,
+    "lat": 45.801169,
+    "lng": 16.000101,
+    "name": "UL. GRADA VUKOVARA - OLIBSKA UL.",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583386230,
+    "lat": 45.81561,
+    "lng": 15.878806,
+    "name": "UL. MEDPOTOKI - JOVINČEVA UL. ",
+    "bikes_available_to_rent": 0,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583390092,
+    "lat": 45.811252,
+    "lng": 16.001372,
+    "name": "UL. V. HEINZELA - UL. BUŽANA",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583390213,
+    "lat": 45.771366,
+    "lng": 15.950925,
+    "name": "REMETINEČKA CESTA - SAVSKI GAJ XIII",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391253,
+    "lat": 45.794444,
+    "lng": 15.959251,
+    "name": "SAVSKA CESTA - SLAVONSKA AVENIJA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391355,
+    "lat": 45.79045,
+    "lng": 15.956309,
+    "name": "SAVSKA CESTA 150",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391466,
+    "lat": 45.796865,
+    "lng": 16.037689,
+    "name": "SLAVONSKA AVENIJA - KOLODOVČINA ",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391562,
+    "lat": 45.79457,
+    "lng": 15.98066,
+    "name": "SLAVONSKA AVENIJA - TRNJANSKA CESTA",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391639,
+    "lat": 45.800518,
+    "lng": 16.057125,
+    "name": "CARINARNICA ZAGREB",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 8
+  },
+  {
+    "uid": 583391842,
+    "lat": 45.803721,
+    "lng": 15.895975,
+    "name": "TRG IVANA KUKULJEVIĆA",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583391944,
+    "lat": 45.806868,
+    "lng": 15.96943,
+    "name": "TRG MARKA MARULIĆA",
+    "bikes_available_to_rent": 11,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392029,
+    "lat": 45.812761,
+    "lng": 15.995699,
+    "name": "TRŽNICA KVATRIĆ",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392168,
+    "lat": 45.808493,
+    "lng": 15.991907,
+    "name": "TVORNICA KULTURE",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392545,
+    "lat": 45.805121,
+    "lng": 15.93022,
+    "name": "UL. DRAGUTINA GOLIKA - GABOŠKA UL.",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392661,
+    "lat": 45.802376,
+    "lng": 16.011735,
+    "name": "UL. GRADA VUKOVARA - UL. V. HEINZELA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392785,
+    "lat": 45.792688,
+    "lng": 15.90072,
+    "name": "UL. J.HATZEA - DOBRONIĆEVA UL. ",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583392895,
+    "lat": 45.807223,
+    "lng": 15.89603,
+    "name": "UL. S.ALIĆA - UL. S.DRAGANIĆA",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 6
+  },
+  {
+    "uid": 583393028,
+    "lat": 45.802253,
+    "lng": 15.889798,
+    "name": "UL. A. ŠOLJANA  - OKRETIŠTE",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583393156,
+    "lat": 45.807367,
+    "lng": 15.957234,
+    "name": "UL. F. PETRAČIĆA - UL. A.ŽAJE",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583393545,
+    "lat": 45.799511,
+    "lng": 15.970981,
+    "name": "PUČKO OTVORENO UČILIŠTE",
+    "bikes_available_to_rent": 0,
+    "bike_racks": 14
+  },
+  {
+    "uid": 583393670,
+    "lat": 45.791477,
+    "lng": 15.940926,
+    "name": "UL. MAJSTORA RADONJE - UL. SREDNJACI",
+    "bikes_available_to_rent": 6,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583393813,
+    "lat": 45.793575,
+    "lng": 15.892461,
+    "name": "OKRETIŠTE PREČKO",
+    "bikes_available_to_rent": 14,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583393998,
+    "lat": 45.762172,
+    "lng": 15.996813,
+    "name": "UL. SV. MATEJA",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583394106,
+    "lat": 45.805684,
+    "lng": 15.922636,
+    "name": "ZAGREBAČKA CESTA 126",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 583394208,
+    "lat": 45.796842,
+    "lng": 15.909035,
+    "name": "ZAGREBAČKA CESTA 231",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 584416637,
+    "lat": 45.790468,
+    "lng": 15.913334,
+    "name": "POINT CENTAR VRBANI ",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 20
+  },
+  {
+    "uid": 584419419,
+    "lat": 45.796759,
+    "lng": 15.961126,
+    "name": "ŠETALIŠTE JURIJA GAGARINA",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 584420083,
+    "lat": 45.794083,
+    "lng": 15.931404,
+    "name": "UL. HRGOVIĆI - ZAGREBAČKA AVENIJA",
+    "bikes_available_to_rent": 13,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585909762,
+    "lat": 45.785834,
+    "lng": 15.985596,
+    "name": "BUNDEK",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585911212,
+    "lat": 45.772553,
+    "lng": 15.994175,
+    "name": "TRAVNO - MAMUTICA",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585911340,
+    "lat": 45.798574,
+    "lng": 15.887328,
+    "name": "Z CENTAR",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585911476,
+    "lat": 45.777525,
+    "lng": 15.989982,
+    "name": "SOPOT",
+    "bikes_available_to_rent": 4,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585911645,
+    "lat": 45.860911,
+    "lng": 15.982901,
+    "name": "ŽIČARA SLJEME",
+    "bikes_available_to_rent": 2,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585911812,
+    "lat": 45.778281,
+    "lng": 16.054742,
+    "name": "RADNIČKA CESTA 228",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585912129,
+    "lat": 45.788209,
+    "lng": 16.035013,
+    "name": "RADNIČKA CESTA 212A",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585912425,
+    "lat": 45.781844,
+    "lng": 16.002629,
+    "name": "SAJMIŠNA CESTA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585912526,
+    "lat": 45.795694,
+    "lng": 15.966705,
+    "name": "KNINSKI TRG - VRBIK",
+    "bikes_available_to_rent": 2,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585912719,
+    "lat": 45.807725,
+    "lng": 15.962247,
+    "name": "JUKIĆEVA UL. - UL. ISIDORA KRŠNJAVOG",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585912890,
+    "lat": 45.807631,
+    "lng": 15.968422,
+    "name": "PERKOVČEVA UL.",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585913527,
+    "lat": 45.827987,
+    "lng": 15.97916,
+    "name": "GUPČEVA ZVIJEZDA",
+    "bikes_available_to_rent": 1,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585913605,
+    "lat": 45.817526,
+    "lng": 15.997421,
+    "name": "PETROVA UL. - UL. IVANA ZAJCA",
+    "bikes_available_to_rent": 7,
+    "bike_racks": 10
+  },
+  {
+    "uid": 585913702,
+    "lat": 45.802365,
+    "lng": 15.968013,
+    "name": "KORANSKA UL.",
+    "bikes_available_to_rent": 3,
+    "bike_racks": 10
+  },
+  {
+    "uid": 586256300,
+    "lat": 45.816342,
+    "lng": 15.872686,
+    "name": "GAJNICE UL. - GRINTAVEČKA UL.",
+    "bikes_available_to_rent": 3,
+    "bike_racks": 10
+  },
+  {
+    "uid": 586273004,
+    "lat": 45.765589,
+    "lng": 15.988426,
+    "name": "UL. V. VARIĆAKA 12",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 587422590,
+    "lat": 45.783761,
+    "lng": 15.944574,
+    "name": "MLADOST",
+    "bikes_available_to_rent": 5,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591297515,
+    "lat": 45.791015,
+    "lng": 15.976772,
+    "name": "POGON JEDINSTVO",
+    "bikes_available_to_rent": 9,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591298537,
+    "lat": 45.747964,
+    "lng": 15.993233,
+    "name": "AVENIJA V. HOLJEVCA - BUZINSKI PRILAZ",
+    "bikes_available_to_rent": 8,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591298813,
+    "lat": 45.760873,
+    "lng": 15.98272,
+    "name": "AVENIJA V. HOLJEVCA - UL. M. MIHOLIĆA",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591299513,
+    "lat": 45.797119,
+    "lng": 15.898649,
+    "name": "ZAGREBAČKA AVENIJA 100",
+    "bikes_available_to_rent": 15,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591300040,
+    "lat": 45.821136,
+    "lng": 16.063259,
+    "name": "JUŽNA ULICA - BRANIMIROVA UL.",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591300427,
+    "lat": 45.790855,
+    "lng": 15.949428,
+    "name": "UL. T. UJEVIĆA - ALBAHARIJEVA UL.",
+    "bikes_available_to_rent": 12,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591300997,
+    "lat": 45.812264,
+    "lng": 15.861302,
+    "name": "UL. V. ŠKORPIKA - SAMOBORSKA CESTA",
+    "bikes_available_to_rent": 3,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591301317,
+    "lat": 45.814493,
+    "lng": 16.024924,
+    "name": "BRANIMIROVA ULICA 130A",
+    "bikes_available_to_rent": 16,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591302073,
+    "lat": 45.810076,
+    "lng": 15.925131,
+    "name": "POTOK KUSTOŠAK",
+    "bikes_available_to_rent": 17,
+    "bike_racks": 10
+  },
+  {
+    "uid": 591302625,
+    "lat": 45.805895,
+    "lng": 16.036302,
+    "name": "BORONGAJSKA CESTA - UL. M. ČAVIĆA",
+    "bikes_available_to_rent": 10,
+    "bike_racks": 10
+  }
+]

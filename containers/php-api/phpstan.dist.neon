@@ -1,0 +1,9 @@
+parameters:
+    level: 9
+    checkUninitializedProperties: true
+    checkBenevolentUnionTypes: true
+    paths:
+        - bin/
+        - public/
+        - src/
+        - tests/
