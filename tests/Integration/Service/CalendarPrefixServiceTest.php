@@ -40,7 +40,7 @@ final class CalendarPrefixServiceTest extends IntegrationTestCase
             'Thursday' => ['input' => '2026-04-02', 'expected' => '0_1_'],
             'Friday' => ['input' => '2026-04-03', 'expected' => '0_1_'],
             'Saturday' => ['input' => '2026-04-04', 'expected' => '0_2_'],
-            'Sunday' => ['input' => '2026-02-05', 'expected' => '0_3_'],
+            'Sunday' => ['input' => '2026-04-05', 'expected' => '0_3_'],
         ];
     }
 }
