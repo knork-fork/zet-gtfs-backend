@@ -67,6 +67,11 @@ fi
 
 echo "Update complete."
 
+# Log deployment to admin panel (graceful failure)
+docker exec zet-gtfs-postgres psql -U zetgtfs_user -d zetgtfs_admin_db -c \
+  "INSERT INTO admin_logs (username, action, details) VALUES ('SYSTEM', 'deploy', 'Backend: $remoteBackendCommit, Frontend: $remoteFrontendCommit');" \
+  2>/dev/null || true
+
 # Send Discord notification (if webhook set)
 discordNotificationWebhook=$(get_env_value DISCORD_NOTIFICATION_WEBHOOK)
 if [[ -z "$discordNotificationWebhook" ]]; then
