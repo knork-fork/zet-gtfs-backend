@@ -2400,6 +2400,12 @@
     "stop_lon": "15.988373"
   },
   {
+    "stop_id": "299_17",
+    "stop_name": "Trg žrt. fašizma",
+    "stop_lat": "45.809730",
+    "stop_lon": "15.988003"
+  },
+  {
     "stop_id": "301_21",
     "stop_name": "Trnsko",
     "stop_lat": "45.776910",
@@ -3502,12 +3508,6 @@
     "stop_name": "Pantovčak",
     "stop_lat": "45.845558",
     "stop_lon": "15.958134"
-  },
-  {
-    "stop_id": "395_24",
-    "stop_name": "Pantovčak",
-    "stop_lat": "45.845570",
-    "stop_lon": "15.958194"
   },
   {
     "stop_id": "396_23",
@@ -12792,12 +12792,6 @@
     "stop_lon": "16.002605"
   },
   {
-    "stop_id": "1465_23",
-    "stop_name": "Sarajevsk-Ukrajinska",
-    "stop_lat": "45.774548",
-    "stop_lon": "16.003668"
-  },
-  {
     "stop_id": "1465_24",
     "stop_name": "Sarajevsk-Ukrajinska",
     "stop_lat": "45.772531",
@@ -14496,28 +14490,10 @@
     "stop_lon": "16.021794"
   },
   {
-    "stop_id": "1921_24",
-    "stop_name": "Gata 13",
-    "stop_lat": "45.762406",
-    "stop_lon": "16.014747"
-  },
-  {
-    "stop_id": "1922_23",
-    "stop_name": "Sarajevska-rotor",
-    "stop_lat": "45.776975",
-    "stop_lon": "16.003006"
-  },
-  {
     "stop_id": "1923_24",
     "stop_name": "Tišinska ul. III odv",
     "stop_lat": "45.763583",
     "stop_lon": "16.017819"
-  },
-  {
-    "stop_id": "1924_21",
-    "stop_name": "Kamenarka 18",
-    "stop_lat": "45.764453",
-    "stop_lon": "16.010630"
   },
   {
     "stop_id": "1930_21",
@@ -15256,5 +15232,23 @@
     "stop_name": "Popovečka 51",
     "stop_lat": "45.832541",
     "stop_lon": "16.146087"
+  },
+  {
+    "stop_id": "2112_21",
+    "stop_name": "Borongaj - jug",
+    "stop_lat": "45.813631",
+    "stop_lon": "16.020665"
+  },
+  {
+    "stop_id": "2113_23",
+    "stop_name": "Šišićeva",
+    "stop_lat": "45.776963",
+    "stop_lon": "16.001041"
+  },
+  {
+    "stop_id": "2114_12",
+    "stop_name": "Savski gaj",
+    "stop_lat": "45.777162",
+    "stop_lon": "15.956305"
   }
 ]
