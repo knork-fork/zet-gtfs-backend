@@ -1,0 +1,36 @@
+<% if (logs.length === 0) { %>
+  <p>No log entries.</p>
+<% } else { %>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Action</th>
+        <th>Details</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% logs.forEach(log => { %>
+        <tr>
+          <td><%= log.id %></td>
+          <td><%= log.username %></td>
+          <td><%= log.action %></td>
+          <td><%= log.details || '-' %></td>
+          <td><%= new Date(log.created_at).toLocaleString('hr-HR') %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <% if (page > 1) { %>
+      <a href="/admin/logs?page=<%= page - 1 %>">&laquo; Previous</a>
+    <% } %>
+    <span>Page <%= page %> of <%= totalPages %></span>
+    <% if (page < totalPages) { %>
+      <a href="/admin/logs?page=<%= page + 1 %>">Next &raquo;</a>
+    <% } %>
+  </div>
+<% } %>

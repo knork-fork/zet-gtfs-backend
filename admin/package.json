@@ -1,0 +1,11 @@
+{
+  "name": "zet-gtfs-admin",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "pg": "^8.13.1"
+  }
+}

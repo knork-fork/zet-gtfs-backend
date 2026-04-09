@@ -85,4 +85,19 @@ scripts/deployment/update_from_repo.sh
 
 For now, `scripts/gtfs/update_schedule.sh` needs to be ran manually at least once a month.
 
+See admin section below for more.
+
+### Admin panel
+
+Admin panel is available at `http://localhost:20000/admin`.
+
+Database is loaded separately using:
+```bash
+admin/scripts/init-db.sh
+```
+
+Create a new admin user with:
+```bash
+admin/scripts/add_administrator.sh
+```
 

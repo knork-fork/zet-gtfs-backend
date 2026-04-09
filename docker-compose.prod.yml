@@ -30,6 +30,7 @@ services:
             DB_HOST: zet-gtfs-postgres
             DATABASES: |
                 zetgtfs_db = host=zet-gtfs-postgres dbname=zetgtfs_db
+                zetgtfs_admin_db = host=zet-gtfs-postgres dbname=zetgtfs_admin_db
             POOL_MODE: transaction
             MAX_CLIENT_CONN: 100
             DEFAULT_POOL_SIZE: 20
@@ -74,6 +75,21 @@ services:
             - './var/logs/php-fpm:/var/log'
         user: www-data
         command: ["php", "/application/scripts/gtfs/fetch_loop.php"]
+
+    admin:
+        container_name: zet-gtfs-admin
+        restart: unless-stopped
+        image: node:20-alpine
+        working_dir: /application/admin
+        volumes:
+            - './admin:/application/admin'
+        command: sh -c "npm install --production && node app.js"
+        environment:
+            - DB_HOST=zet-gtfs-db
+            - DB_PORT=5435
+            - DB_NAME=zetgtfs_admin_db
+            - DB_USER=zetgtfs_user
+            - DB_PASSWORD=zetgtfs_pass
 
 volumes:
     zet-gtfs-pgdata:

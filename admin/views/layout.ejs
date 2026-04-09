@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - <%= title %></title>
+  <link rel="stylesheet" href="/admin/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <nav class="sidebar">
+      <div class="sidebar-header"><img src="/admin/static/favicon.png" alt="" width="20" height="20"> ZET Uživo Admin Panel</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Actions</div>
+        <a href="/admin/actions/schedule" class="<%= active === '/admin/actions/schedule' ? 'active' : '' %>">Update schedule</a>
+        <a href="/admin/actions/routes" class="<%= active === '/admin/actions/routes' ? 'active' : '' %>">Update routes</a>
+      </div>
+      <a href="/admin/logs" class="<%= active === '/admin/logs' ? 'active' : '' %>">Logs</a>
+      <a href="/admin/settings" class="<%= active === '/admin/settings' ? 'active' : '' %>">Settings</a>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-footer">
+        <span class="sidebar-user"><%= user %></span>
+        <a href="/admin/logout">Logout</a>
+      </div>
+    </nav>
+    <main>
+      <h1><%= title %></h1>
+      <%- include(body, data) %>
+    </main>
+  </div>
+</body>
+</html>
