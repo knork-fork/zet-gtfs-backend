@@ -83,6 +83,9 @@ services:
         working_dir: /application/admin
         volumes:
             - './admin:/application/admin'
+            - './resources:/application/resources'
+            - './scripts/gtfs/generated_geojson_routes:/application/static_geojson:ro'
+            - './frontend/.env:/application/frontend/.env:ro'
         command: sh -c "npm install --production && node app.js"
         environment:
             - DB_HOST=zet-gtfs-db

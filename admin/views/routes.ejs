@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<div class="routes-toolbar">
+  <span id="last-update"></span>
+  <div class="routes-toolbar-buttons">
+    <button id="btn-pull" class="btn">Pull fresh GTFS</button>
+    <button id="btn-publish" class="btn" disabled>Publish</button>
+    <button id="btn-cancel" class="btn btn-danger" disabled>Cancel</button>
+  </div>
+  <span id="status-text"></span>
+</div>
+
+<div id="routes-content" class="routes-content" style="display:none">
+  <div class="routes-main">
+    <div id="map-wrapper">
+      <div id="map-container"></div>
+      <div id="feature-bar" class="feature-bar"></div>
+    </div>
+  </div>
+  <div class="routes-sidebar">
+    <div id="route-list"></div>
+  </div>
+</div>
+
+<script src="/admin/static/routes.js"></script>
