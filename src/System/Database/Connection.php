@@ -29,7 +29,8 @@ final class Connection
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
+                // Must be true: pgbouncer transaction pool mode doesn't support server-side prepared statements
+                PDO::ATTR_EMULATE_PREPARES => true,
             ]
         );
     }
