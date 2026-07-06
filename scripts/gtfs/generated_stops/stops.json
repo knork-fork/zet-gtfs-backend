@@ -38,8 +38,8 @@
   {
     "stop_id": "99_32",
     "stop_name": "Črnomerec",
-    "stop_lat": "45.816059",
-    "stop_lon": "15.933327"
+    "stop_lat": "45.815666",
+    "stop_lon": "15.933689"
   },
   {
     "stop_id": "99_36",
@@ -206,8 +206,8 @@
   {
     "stop_id": "107_4",
     "stop_name": "Zrinjevac",
-    "stop_lat": "45.808883",
-    "stop_lon": "15.977743"
+    "stop_lat": "45.809508",
+    "stop_lon": "15.977652"
   },
   {
     "stop_id": "109_1",
@@ -1064,8 +1064,8 @@
   {
     "stop_id": "184_32",
     "stop_name": "Zapruđe",
-    "stop_lat": "45.781868",
-    "stop_lon": "16.002687"
+    "stop_lat": "45.781876",
+    "stop_lon": "16.002674"
   },
   {
     "stop_id": "185_1",
@@ -1094,8 +1094,8 @@
   {
     "stop_id": "185_8",
     "stop_name": "Zapruđe",
-    "stop_lat": "45.779550",
-    "stop_lon": "16.001676"
+    "stop_lat": "45.778577",
+    "stop_lon": "16.001030"
   },
   {
     "stop_id": "185_14",
@@ -1117,13 +1117,13 @@
   },
   {
     "stop_id": "188_1",
-    "stop_name": "HNK2",
+    "stop_name": "HNK 2 - Adžijina",
     "stop_lat": "45.807816",
     "stop_lon": "15.961581"
   },
   {
     "stop_id": "188_2",
-    "stop_name": "HNK2",
+    "stop_name": "HNK 2 - Adžijina",
     "stop_lat": "45.807564",
     "stop_lon": "15.962047"
   },
@@ -1730,8 +1730,8 @@
   {
     "stop_id": "236_1",
     "stop_name": "Kvaternikov trg",
-    "stop_lat": "45.814926",
-    "stop_lon": "15.997070"
+    "stop_lat": "45.814575",
+    "stop_lon": "15.995921"
   },
   {
     "stop_id": "236_2",
@@ -1742,8 +1742,8 @@
   {
     "stop_id": "236_13",
     "stop_name": "Kvaternikov trg",
-    "stop_lat": "45.814912",
-    "stop_lon": "15.997227"
+    "stop_lat": "45.814861",
+    "stop_lon": "15.996662"
   },
   {
     "stop_id": "236_14",
@@ -1806,12 +1806,6 @@
     "stop_lon": "15.936965"
   },
   {
-    "stop_id": "244_24",
-    "stop_name": "Ljubljanica",
-    "stop_lat": "45.796155",
-    "stop_lon": "15.936770"
-  },
-  {
     "stop_id": "244_34",
     "stop_name": "Ljubljanica",
     "stop_lat": "45.796184",
@@ -1846,6 +1840,12 @@
     "stop_name": "Ljubljanica",
     "stop_lat": "45.797255",
     "stop_lon": "15.937654"
+  },
+  {
+    "stop_id": "245_13",
+    "stop_name": "Ljubljanica",
+    "stop_lat": "45.797236",
+    "stop_lon": "15.937948"
   },
   {
     "stop_id": "246_1",
@@ -2233,13 +2233,13 @@
   },
   {
     "stop_id": "286_21",
-    "stop_name": "St.dom Stjepan Radić",
+    "stop_name": "St. dom S. Radić",
     "stop_lat": "45.786213",
     "stop_lon": "15.950760"
   },
   {
     "stop_id": "286_22",
-    "stop_name": "St.dom Stjepan Radić",
+    "stop_name": "St. dom S. Radić",
     "stop_lat": "45.786505",
     "stop_lon": "15.950506"
   },
@@ -2384,8 +2384,8 @@
   {
     "stop_id": "298_4",
     "stop_name": "Trg Rep. Hrvatske",
-    "stop_lat": "45.809331",
-    "stop_lon": "15.968876"
+    "stop_lat": "45.808450",
+    "stop_lon": "15.968335"
   },
   {
     "stop_id": "299_1",
@@ -2402,8 +2402,8 @@
   {
     "stop_id": "299_17",
     "stop_name": "Trg žrt. fašizma",
-    "stop_lat": "45.809730",
-    "stop_lon": "15.988003"
+    "stop_lat": "45.809444",
+    "stop_lon": "15.987632"
   },
   {
     "stop_id": "301_21",
@@ -2568,18 +2568,6 @@
     "stop_lon": "15.953928"
   },
   {
-    "stop_id": "317_1",
-    "stop_name": "Zapadni kolodvor",
-    "stop_lat": "45.809480",
-    "stop_lon": "15.954827"
-  },
-  {
-    "stop_id": "317_2",
-    "stop_name": "Zapadni kolodvor",
-    "stop_lat": "45.809354",
-    "stop_lon": "15.955781"
-  },
-  {
     "stop_id": "319_23",
     "stop_name": "Varaždinska-Selčina",
     "stop_lat": "45.831696",
@@ -2632,12 +2620,6 @@
     "stop_name": "Soblinec-rask.-škola",
     "stop_lat": "45.864067",
     "stop_lon": "16.154944"
-  },
-  {
-    "stop_id": "323_22",
-    "stop_name": "Soblinec-rask.-škola",
-    "stop_lat": "45.864456",
-    "stop_lon": "16.153723"
   },
   {
     "stop_id": "323_23",
@@ -2958,94 +2940,10 @@
     "stop_lon": "16.109511"
   },
   {
-    "stop_id": "347_23",
-    "stop_name": "Obrež",
-    "stop_lat": "45.872160",
-    "stop_lon": "16.145129"
-  },
-  {
-    "stop_id": "347_24",
-    "stop_name": "Obrež",
-    "stop_lat": "45.871797",
-    "stop_lon": "16.145255"
-  },
-  {
-    "stop_id": "348_23",
-    "stop_name": "Vojnovićeva",
-    "stop_lat": "45.877129",
-    "stop_lon": "16.141392"
-  },
-  {
-    "stop_id": "348_24",
-    "stop_name": "Vojnovićeva",
-    "stop_lat": "45.876995",
-    "stop_lon": "16.141450"
-  },
-  {
-    "stop_id": "349_23",
-    "stop_name": "Gajci-Lovre Sedinića",
-    "stop_lat": "45.884512",
-    "stop_lon": "16.137787"
-  },
-  {
-    "stop_id": "349_24",
-    "stop_name": "Gajci-Lovre Sedinića",
-    "stop_lat": "45.884444",
-    "stop_lon": "16.137795"
-  },
-  {
-    "stop_id": "350_23",
-    "stop_name": "Vurnovec-B.B.-Kusova",
-    "stop_lat": "45.888799",
-    "stop_lon": "16.136660"
-  },
-  {
-    "stop_id": "350_24",
-    "stop_name": "Vurnovec-B.B.-Kusova",
-    "stop_lat": "45.888503",
-    "stop_lon": "16.136491"
-  },
-  {
-    "stop_id": "351_23",
-    "stop_name": "Prepuštovec-Vurnovec",
-    "stop_lat": "45.891780",
-    "stop_lon": "16.133676"
-  },
-  {
-    "stop_id": "351_24",
-    "stop_name": "Prepuštovec-Vurnovec",
-    "stop_lat": "45.891285",
-    "stop_lon": "16.133819"
-  },
-  {
-    "stop_id": "352_23",
-    "stop_name": "Škanići",
-    "stop_lat": "45.897253",
-    "stop_lon": "16.133781"
-  },
-  {
-    "stop_id": "352_24",
-    "stop_name": "Škanići",
-    "stop_lat": "45.897239",
-    "stop_lon": "16.133786"
-  },
-  {
-    "stop_id": "353_23",
-    "stop_name": "Prepuštovec-izletišt",
-    "stop_lat": "45.901157",
-    "stop_lon": "16.132373"
-  },
-  {
-    "stop_id": "353_24",
-    "stop_name": "Prepuštovec-izletišt",
-    "stop_lat": "45.901037",
-    "stop_lon": "16.132379"
-  },
-  {
-    "stop_id": "354_23",
-    "stop_name": "Put za Kašinu",
-    "stop_lat": "45.903675",
-    "stop_lon": "16.131057"
+    "stop_id": "346_83",
+    "stop_name": "Sesvete-izlaz",
+    "stop_lat": "45.824513",
+    "stop_lon": "16.105891"
   },
   {
     "stop_id": "354_24",
@@ -3770,14 +3668,14 @@
   {
     "stop_id": "418_23",
     "stop_name": "Jandrićeva",
-    "stop_lat": "45.837291",
-    "stop_lon": "15.977409"
+    "stop_lat": "45.836969",
+    "stop_lon": "15.976707"
   },
   {
     "stop_id": "418_24",
     "stop_name": "Jandrićeva",
-    "stop_lat": "45.837074",
-    "stop_lon": "15.977202"
+    "stop_lat": "45.836981",
+    "stop_lon": "15.976569"
   },
   {
     "stop_id": "419_23",
@@ -5102,8 +5000,8 @@
   {
     "stop_id": "524_25",
     "stop_name": "Špansko",
-    "stop_lat": "45.802335",
-    "stop_lon": "15.889837"
+    "stop_lat": "45.802257",
+    "stop_lon": "15.889662"
   },
   {
     "stop_id": "526_23",
@@ -5144,8 +5042,8 @@
   {
     "stop_id": "528_24",
     "stop_name": "Naletilićeva",
-    "stop_lat": "45.765749",
-    "stop_lon": "15.946060"
+    "stop_lat": "45.765393",
+    "stop_lon": "15.946002"
   },
   {
     "stop_id": "529_24",
@@ -5653,7 +5551,7 @@
   },
   {
     "stop_id": "578_21",
-    "stop_name": "HNK2",
+    "stop_name": "HNK 2 - Adžijina",
     "stop_lat": "45.807740",
     "stop_lon": "15.960870"
   },
@@ -5731,7 +5629,7 @@
   },
   {
     "stop_id": "589_21",
-    "stop_name": "HNK2",
+    "stop_name": "HNK 2 - Adžijina",
     "stop_lat": "45.807501",
     "stop_lon": "15.960206"
   },
@@ -5764,18 +5662,6 @@
     "stop_name": "Paljetkova",
     "stop_lat": "45.793058",
     "stop_lon": "15.894551"
-  },
-  {
-    "stop_id": "611_23",
-    "stop_name": "Prečko-terminal",
-    "stop_lat": "45.794876",
-    "stop_lon": "15.899648"
-  },
-  {
-    "stop_id": "611_24",
-    "stop_name": "Prečko-terminal",
-    "stop_lat": "45.794759",
-    "stop_lon": "15.899611"
   },
   {
     "stop_id": "611_27",
@@ -6560,8 +6446,8 @@
   {
     "stop_id": "681_22",
     "stop_name": "Dragonožec-škola",
-    "stop_lat": "45.663460",
-    "stop_lon": "15.943247"
+    "stop_lat": "45.663056",
+    "stop_lon": "15.942096"
   },
   {
     "stop_id": "681_23",
@@ -7622,8 +7508,8 @@
   {
     "stop_id": "792_23",
     "stop_name": "Novaki - Selska",
-    "stop_lat": "45.886173",
-    "stop_lon": "15.861208"
+    "stop_lat": "45.886793",
+    "stop_lon": "15.864524"
   },
   {
     "stop_id": "792_24",
@@ -7946,14 +7832,14 @@
   {
     "stop_id": "933_24",
     "stop_name": "Črnkovec",
-    "stop_lat": "45.751727",
-    "stop_lon": "16.109856"
+    "stop_lat": "45.751710",
+    "stop_lon": "16.109543"
   },
   {
     "stop_id": "933_27",
     "stop_name": "Črnkovec",
-    "stop_lat": "45.751757",
-    "stop_lon": "16.109848"
+    "stop_lat": "45.751710",
+    "stop_lon": "16.109543"
   },
   {
     "stop_id": "933_28",
@@ -8294,14 +8180,14 @@
   {
     "stop_id": "966_23",
     "stop_name": "Remete",
-    "stop_lat": "45.850147",
-    "stop_lon": "15.993457"
+    "stop_lat": "45.848661",
+    "stop_lon": "15.990830"
   },
   {
     "stop_id": "966_24",
     "stop_name": "Remete",
-    "stop_lat": "45.848864",
-    "stop_lon": "15.990280"
+    "stop_lat": "45.849447",
+    "stop_lon": "15.989985"
   },
   {
     "stop_id": "967_23",
@@ -8456,8 +8342,8 @@
   {
     "stop_id": "978_23",
     "stop_name": "Trg Svetog Šimuna",
-    "stop_lat": "45.875368",
-    "stop_lon": "16.013808"
+    "stop_lat": "45.875702",
+    "stop_lon": "16.014678"
   },
   {
     "stop_id": "979_23",
@@ -9086,8 +8972,8 @@
   {
     "stop_id": "1027_42",
     "stop_name": "Bistrička-Zagrebačka",
-    "stop_lat": "45.827780",
-    "stop_lon": "16.108090"
+    "stop_lat": "45.827488",
+    "stop_lon": "16.107775"
   },
   {
     "stop_id": "1027_52",
@@ -10214,8 +10100,8 @@
   {
     "stop_id": "1122_23",
     "stop_name": "Melinišće",
-    "stop_lat": "45.839675",
-    "stop_lon": "16.019035"
+    "stop_lat": "45.839322",
+    "stop_lon": "16.019710"
   },
   {
     "stop_id": "1122_24",
@@ -10393,7 +10279,7 @@
   },
   {
     "stop_id": "1138_21",
-    "stop_name": "Aleja Javora",
+    "stop_name": "Aleja javora",
     "stop_lat": "45.823208",
     "stop_lon": "16.068727"
   },
@@ -10706,8 +10592,8 @@
   {
     "stop_id": "1166_23",
     "stop_name": "Poljaki",
-    "stop_lat": "45.890532",
-    "stop_lon": "16.111995"
+    "stop_lat": "45.893478",
+    "stop_lon": "16.113627"
   },
   {
     "stop_id": "1166_24",
@@ -10994,8 +10880,8 @@
   {
     "stop_id": "1188_23",
     "stop_name": "Oreškovićeva",
-    "stop_lat": "45.760609",
-    "stop_lon": "15.987749"
+    "stop_lat": "45.760659",
+    "stop_lon": "15.990468"
   },
   {
     "stop_id": "1188_24",
@@ -11054,8 +10940,8 @@
   {
     "stop_id": "1192_22",
     "stop_name": "Hrašće Turopolj.",
-    "stop_lat": "45.736059",
-    "stop_lon": "16.010909"
+    "stop_lat": "45.735393",
+    "stop_lon": "16.010487"
   },
   {
     "stop_id": "1193_22",
@@ -11138,8 +11024,8 @@
   {
     "stop_id": "1200_21",
     "stop_name": "Velika Gorica",
-    "stop_lat": "45.711477",
-    "stop_lon": "16.077502"
+    "stop_lat": "45.711421",
+    "stop_lon": "16.076933"
   },
   {
     "stop_id": "1200_23",
@@ -11300,8 +11186,8 @@
   {
     "stop_id": "1213_21",
     "stop_name": "Mladena Halape",
-    "stop_lat": "45.813837",
-    "stop_lon": "16.186704"
+    "stop_lat": "45.813833",
+    "stop_lon": "16.186325"
   },
   {
     "stop_id": "1214_21",
@@ -11348,8 +11234,8 @@
   {
     "stop_id": "1217_22",
     "stop_name": "Šijavrh",
-    "stop_lat": "45.839284",
-    "stop_lon": "16.169204"
+    "stop_lat": "45.845953",
+    "stop_lon": "16.162913"
   },
   {
     "stop_id": "1218_21",
@@ -11360,8 +11246,8 @@
   {
     "stop_id": "1218_22",
     "stop_name": "Budenec-Stančira",
-    "stop_lat": "45.836590",
-    "stop_lon": "16.174287"
+    "stop_lat": "45.839284",
+    "stop_lon": "16.169204"
   },
   {
     "stop_id": "1219_21",
@@ -11372,8 +11258,8 @@
   {
     "stop_id": "1219_22",
     "stop_name": "Budenečka 14",
-    "stop_lat": "45.834850",
-    "stop_lon": "16.178710"
+    "stop_lat": "45.836590",
+    "stop_lon": "16.174287"
   },
   {
     "stop_id": "1220_21",
@@ -11410,36 +11296,6 @@
     "stop_name": "Laktec",
     "stop_lat": "45.858176",
     "stop_lon": "16.229483"
-  },
-  {
-    "stop_id": "1224_22",
-    "stop_name": "Ante Starčevića 45 A",
-    "stop_lat": "45.824543",
-    "stop_lon": "16.096974"
-  },
-  {
-    "stop_id": "1225_23",
-    "stop_name": "Sopnička - škola",
-    "stop_lat": "45.821846",
-    "stop_lon": "16.092985"
-  },
-  {
-    "stop_id": "1225_24",
-    "stop_name": "Sopnička - škola",
-    "stop_lat": "45.821846",
-    "stop_lon": "16.092985"
-  },
-  {
-    "stop_id": "1226_24",
-    "stop_name": "Sopnička 37",
-    "stop_lat": "45.819283",
-    "stop_lon": "16.095715"
-  },
-  {
-    "stop_id": "1227_23",
-    "stop_name": "Sopnička-kod 10D",
-    "stop_lat": "45.817058",
-    "stop_lon": "16.099184"
   },
   {
     "stop_id": "1228_21",
@@ -12504,12 +12360,6 @@
     "stop_lon": "16.103338"
   },
   {
-    "stop_id": "1401_23",
-    "stop_name": "Ljudevita Posavskog",
-    "stop_lat": "45.822041",
-    "stop_lon": "16.101144"
-  },
-  {
     "stop_id": "1401_24",
     "stop_name": "Ljudevita Posavskog",
     "stop_lat": "45.821965",
@@ -12775,25 +12625,25 @@
   },
   {
     "stop_id": "1464_23",
-    "stop_name": "Sarajevsk-Vatikanska",
+    "stop_name": "Sarajev.-Vatikanska",
     "stop_lat": "45.769325",
     "stop_lon": "16.005381"
   },
   {
     "stop_id": "1464_24",
-    "stop_name": "Sarajevsk-Vatikanska",
+    "stop_name": "Sarajev.-Vatikanska",
     "stop_lat": "45.767603",
     "stop_lon": "16.005751"
   },
   {
     "stop_id": "1465_22",
-    "stop_name": "Sarajevsk-Ukrajinska",
+    "stop_name": "Sarajev.-Ukrajinska",
     "stop_lat": "45.773268",
     "stop_lon": "16.002605"
   },
   {
     "stop_id": "1465_24",
-    "stop_name": "Sarajevsk-Ukrajinska",
+    "stop_name": "Sarajev.-Ukrajinska",
     "stop_lat": "45.772531",
     "stop_lon": "16.003828"
   },
@@ -12896,8 +12746,8 @@
   {
     "stop_id": "1525_22",
     "stop_name": "Budenečka 34",
-    "stop_lat": "45.834716",
-    "stop_lon": "16.179160"
+    "stop_lat": "45.834850",
+    "stop_lon": "16.178710"
   },
   {
     "stop_id": "1526_23",
@@ -13070,14 +12920,14 @@
   {
     "stop_id": "1619_21",
     "stop_name": "Park 101.Brigade",
-    "stop_lat": "45.817608",
-    "stop_lon": "15.875368"
+    "stop_lat": "45.817457",
+    "stop_lon": "15.875281"
   },
   {
     "stop_id": "1619_23",
     "stop_name": "Park 101.Brigade",
-    "stop_lat": "45.817365",
-    "stop_lon": "15.875244"
+    "stop_lat": "45.817457",
+    "stop_lon": "15.875281"
   },
   {
     "stop_id": "1634_22",
@@ -13260,12 +13110,6 @@
     "stop_lon": "15.983143"
   },
   {
-    "stop_id": "1665_32",
-    "stop_name": "Sesvete-ukrcaj",
-    "stop_lat": "45.825770",
-    "stop_lon": "16.108543"
-  },
-  {
     "stop_id": "1665_42",
     "stop_name": "Sesvete-ukrcaj",
     "stop_lat": "45.825864",
@@ -13290,10 +13134,10 @@
     "stop_lon": "16.107175"
   },
   {
-    "stop_id": "1665_92",
+    "stop_id": "1665_87",
     "stop_name": "Sesvete-ukrcaj",
-    "stop_lat": "45.826164",
-    "stop_lon": "16.106927"
+    "stop_lat": "45.824408",
+    "stop_lon": "16.105480"
   },
   {
     "stop_id": "1666_23",
@@ -13364,8 +13208,8 @@
   {
     "stop_id": "1671_22",
     "stop_name": "Rimski put-bazen",
-    "stop_lat": "45.809920",
-    "stop_lon": "16.101963"
+    "stop_lat": "45.809850",
+    "stop_lon": "16.107282"
   },
   {
     "stop_id": "1672_22",
@@ -13778,8 +13622,8 @@
   {
     "stop_id": "1760_24",
     "stop_name": "Savišće",
-    "stop_lat": "45.789163",
-    "stop_lon": "16.033682"
+    "stop_lat": "45.788036",
+    "stop_lon": "16.035297"
   },
   {
     "stop_id": "1764_23",
@@ -13838,8 +13682,8 @@
   {
     "stop_id": "1775_22",
     "stop_name": "Slavonska-Čulinečka",
-    "stop_lat": "45.803579",
-    "stop_lon": "16.073259"
+    "stop_lat": "45.803404",
+    "stop_lon": "16.072248"
   },
   {
     "stop_id": "1780_11",
@@ -13850,8 +13694,8 @@
   {
     "stop_id": "1780_18",
     "stop_name": "Zapruđe",
-    "stop_lat": "45.778950",
-    "stop_lon": "16.001836"
+    "stop_lat": "45.778054",
+    "stop_lon": "16.000903"
   },
   {
     "stop_id": "1781_11",
@@ -13874,8 +13718,8 @@
   {
     "stop_id": "1783_11",
     "stop_name": "Park Maksimir",
-    "stop_lat": "45.819781",
-    "stop_lon": "16.014988"
+    "stop_lat": "45.819034",
+    "stop_lon": "16.014094"
   },
   {
     "stop_id": "1784_23",
@@ -14114,8 +13958,8 @@
   {
     "stop_id": "1851_23",
     "stop_name": "Habdelićeva",
-    "stop_lat": "45.815905",
-    "stop_lon": "15.975340"
+    "stop_lat": "45.815687",
+    "stop_lon": "15.974748"
   },
   {
     "stop_id": "1852_22",
@@ -14236,18 +14080,6 @@
     "stop_name": "K.Hruševec-okret.",
     "stop_lat": "45.946094",
     "stop_lon": "15.788398"
-  },
-  {
-    "stop_id": "1873_23",
-    "stop_name": "Paruževinska cesta",
-    "stop_lat": "45.880471",
-    "stop_lon": "16.138143"
-  },
-  {
-    "stop_id": "1873_24",
-    "stop_name": "Paruževinska cesta",
-    "stop_lat": "45.880098",
-    "stop_lon": "16.138260"
   },
   {
     "stop_id": "1874_23",
@@ -14846,8 +14678,8 @@
   {
     "stop_id": "2029_23",
     "stop_name": "MO N.Brestje",
-    "stop_lat": "45.828846",
-    "stop_lon": "16.090892"
+    "stop_lat": "45.828985",
+    "stop_lon": "16.090948"
   },
   {
     "stop_id": "2029_24",
@@ -15218,8 +15050,8 @@
   {
     "stop_id": "2102_24",
     "stop_name": "Pliva",
-    "stop_lat": "45.812630",
-    "stop_lon": "15.931636"
+    "stop_lat": "45.812636",
+    "stop_lon": "15.931442"
   },
   {
     "stop_id": "2103_21",
@@ -15246,9 +15078,15 @@
     "stop_lon": "16.001041"
   },
   {
-    "stop_id": "2114_12",
-    "stop_name": "Savski gaj",
-    "stop_lat": "45.777162",
-    "stop_lon": "15.956305"
+    "stop_id": "2115_24",
+    "stop_name": "Soblinečka 22",
+    "stop_lat": "45.903967",
+    "stop_lon": "16.130337"
+  },
+  {
+    "stop_id": "2119_22",
+    "stop_name": "Slatinska",
+    "stop_lat": "45.824768",
+    "stop_lon": "16.100967"
   }
 ]
