@@ -28,6 +28,7 @@ const DYNAMIC_DIR = '/application/resources/gtfs/dynamic/routes';
 const TEMP_DIR = '/application/resources/gtfs/temp';
 const STAGING_DIR = '/application/resources/gtfs/staging';
 const STATIC_DIR = '/application/static_geojson';
+const STATUS_MESSAGE_FILE = '/application/resources/status_message.txt';
 
 [DYNAMIC_DIR, TEMP_DIR, STAGING_DIR].forEach(d => fs.mkdirSync(d, { recursive: true }));
 app.use(session({
@@ -51,7 +52,7 @@ async function logAction(username, action, details = null) {
 
 // Login
 app.get('/admin/login', (req, res) => {
-  if (req.session.user) return res.redirect('/admin/actions/schedule');
+  if (req.session.user) return res.redirect('/admin/status-message');
   res.render('login', { error: null });
 });
 
@@ -66,7 +67,7 @@ app.post('/admin/login', async (req, res) => {
 
   req.session.user = user.username;
   await logAction(user.username, 'login');
-  res.redirect('/admin/actions/schedule');
+  res.redirect('/admin/status-message');
 });
 
 // Logout
@@ -77,7 +78,7 @@ app.get('/admin/logout', (req, res) => {
 // Protected routes
 app.use(requireAuth);
 
-app.get('/admin', (req, res) => res.redirect('/admin/actions/schedule'));
+app.get('/admin', (req, res) => res.redirect('/admin/status-message'));
 
 app.get('/admin/actions/:type', (req, res) => {
   const type = req.params.type;
@@ -90,6 +91,41 @@ app.get('/admin/actions/:type', (req, res) => {
     body: type === 'routes' ? 'routes' : 'actions',
     data: { type },
   });
+});
+
+function readStatusMessage() {
+  try {
+    return fs.readFileSync(STATUS_MESSAGE_FILE, 'utf-8').trim();
+  } catch { return ''; }
+}
+
+function renderStatusMessage(req, res, data = {}) {
+  res.render('layout', {
+    user: req.session.user,
+    active: '/admin/status-message',
+    title: 'Status message',
+    body: 'status-message',
+    data: { message: readStatusMessage(), success: null, error: null, ...data },
+  });
+}
+
+app.get('/admin/status-message', (req, res) => renderStatusMessage(req, res));
+
+app.post('/admin/status-message', async (req, res) => {
+  const message = (req.body.message || '').replace(/\r\n/g, '\n').trim();
+
+  try {
+    if (message === '') {
+      fs.rmSync(STATUS_MESSAGE_FILE, { force: true });
+    } else {
+      fs.writeFileSync(STATUS_MESSAGE_FILE, message);
+    }
+  } catch (err) {
+    return renderStatusMessage(req, res, { message, error: err.message });
+  }
+
+  await logAction(req.session.user, message === '' ? 'status_message_clear' : 'status_message_set', message || null);
+  renderStatusMessage(req, res, { success: message === '' ? 'Status message cleared' : 'Status message updated' });
 });
 
 app.get('/admin/logs', async (req, res) => {

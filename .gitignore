@@ -15,3 +15,6 @@ scripts/gtfs/static_gtfs_files/stop_times_clean.csv
 
 # Too large for git, gzipped variant is pushed instead
 scripts/gtfs/static_gtfs_files/stop_times.txt
+
+# Status message set from admin panel
+resources/status_message.txt

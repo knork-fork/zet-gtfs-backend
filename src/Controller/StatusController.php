@@ -11,10 +11,24 @@ use KnorkFork\LoadEnvironment\Environment;
 
 final class StatusController
 {
+    // Written by the admin panel
+    private const STATUS_MESSAGE_FILE = '/application/resources/status_message.txt';
+
     public static function status(): JsonResponse
     {
         return new JsonResponse([
             'status' => 'ok',
+        ]);
+    }
+
+    public static function statusMessage(): JsonResponse
+    {
+        $message = is_file(self::STATUS_MESSAGE_FILE)
+            ? trim((string) file_get_contents(self::STATUS_MESSAGE_FILE))
+            : '';
+
+        return new JsonResponse([
+            'message' => $message !== '' ? $message : null,
         ]);
     }
 

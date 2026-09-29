@@ -14,6 +14,14 @@ info:
     requestDto: null
     status_code: 200
 
+status_message:
+    path: /api/status_message
+    controller: App\Controller\StatusController::statusMessage
+    method: GET
+    description: Get the public status message (PSA), message is null when there is none
+    requestDto: null
+    status_code: 200
+
 get_all_data:
     path: /api/get_data
     controller: App\Controller\DataController::getAllData
