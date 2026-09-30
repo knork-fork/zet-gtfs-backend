@@ -1740,10 +1740,16 @@
     "stop_lon": "15.997631"
   },
   {
+    "stop_id": "236_10",
+    "stop_name": "Kvaternikov trg",
+    "stop_lat": "74.194200",
+    "stop_lon": "70.743484"
+  },
+  {
     "stop_id": "236_13",
     "stop_name": "Kvaternikov trg",
-    "stop_lat": "45.814861",
-    "stop_lon": "15.996662"
+    "stop_lat": "52.909696",
+    "stop_lon": "29.683367"
   },
   {
     "stop_id": "236_14",
@@ -1806,6 +1812,12 @@
     "stop_lon": "15.936965"
   },
   {
+    "stop_id": "244_24",
+    "stop_name": "Ljubljanica",
+    "stop_lat": "45.796420",
+    "stop_lon": "15.936608"
+  },
+  {
     "stop_id": "244_34",
     "stop_name": "Ljubljanica",
     "stop_lat": "45.796184",
@@ -1840,12 +1852,6 @@
     "stop_name": "Ljubljanica",
     "stop_lat": "45.797255",
     "stop_lon": "15.937654"
-  },
-  {
-    "stop_id": "245_13",
-    "stop_name": "Ljubljanica",
-    "stop_lat": "45.797236",
-    "stop_lon": "15.937948"
   },
   {
     "stop_id": "246_1",
@@ -2400,12 +2406,6 @@
     "stop_lon": "15.988373"
   },
   {
-    "stop_id": "299_17",
-    "stop_name": "Trg žrt. fašizma",
-    "stop_lat": "45.809444",
-    "stop_lon": "15.987632"
-  },
-  {
     "stop_id": "301_21",
     "stop_name": "Trnsko",
     "stop_lat": "45.776910",
@@ -2566,6 +2566,18 @@
     "stop_name": "Zapadni kolodvor",
     "stop_lat": "45.809494",
     "stop_lon": "15.953928"
+  },
+  {
+    "stop_id": "317_1",
+    "stop_name": "Zapadni kolodvor",
+    "stop_lat": "45.809332",
+    "stop_lon": "15.955796"
+  },
+  {
+    "stop_id": "317_2",
+    "stop_name": "Zapadni kolodvor",
+    "stop_lat": "45.809480",
+    "stop_lon": "15.954827"
   },
   {
     "stop_id": "319_23",
@@ -2938,12 +2950,6 @@
     "stop_name": "Sesvete-izlaz",
     "stop_lat": "45.825442",
     "stop_lon": "16.109511"
-  },
-  {
-    "stop_id": "346_83",
-    "stop_name": "Sesvete-izlaz",
-    "stop_lat": "45.824513",
-    "stop_lon": "16.105891"
   },
   {
     "stop_id": "354_24",
@@ -5662,6 +5668,18 @@
     "stop_name": "Paljetkova",
     "stop_lat": "45.793058",
     "stop_lon": "15.894551"
+  },
+  {
+    "stop_id": "611_23",
+    "stop_name": "Prečko-terminal",
+    "stop_lat": "45.794759",
+    "stop_lon": "15.899611"
+  },
+  {
+    "stop_id": "611_24",
+    "stop_name": "Prečko-terminal",
+    "stop_lat": "45.794759",
+    "stop_lon": "15.899611"
   },
   {
     "stop_id": "611_27",
@@ -11024,14 +11042,20 @@
   {
     "stop_id": "1200_21",
     "stop_name": "Velika Gorica",
-    "stop_lat": "45.711421",
-    "stop_lon": "16.076933"
+    "stop_lat": "45.712301",
+    "stop_lon": "16.077603"
+  },
+  {
+    "stop_id": "1200_22",
+    "stop_name": "Velika Gorica",
+    "stop_lat": "45.712301",
+    "stop_lon": "16.077603"
   },
   {
     "stop_id": "1200_23",
     "stop_name": "Velika Gorica",
-    "stop_lat": "45.711621",
-    "stop_lon": "16.077274"
+    "stop_lat": "45.712301",
+    "stop_lon": "16.077603"
   },
   {
     "stop_id": "1200_25",
@@ -11296,6 +11320,36 @@
     "stop_name": "Laktec",
     "stop_lat": "45.858176",
     "stop_lon": "16.229483"
+  },
+  {
+    "stop_id": "1224_22",
+    "stop_name": "Ante Starčevića 45 A",
+    "stop_lat": "45.824543",
+    "stop_lon": "16.096974"
+  },
+  {
+    "stop_id": "1225_23",
+    "stop_name": "Sopnička - škola",
+    "stop_lat": "45.821846",
+    "stop_lon": "16.092985"
+  },
+  {
+    "stop_id": "1225_24",
+    "stop_name": "Sopnička - škola",
+    "stop_lat": "45.821846",
+    "stop_lon": "16.092985"
+  },
+  {
+    "stop_id": "1226_24",
+    "stop_name": "Sopnička 37",
+    "stop_lat": "45.819283",
+    "stop_lon": "16.095715"
+  },
+  {
+    "stop_id": "1227_23",
+    "stop_name": "Sopnička-kod 10D",
+    "stop_lat": "45.817058",
+    "stop_lon": "16.099184"
   },
   {
     "stop_id": "1228_21",
@@ -12360,6 +12414,12 @@
     "stop_lon": "16.103338"
   },
   {
+    "stop_id": "1401_23",
+    "stop_name": "Ljudevita Posavskog",
+    "stop_lat": "45.822041",
+    "stop_lon": "16.101144"
+  },
+  {
     "stop_id": "1401_24",
     "stop_name": "Ljudevita Posavskog",
     "stop_lat": "45.821965",
@@ -13110,6 +13170,12 @@
     "stop_lon": "15.983143"
   },
   {
+    "stop_id": "1665_32",
+    "stop_name": "Sesvete-ukrcaj",
+    "stop_lat": "45.825935",
+    "stop_lon": "16.107881"
+  },
+  {
     "stop_id": "1665_42",
     "stop_name": "Sesvete-ukrcaj",
     "stop_lat": "45.825864",
@@ -13134,10 +13200,10 @@
     "stop_lon": "16.107175"
   },
   {
-    "stop_id": "1665_87",
+    "stop_id": "1665_92",
     "stop_name": "Sesvete-ukrcaj",
-    "stop_lat": "45.824408",
-    "stop_lon": "16.105480"
+    "stop_lat": "45.825935",
+    "stop_lon": "16.107881"
   },
   {
     "stop_id": "1666_23",
@@ -15082,11 +15148,5 @@
     "stop_name": "Soblinečka 22",
     "stop_lat": "45.903967",
     "stop_lon": "16.130337"
-  },
-  {
-    "stop_id": "2119_22",
-    "stop_name": "Slatinska",
-    "stop_lat": "45.824768",
-    "stop_lon": "16.100967"
   }
 ]
